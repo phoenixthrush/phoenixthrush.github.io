@@ -1,7 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Phoenixsnake</title>
+
+<title>Phoenixsnake</title>
+	
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+	
+<body onload="startTime()">
+<div>Phoenixrex</div>
+<div id="txt"></div>
+</body>
+	
   <style>
   html, body {
     height: 100%;
@@ -197,5 +223,12 @@ document.addEventListener('keydown', function(e) {
 // start the game
 requestAnimationFrame(loop);
 </script>
+	
 </body>
+	
+<p>
+<div>Made with &#10084</div>
+<div>&copy; 2020 CEO of &commat;<a href="https://instagram.com/phoenixthrush" style="color: red">Phoenixthrush</a> on Instagram</h4>
+</p>
+
 </html>
