@@ -1,0 +1,11 @@
+Origin: Phoenixthrush Develops
+Label: Phoenixthrush
+Suite: stable
+Version: 1.0
+Codename: Phoenixthrush
+Architecture: iphoneos-arm
+Components: main
+Description: make iOS urs
+MD5Sum:
+ ef313ad056885485f393ee5c85f7fe62 80474 Packages
+ b529637bbf721b0d11b38ad00709548c 21834 Packages.bz2
