@@ -3,32 +3,6 @@
 <head>
 
 <title>Phoenixsnake</title>
-
-<script>
-function startTime() {
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
-document.getElementById('txt').innerHTML =
-  h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-  if (i < 10) {i = "0" + i};
-  return i;
-}
-</script>
-	
-<body onload="startTime()">
-<div>Phoenixrex</div>
-<div id="txt"></div>
-</body>
-
-</br>
-	
   <style>
   html, body {
     height: 100%;
@@ -59,14 +33,14 @@ function checkTime(i) {
   }
   #score
   {
-    color:yellow;
+    color:blue;
     position:absolute;
 	left:155px;
 	top:10px;
   }
   #high
   {
-    color:yellow;
+    color:blue;
     position:absolute;
 	left:195px;
 	top:30px;
