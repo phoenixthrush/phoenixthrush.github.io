@@ -1,1 +1,45 @@
-<a href"https://blockchain.com/btc/payment_request?address=1Bwqn8i2KYVJR9qDkFpj8oRxpG52qrGU7G&amount=0.00032352&message=Spend me a coffe! lmao">Coffee</a>
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+</style>
+<title>Donations</title>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+
+<body onload="startTime()">
+<div>Donations</div>
+<div id="txt"></div>
+</body>
+  
+<p>
+<div>Spend me a overpriced <a href"https://blockchain.com/btc/payment_request?address=1Bwqn8i2KYVJR9qDkFpj8oRxpG52qrGU7G&amount=0.00032352&message=Spend me a coffe! lmao">Coffee</a> (3 Dollars lmao)</div>
+<div>Spend me a <a href"https://blockchain.com/btc/payment_request?address=1Hk6Foi7BsEZzmC8skFkGLx4sa6MvZUfFa&amount=0.00161638&message=Spend me a Itunes Card!">Itunes Card</a> (15 Dollars lmao)</div>
+</p>
+  
+<p>
+<div>Made with &#10084</div>
+<div>&copy; 2020 CEO of &commat;<a href="https://instagram.com/phoenixthrush" style="color: red">Phoenixthrush</a> on Instagram</h4>
+</p>
+</html>
