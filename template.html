@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<style>
+body {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+</style>
+<title>Phoenixthrush</title>
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+
+<body onload="startTime()">
+<div>Phoenixthrush</div>
+<div id="txt"></div>
+
+<p>
+<div>Made with &#10084</div>
+<div>&copy; 2020 CEO of &commat;<a href="https://instagram.com/phoenixthrush" style="color: red">Phoenixthrush</a> on Instagram</h4>
+</p>
+</html>
