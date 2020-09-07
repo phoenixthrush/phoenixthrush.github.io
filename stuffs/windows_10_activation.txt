@@ -15,6 +15,6 @@ Enterprise 2015 LTSB N               2F77B-TNFGY-69QQF-B8YKP-D69TJ
 Enterprise 2016 LTSB                 DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ  
 Enterprise 2016 LTSB N               QFFDN-GRT3P-VKWWX-X7T3R-8B639
  
- cscript slmgr.vbs /skms kms.lotro.cc
+cscript slmgr.vbs /skms kms.lotro.cc
  
- cscript slmgr.vbs /ato
+cscript slmgr.vbs /ato
