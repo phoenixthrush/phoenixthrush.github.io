@@ -2,5 +2,5 @@
 
 ## Reporting a Vulnerability
 
-U can contact me on Insta!
-I will try to fix it in a Day
+U can contact me on <a href="https://instagram.com/phoenixthrush" style="color: red">Insta</a>!
+I'll try the days
