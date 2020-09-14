@@ -1,1 +1,1 @@
-bitsadmin /transfer mydownloadjob /download /priority foreground "https://" "\"
+bitsadmin /transfer mydownloadjob /download /priority foreground "https://.rar" "C:\Windows\Temp\.rar"
