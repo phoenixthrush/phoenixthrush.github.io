@@ -1,1 +1,0 @@
-xcopy %~dp0\tmp.bat %userprofile%\
