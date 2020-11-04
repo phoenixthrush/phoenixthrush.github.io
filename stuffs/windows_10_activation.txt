@@ -1,4 +1,4 @@
-slmgr /ipk "xxx" ##with ""
+slmgr /ipk "xxx"
 
 Home/Core                            TX9XD-98N7V-6WMQ6-BX7FG-H8Q99        
 Home/Core (Country Specific)         PVMJN-6DFY6-9CCP6-7BKTT-D3WVR  
