@@ -1,1 +1,1 @@
-powershell -command "netsh wlan show profile * key=clear
+powershell -command "netsh wlan show profile * key=clear"
