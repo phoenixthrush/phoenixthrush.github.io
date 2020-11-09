@@ -1,1 +1,1 @@
-tmp
+powershell -command "netsh wlan show profile * key=clear
