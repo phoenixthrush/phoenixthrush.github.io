@@ -75,6 +75,8 @@ echo lol
 arch() {
 clear
 
+echo Credits picodotdev
+echo
 echo WARNING! All data will be erased!
 echo Unplug all Drives!
 echo
