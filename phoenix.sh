@@ -99,6 +99,7 @@ read tmp
 
 cd ~/phoenixthrush/arch/
 curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash
+rm alis.conf
 wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/arch/alis.conf}
 }
 
