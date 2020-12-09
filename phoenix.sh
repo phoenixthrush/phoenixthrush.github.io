@@ -8,7 +8,7 @@ mkdir -p ~/phoenixthrush/minecraft
 mkdir -p ~/phoenixthrush/minecraft/server
 
 menue() {
-echo Welcome
+echo Welcome v1.3
 echo "  ___                   ___   "
 echo " (o o)                 (o o)  "
 echo "(  V  ) Phoenixthrush (  V  ) "
@@ -78,6 +78,7 @@ echo lol
 }
 
 arch() {
+rm -r ~/phoenixthrush/arch/
 clear
 
 echo Credits picodotdev
