@@ -102,6 +102,7 @@ curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash
 rm alis.conf
 wget https://bit.ly/3gwmTrM
 mv 3gwmTrM alis.sh
+nano alis.conf && ./alis.sh
 }
 
 menue
