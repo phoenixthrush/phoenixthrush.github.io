@@ -167,6 +167,7 @@ echo lol
 }
 
 arch() {
+rm -r /usr/share/phoenixthrush/arch
 clear
 
 echo Credits picodotdev
