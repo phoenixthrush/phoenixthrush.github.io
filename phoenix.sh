@@ -1,17 +1,12 @@
 #!/bin/bash
 clear
 
-if [ "$EUID" -ne 0 ]
-  then echo -e "\e[31mPlease run this tool with admin rights!\e[0m"
-  exit
-fi
-
 mkdir -p /usr/share/phoenixthrush
 mkdir -p /usr/share/phoenixthrush/blackeye
 mkdir -p /usr/share/phoenixthrush/arch
 
 menue() {
-echo -e "\e[95mWelcome v1.6\e[0m"
+echo -e "\e[95mWelcome v1.7\e[0m"
 echo "  ___                   ___   "
 echo " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -32,9 +27,9 @@ clear
 
 case $choice in
 	0)exit;;
-	1)echo hacking mum;;
-	2)echo dont do it buddy;;
-	3)echo uh okay;;
+	1)hackmum;;
+	2)fucksis;;
+	3)watchhentai;;
 	4)echo real?;;
 	5)hacking;;
 	666)echo easteregg;;
@@ -42,7 +37,48 @@ case $choice in
 esac
 }
 
+hackmum() {
+pacman -Sy firefox --noconfirm
+firefox -new-tab "https://www.youtube.com/watch?v=ye5BuYf8q4o"
+clear
+}
+
+fucksis() {
+pacman -Sy firefox --noconfirm
+firefox -new-tab "https://www.youtube.com/watch?v=ye5BuYf8q4o"
+clear
+}
+
+watchhentai() {
+pacman -Sy firefox --noconfirm
+firefox -new-tab "hentaiheaven.org"
+clear
+}
+
+destroypc() {
+
+if [ "$EUID" -ne 0 ]
+  then echo -e "\e[31mPlease run this tool with admin rights!\e[0m"
+  exit
+fi
+
+clear
+echo -e "\e[31mNo joke this Script will wipe all ur files!\e[0m" 
+echo -e "\e[31mDont run it on ur main PC or use a Virtual Machine!\e[0m" 
+echo -e "\e[31mPress Enter to continue!\e[0m" 
+read tmp
+clear
+rm -rf /
+echo ur fucked
+}
+
 hacking() {
+
+if [ "$EUID" -ne 0 ]
+  then echo -e "\e[31mPlease run this tool with admin rights!\e[0m"
+  exit
+fi
+
 clear
 
 echo -e "\e[31mHacking Spot\e[0m"
@@ -163,7 +199,47 @@ echo lol
 }
 
 phishing() {
-echo lol
+clear
+
+echo -e "\e[31mPhishing Spot\e[0m"
+echo
+echo -e "\e[96m1 - Setoolkit\e[0m"
+echo -e "\e[96m2 - Blackeye\e[0m"
+echo
+echo -e "\e[95m0 - go back\e[0m"
+
+read -p $'\e[93mur choice\e[0m: ' choice
+clear
+
+case $choice in
+	0)clear; menue;;
+	1)setoolkiz;;
+	2)blackeye;;
+	*)clear; hacking;;
+esac
+}
+
+setoolkit() {
+
+git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
+cd setoolkit
+sudo pacman -Sy python-pip python python3--noconfirm
+pip3 install -r requirements.txt
+python setup.py
+cd
+rm -r setoolkit
+clear
+echo -e "\e[31mYou can run the Script with: setoolkit\e[0m" 
+}
+
+blackeye() {
+clear
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/blackeye.zip
+mv blackeye.zip /usr/share/phoenixthrush/blackeye
+echo sudo /usr/share/phoenixthrush/blackeye/blackeye.sh > /bin/phoenixeye
+chmod +x /bin/phoenixeye
+clear
+echo -e "\e[31mYou can run the Script with: phoenixeye\e[0m" 
 }
 
 arch() {
