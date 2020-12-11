@@ -51,7 +51,7 @@ clear
 
 watchhentai() {
 pacman -Sy firefox --noconfirm
-firefox -new-tab "hentaiheaven.org"
+firefox -new-tab "hentaihaven.org"
 clear
 }
 
