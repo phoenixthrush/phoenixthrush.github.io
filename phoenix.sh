@@ -56,8 +56,6 @@ echo
 echo -e "\e[31mYou can run the Script with: phoenix\e[0m"
 }
 
-
-
 hackmum() {
 pacman -Sy firefox --noconfirm
 firefox -new-tab "https://www.youtube.com/watch?v=ye5BuYf8q4o"
@@ -108,6 +106,7 @@ echo -e "\e[96m1 - Create Minecraft Server\e[0m"
 echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
 echo -e "\e[96m3 - Website Phishing\e[0m"
 echo -e "\e[96m4 - Install Arch Linux\e[0m \e[31m<3\e[0m"
+echo -e "\e[96m5 - Update Arch Linux\e[0m \e[31m<3\e[0m"
 echo
 echo -e "\e[95m0 - go back\e[0m"
 
@@ -120,8 +119,13 @@ case $choice in
 	2)hotspot;;
 	3)phishing;;
 	4)arch;;
+	5)archupdate;;
 	*)clear; hacking;;
 esac
+}
+
+archupdate() {
+pacman -Syyu --noconfirm
 }
 
 minecraft() {
