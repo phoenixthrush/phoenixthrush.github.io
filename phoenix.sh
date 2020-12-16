@@ -5,7 +5,7 @@ mkdir -p /usr/share/phoenixthrush/blackeye
 mkdir -p /usr/share/phoenixthrush/arch
 
 menue() {
-echo -e "\e[95mWelcome v1.8\e[0m"
+echo -e "\e[95mWelcome v1.9\e[0m"
 echo "  ___                   ___   "
 echo " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -132,9 +132,9 @@ nano /etc/pacman.conf
 
 pacman -Syu --needed --noconfirm
 
-pacman -S gnome-tweaks grub-customizer --needed --noconfirm
+pacman -S aic94xx-firmware wd719x-firmware upd72020x-fw gnome-teaks grub-customizer --needed --noconfirm
 
-pacman -Sy python python3 curl wget git ntfs-3g vlc python-pip qemu virt-manager --needed --noconfirm 
+pacman -S python python3 curl wget git ntfs-3g vlc python-pip qemu virt-manager --needed --noconfirm 
 
 cd /opt
 git clone https://aur.archlinux.org/yay-git.git
@@ -155,6 +155,7 @@ pip3 install -r requirements.txt
 python setup.py
 
 cd ..
+rm -r setoolkit
 rm -r phoenixrepo
 git clone https://github.com/phoenixthrush/phoenixthrush.github.io/ phoenixrepo
 
@@ -285,26 +286,11 @@ esac
 }
 
 setoolkit() {
-
-git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
-cd setoolkit
-sudo pacman -Sy python-pip python python3--noconfirm
-pip3 install -r requirements.txt
-python setup.py
-cd
-rm -r setoolkit
-clear
-echo -e "\e[31mYou can run the Script with: setoolkit\e[0m" 
+echo -e "\e[31mComming Soon!\e[0m" 
 }
 
 blackeye() {
-clear
-wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/blackeye.zip
-mv blackeye.zip /usr/share/phoenixthrush/blackeye
-echo sudo /usr/share/phoenixthrush/blackeye/blackeye.sh > /bin/phoenixeye
-chmod +x /bin/phoenixeye
-clear
-echo -e "\e[31mYou can run the Script with: phoenixeye\e[0m" 
+echo -e "\e[31mComming Soon!\e[0m" 
 }
 
 arch() {
