@@ -107,6 +107,7 @@ echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
 echo -e "\e[96m3 - Website Phishing\e[0m"
 echo -e "\e[96m4 - Install Arch Linux\e[0m \e[31m<3\e[0m"
 echo -e "\e[96m5 - Update Arch Linux\e[0m \e[31m<3\e[0m"
+echo -e "\e[95m6 - Install common Tools!\e[0m"
 echo
 echo -e "\e[95m0 - go back\e[0m"
 
@@ -120,9 +121,48 @@ case $choice in
 	3)phishing;;
 	4)arch;;
 	5)archupdate;;
+	6)tools;;
 	*)clear; hacking;;
 esac
 }
+
+tools() {
+
+nano /etc/pacman.conf
+
+pacman -Syu --needed --noconfirm
+
+pacman -S gnome-tweaks grub-customizer --needed --noconfirm
+
+pacman -Sy python python3 curl wget git ntfs-3g vlc python-pip qemu virt-manager --needed --noconfirm 
+
+cd /opt
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
+
+git clone https://aur.archlinux.org/snapd.git
+cd snapd
+makepkg -si
+cd ..
+sudo systemctl enable --now snapd.socket
+sudo ln -s /var/lib/snapd/snap /snap
+rm -r snapd
+
+git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
+cd setoolkit
+pip3 install -r requirements.txt
+python setup.py
+
+cd ..
+rm -r phoenixrepo
+git clone https://github.com/phoenixthrush/phoenixthrush.github.io/ phoenixrepo
+
+yay -Sy ettercap-gtk gparted steam discord teams --needed --noconfirm
+
+echo -e "\e[31mPlease restart ur PC!\e[0m"
+}
+
 
 archupdate() {
 pacman -Syyu --noconfirm
