@@ -1,0 +1,9 @@
+Noob Arch Bible v0.1
+
+#Das ist ein Kommentar#
+
+#Update
+sudo pacman -Syu --needed --noconfirm
+
+#Programme installieren
+sudo pacman -S git #Programm --needed --noconfirm
