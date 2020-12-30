@@ -5,7 +5,7 @@ mkdir -p /usr/share/phoenixthrush/blackeye
 mkdir -p /usr/share/phoenixthrush/arch
 
 menue() {
-echo -e "\e[95mWelcome v1.9\e[0m"
+echo -e "\e[95mWelcome v2.0\e[0m"
 echo "  ___                   ___   "
 echo " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -107,7 +107,7 @@ echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
 echo -e "\e[96m3 - Website Phishing\e[0m"
 echo -e "\e[96m4 - Install Arch Linux\e[0m \e[31m<3\e[0m"
 echo -e "\e[96m5 - Update Arch Linux\e[0m \e[31m<3\e[0m"
-echo -e "\e[95m6 - Install common Tools!\e[0m"
+echo -e "\e[96m6 - Install common Tools!\e[0m"
 echo
 echo -e "\e[95m0 - go back\e[0m"
 
