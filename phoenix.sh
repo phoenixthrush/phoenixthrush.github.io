@@ -208,6 +208,7 @@ if [ "$EUID" -ne 0 ]
   then 
   yay -Syu --needed --noconfirm
   snap refresh
+  exit
 fi
 
 echo -e "\e[31mPlease run this tool without admin rights!\e[0m"
