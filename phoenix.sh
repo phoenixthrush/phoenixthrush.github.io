@@ -12,7 +12,7 @@ echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
 echo -e "--m-m-------------------m-m-- "
 echo
-echo -e "\e[31mHave Fun \<3\e[0m" 
+echo -e "\e[31mHave Fun <3\e[0m" 
 echo
 echo -e "\e[92m1 - hack ur mum\e[0m"
 echo -e "\e[92m2 - fuck ur sis\e[0m"
@@ -121,7 +121,7 @@ echo -e "\e[96m1 - Create Minecraft Server\e[0m"
 echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
 echo -e "\e[96m3 - Website Phishing\e[0m"
 echo -e "\e[96m4 - Install Arch Linux\e[0m \e[31m<3\e[0m"
-echo -e "\e[96m5 - Update Arch Linux\e[0m \e[31m<3\e[0m"
+echo -e "\e[96m5 - Update Arch Linux\e[0m"
 echo -e "\e[96m6 - Install common Tools!\e[0m"
 echo
 echo -e "\e[95m0 - go back\e[0m"
