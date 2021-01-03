@@ -87,7 +87,7 @@ watchhentai() {
 
 if [ "$EUID" -ne 0 ]
   then
-  firefox -new-tab "https://www.youtube.com/watch?v=ye5BuYf8q4o"
+  firefox -new-tab "https://hentaihaven.xxx"
   exit
 fi
 
