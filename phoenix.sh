@@ -1,17 +1,15 @@
 #!/bin/bash
 clear
 
-mkdir -p /usr/share/phoenixthrush/
-mkdir -p /usr/share/phoenixthrush/blackeye
-mkdir -p /usr/share/phoenixthrush/arch
-
 menue() {
-echo -e "\e[95mWelcome v2.1\e[0m"
+echo -e "\e[95mWelcome v2.2\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
 echo -e "--m-m-------------------m-m-- "
 echo
+echo -e "\e[31mThis Tool just work with Arch Linux!\e[0m"
+echo -e "\e[31mSupport for Debian will coming soon!\e[0m"  
 echo -e "\e[31mHave Fun <3\e[0m" 
 echo
 echo -e "\e[92m1 - hack ur mum\e[0m"
@@ -31,7 +29,7 @@ case $choice in
 	1)hackmum;;
 	2)fucksis;;
 	3)watchhentai;;
-	4)echo real?;;
+	4)destroypc;;
 	5)hacking;;
 	6)update;;
 	666)easteregg;;
@@ -339,14 +337,25 @@ cd /usr/share/phoenixthrush/arch
 rm *
 curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash
 rm alis.conf
+rm alis-packets.conf
 wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/arch/alis.conf
-nano alis.conf && ./alis.sh
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/arch/alis-packets.conf
+nano alis.conf 
+nano alis-packets.conf
+./alis.sh
 }
 
 easteregg() {
 echo uh idk coming soon!
 read tmp
 exit
+}
+
+Ubuntu() {
+
+ubuntumenue
+exit
+
 }
 
 menue
