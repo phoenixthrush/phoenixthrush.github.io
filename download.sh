@@ -1,21 +1,15 @@
 #!/bin/bash
 clear
 
-if [ "$EUID" -ne 0 ]
-  then echo -e "\e[31mPlease run this tool with admin rights!\e[0m"
-  exit
-fi
+sudo mkdir -p /usr/share/phoenixthrush/
 
+sudo rm /bin/phoenix
+sudo rm /usr/share/phoenixthrush/phoenix.sh
+wget https://bit.ly/3m0JwFX && mv 3m0JwFX phoenix.sh && sudo chmod +x phoenix.sh
+sudo mv phoenix.sh /usr/share/phoenixthrush/phoenix.sh
 
-mkdir -p /usr/share/phoenixthrush/
-
-rm /bin/phoenix
-rm /usr/share/phoenixthrush/phoenix.sh
-wget https://bit.ly/3m0JwFX && mv 3m0JwFX phoenix.sh && chmod +x phoenix.sh
-mv phoenix.sh /usr/share/phoenixthrush/phoenix.sh
-
-echo /usr/share/phoenixthrush/phoenix.sh > /bin/phoenix
-chmod +x /bin/phoenix
+sudo echo /usr/share/phoenixthrush/phoenix.sh > /bin/phoenix
+sudo chmod +x /bin/phoenix
 
 clear 
 echo -e "\e[31mInstalled!\e[0m"
