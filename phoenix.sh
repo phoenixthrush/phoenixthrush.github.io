@@ -300,7 +300,8 @@ echo max-world-size=29999984
 
 echo eula=true > ./eula.txt
 
-sudo echo sudo java -Xmx1024M -Xms1024M -jar /usr/share/phoenixthrush/phoenixMC/vanilla-1.16.4.jar nogui > /bin/phoenixMC
+sudo echo cd /usr/share/phoenixthrush/PhoenixMC > /bin/phoenixMC
+sudo echo sudo java -Xmx1024M -Xms1024M -jar ./vanilla-1.16.4.jar nogui >> /bin/phoenixMC
 sudo chmod +x /bin/phoenixMC
 
 clear
