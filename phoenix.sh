@@ -44,6 +44,8 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
+mkdir -p /usr/share/phoenixthrush/
+
 rm /bin/phoenix
 rm /usr/share/phoenixthrush/phoenix.sh
 wget https://bit.ly/3m0JwFX && mv 3m0JwFX phoenix.sh && chmod +x phoenix.sh
