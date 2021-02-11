@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.3\e[0m"
+echo -e "\e[95mWelcome v2.4\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -314,6 +314,14 @@ exit
 hotspot() {
 echo Coming Soon!
 exit
+}
+
+phishing() {
+cd /usr/share/phoenixthrush
+rm -r repo
+sudo git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
+cd repo/linux/blackeye/
+sudo bash blackeye.sh
 }
 
 arch() {
