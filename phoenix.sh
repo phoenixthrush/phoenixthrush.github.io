@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.2\e[0m"
+echo -e "\e[95mWelcome v2.3\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -18,6 +18,7 @@ echo -e "\e[92m3 - watch hentai\e[0m"
 echo -e "\e[92m4 - destroy pc\e[0m"
 echo -e "\e[92m5 - real hacking shit\e[0m"
 echo -e "\e[92m6 - Install and Update!\e[0m"
+echo -e "\e[92m7 - Debian (Beta)\e[0m"
 echo
 echo -e "\e[96m0 - exit\e[0m"
 
@@ -32,6 +33,7 @@ case $choice in
 	4)destroypc;;
 	5)hacking;;
 	6)update;;
+    7)debian;;
 	666)easteregg;;
 	*)echo I said 1-5 baka haha; echo; menue;;
 esac
@@ -354,11 +356,29 @@ read tmp
 exit
 }
 
-Ubuntu() {
+debian() {
+clear
 
-ubuntumenue
-exit
+echo -e "\e[31mHacking Spot\e[0m"
+echo
+echo -e "\e[96m1 - Update Linux\e[0m"
+echo
+echo -e "\e[95m0 - go back\e[0m"
 
+read -p $'\e[93mur choice\e[0m: ' choice
+clear
+
+case $choice in
+	0)clear; menue;;
+	1)debian_update;;
+	*)clear; debian;;
+esac
+}
+
+debian_update() {
+sudo apt update -y
+sudo apt full-upgrade -y
+sudo apt autoremove -y
 }
 
 menue
