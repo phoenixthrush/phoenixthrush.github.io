@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.4\e[0m"
+echo -e "\e[95mWelcome v2.5\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -370,6 +370,8 @@ clear
 echo -e "\e[31mHacking Spot\e[0m"
 echo
 echo -e "\e[96m1 - Update Linux\e[0m"
+echo -e "\e[96m2 - Website Phishing\e[0m"
+echo -e "\e[96m3 - Install Arch Linux\e[0m \e[31m<3\e[0m"
 echo
 echo -e "\e[95m0 - go back\e[0m"
 
@@ -379,6 +381,8 @@ clear
 case $choice in
 	0)clear; menue;;
 	1)debian_update;;
+  2)phishing;;
+  3)arch;;
 	*)clear; debian;;
 esac
 }
