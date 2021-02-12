@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.5\e[0m"
+echo -e "\e[95mWelcome v2.6\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -196,6 +196,10 @@ if [ "$EUID" -ne 0 ]
 
   yay -Syu --needed --noconfirm
   yay -S ettercap-gtk gparted steam discord teams --needed --noconfirm
+  curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  sudo chmod 755 msfinstall && \
+  ./msfinstall
+  
   exit
 
 fi
@@ -369,9 +373,12 @@ clear
 
 echo -e "\e[31mHacking Spot\e[0m"
 echo
-echo -e "\e[96m1 - Update Linux\e[0m"
-echo -e "\e[96m2 - Website Phishing\e[0m"
-echo -e "\e[96m3 - Install Arch Linux\e[0m \e[31m<3\e[0m"
+echo -e "\e[96m1 - Create Minecraft Server\e[0m"
+echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
+echo -e "\e[96m3 - Website Phishing\e[0m"
+echo -e "\e[96m4 - Update Linux\e[0m"
+echo -e "\e[96m5 - Install common Tools!\e[0m"
+echo -e "\e[96m6 - Install Arch Linux\e[0m \e[31m<3\e[0m"
 echo
 echo -e "\e[95m0 - go back\e[0m"
 
@@ -380,10 +387,13 @@ clear
 
 case $choice in
 	0)clear; menue;;
-	1)debian_update;;
-  2)phishing;;
-  3)arch;;
-	*)clear; debian;;
+	1)minecraft;;
+	2)hotspot;;
+	3)phishing;;
+	4)debian_update;;
+	5)debian_tools;;
+	6)arch;;
+	*)clear; hacking;;
 esac
 }
 
@@ -391,6 +401,44 @@ debian_update() {
 sudo apt update -y
 sudo apt full-upgrade -y
 sudo apt autoremove -y
+}
+
+debian_tools() {
+
+if [ "$EUID" -ne 0 ]
+  then
+  sudo apt update && sudo apt install python python3-pip
+  cd /opt
+  git clone https://aur.archlinux.org/yay-git.git
+  cd yay-git
+  makepkg -si
+
+  cd /opt
+  git clone https://aur.archlinux.org/snapd.git
+  cd snapd
+  makepkg -si
+  sudo systemctl enable --now snapd.socket
+  sudo ln -s /var/lib/snapd/snap /snap
+
+  cd /opt
+  git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
+  cd setoolkit
+  sudo pip3 install -r requirements.txt
+  sudo python setup.py
+
+  cd /opt
+  rm -r setoolkit
+  rm -r yay-git
+  rm -r snapd
+  curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  sudo chmod 755 msfinstall && \
+  ./msfinstall
+  exit
+
+fi
+
+echo -e "\e[31mPlease run this Script without rights!\e[0m"
+exit
 }
 
 menue
