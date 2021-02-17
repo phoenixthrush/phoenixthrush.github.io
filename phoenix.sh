@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.6\e[0m"
+echo -e "\e[95mWelcome v2.7\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -324,8 +324,11 @@ phishing() {
 cd /usr/share/phoenixthrush
 rm -r repo
 sudo git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
-cd repo/linux/blackeye/
-sudo bash blackeye.sh
+echo sudo bash /usr/share/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenix-phish
+
+clear
+Credits thelinuxchoice
+echo -e "\e[31mYou can run the Script with: phoenix-phish\e[0m"
 }
 
 arch() {
