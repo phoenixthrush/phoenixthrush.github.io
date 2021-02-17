@@ -55,6 +55,7 @@ mv phoenix.sh /usr/share/phoenixthrush/phoenix.sh
 
 echo /usr/share/phoenixthrush/phoenix.sh > /bin/phoenix
 chmod +x /bin/phoenix 
+chmod 777 /bin/phoenix
 echo 
 echo -e "\e[31mUpdated!\e[0m"
 echo -e "\e[31mYou can run the Script with: phoenix\e[0m"
@@ -330,11 +331,13 @@ fi
 cd /usr/share/phoenixthrush
 rm -r repo
 git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
-echo sudo bash /usr/share/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenix-phish
+echo sudo bash /usr/share/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenixphish
+chmod +x /bin/phoenixphish
+chmod 777 /bin/phoenixphish
 
 clear
 echo Credits thelinuxchoice
-echo -e "\e[31mYou can run the Script with: phoenix-phish\e[0m"
+echo -e "\e[31mYou can run the Script with: phoenixphish\e[0m"
 }
 
 arch() {
