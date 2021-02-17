@@ -321,9 +321,15 @@ exit
 }
 
 phishing() {
+
+if [ "$EUID" -ne 0 ]
+  then echo -e "\e[31mPlease run this tool with admin rights!\e[0m"
+  exit
+fi
+
 cd /usr/share/phoenixthrush
 rm -r repo
-sudo git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
+git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
 echo sudo bash /usr/share/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenix-phish
 
 clear
