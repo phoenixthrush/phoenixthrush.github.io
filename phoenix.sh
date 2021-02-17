@@ -327,7 +327,7 @@ sudo git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
 echo sudo bash /usr/share/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenix-phish
 
 clear
-Credits thelinuxchoice
+echo Credits thelinuxchoice
 echo -e "\e[31mYou can run the Script with: phoenix-phish\e[0m"
 }
 
