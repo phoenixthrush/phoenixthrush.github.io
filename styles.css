@@ -45,9 +45,16 @@ a {
 
 .bottom-text {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.copyright {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    float:right;
 }
 
 a:hover {
