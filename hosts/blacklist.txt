@@ -1,0 +1,17 @@
+cdn.ordinaryluckrewardextra.club	
+www.ordinaryluckrewardextra.club	
+inflationbreedinghoax.com	
+plannerladyreality.com	
+deploy.mopinion.com	
+support.mozilla.org	
+(\.|^)gstatic\.com$	
+(\.|^)guppy\.site$	
+(\.|^)dzhjmp\.com$	
+(\.|^)google-analytics\.com$	
+em.phncdn.com.lds.rncdn7.com	
+cdn.opensourcefonts.org.sds4.rncdn7.com	
+camschat.net	
+r3.o.lencr.org	
+(\.|^)evtubescms\.phncdn\.com$	
+(\.|^)hwcdn\.net$	
+(\.|^)rncdn5\.com$
