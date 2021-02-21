@@ -46,14 +46,14 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-mkdir -p /usr/share/phoenixthrush/
+mkdir -p /etc/phoenixthrush/
 
 rm /bin/phoenix
-rm /usr/share/phoenixthrush/phoenix.sh
-wget https://bit.ly/3m0JwFX && mv 3m0JwFX phoenix.sh && chmod +x phoenix.sh
-mv phoenix.sh /usr/share/phoenixthrush/phoenix.sh
+rm /etc/phoenixthrush/phoenix.sh
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/phoenix.sh && chmod +x phoenix.sh
+mv phoenix.sh /etc/phoenixthrush/phoenix.sh
 
-echo /usr/share/phoenixthrush/phoenix.sh > /bin/phoenix
+echo /etc/phoenixthrush/phoenix.sh > /bin/phoenix
 chmod +x /bin/phoenix 
 chmod 777 /bin/phoenix
 echo 
@@ -341,8 +341,8 @@ echo -e "\e[31mYou can run the Script with: phoenixphish\e[0m"
 }
 
 arch() {
-rm -r /usr/share/phoenixthrush/arch
-mkdir -p /usr/share/phoenixthrush/arch
+rm -r /etc/phoenixthrush/arch
+mkdir -p /etc/phoenixthrush/arch
 clear
 
 echo Credits picodotdev
@@ -362,14 +362,13 @@ echo Last Warning all data will be erased!
 echo Press Enter to continue!
 read tmp
 
-cd /usr/share/phoenixthrush/arch
-rm *
+cd /etc/phoenixthrush/arch
 curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash
 rm alis.conf
 rm alis-packets.conf
-wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/arch/alis.conf
-wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/arch/alis-packets.conf
-nano alis.conf 
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis.conf
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis-packets.conf
+nano alis.conf
 nano alis-packets.conf
 ./alis.sh
 }
