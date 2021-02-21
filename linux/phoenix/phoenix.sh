@@ -346,6 +346,7 @@ mkdir -p /etc/phoenixthrush/arch
 clear
 
 echo Credits picodotdev
+echo https://github.com/picodotdev
 echo
 echo WARNING! All data will be erased!
 echo Unplug all Drives!
@@ -354,6 +355,7 @@ echo Please burn the official Arch Live ISO to the USB!
 echo Boot into it and type: loadkeys [ur keymap like de-latin1 \for germany]
 echo
 echo After u edited the alis.conf, run alis.sh
+echo Default password is phoenixthrush
 echo Press Enter to continue!
 read tmp
 
