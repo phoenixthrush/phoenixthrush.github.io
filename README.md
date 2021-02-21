@@ -1,9 +1,9 @@
 # phoenixthrush.github.io
-Just memes, codes, malwares, a archive and lots more lol!
+Just memes, codes, malwares, an archive and lots more lol!
 
 Follow me if u wanna get a&nbsp;<a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao
 
-
+<br>
 
 
 NEW UPDATE!
