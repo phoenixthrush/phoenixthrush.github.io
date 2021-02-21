@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.7\e[0m"
+echo -e "\e[95mWelcome v2.8\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
