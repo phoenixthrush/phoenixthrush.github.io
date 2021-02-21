@@ -9,8 +9,4 @@ Follow me if u wanna get a&nbsp;<a href="https://instagram.com/phoenixthrush">:c
 NEW UPDATE!
 DOES NOT FUNCTION
 
-
-sudo su && curl -sL https://bit.ly/3hXEadY | bash
-
-or
-wget https://bit.ly/3m0JwFX && mv 3m0JwFX phoenix.sh && sudo chmod +x phoenix.sh && sudo  ./phoenix.sh
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/phoenix.sh && sudo chmod +x phoenix.sh && sudo ./phoenix.sh
