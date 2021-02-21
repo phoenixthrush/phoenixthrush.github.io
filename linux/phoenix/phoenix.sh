@@ -365,9 +365,9 @@ read tmp
 cd /etc/phoenixthrush/arch
 curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash
 rm alis.conf
-rm alis-packets.conf
+rm alis-packages.conf.conf
 wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis.conf
-wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis-packets.conf
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis-packages.conf
 nano alis.conf
 nano alis-packets.conf
 ./alis.sh
