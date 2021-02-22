@@ -48,12 +48,11 @@ fi
 
 mkdir -p /etc/phoenixthrush/
 
-rm /bin/phoenix
-rm /etc/phoenixthrush/phoenix.sh
+rm /etc/phoenixthrush/phoenixsploit
 wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/phoenix.sh && chmod +x phoenix.sh
-mv phoenix.sh /etc/phoenixthrush/phoenix.sh
+mv phoenix.sh /etc/phoenixthrush/phoenixsploit
 
-echo /etc/phoenixthrush/phoenix.sh > /bin/phoenix
+echo /etc/phoenixthrush/phoenixsploit > /bin/phoenix
 chmod +x /bin/phoenix 
 chmod 777 /bin/phoenix
 echo 
