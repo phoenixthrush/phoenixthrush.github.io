@@ -2,7 +2,7 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.8\e[0m"
+echo -e "\e[95mWelcome v2.9\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
@@ -235,8 +235,8 @@ exit
 minecraft_server() {
 
 sudo rm /bin/phoenixMC
-sudo rm -r /usr/share/phoenixthrush/phoenixMC 
-sudo mkdir /usr/share/phoenixthrush/phoenixMC 
+sudo rm -r /etc/phoenixthrush/phoenixMC 
+sudo mkdir /etc/phoenixthrush/phoenixMC 
 clear
 
 echo Old Files removed!
@@ -244,12 +244,12 @@ echo Create new Server? [Press Enter to \continue or STRG+C to exit]
 read tmp
 
 wget https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar
-sudo mv server.jar /usr/share/phoenixthrush/phoenixMC/vanilla-1.16.4.jar
+sudo mv server.jar /etc/phoenixthrush/phoenixMC/vanilla-1.16.4.jar
 
-pacman -Sy jre-openjdk --needed --noconfirm 
+sudo pacman -Sy jre-openjdk --needed --noconfirm 
 
-cd /usr/share/phoenixthrush/phoenixMC/
-java -Xmx1024M -Xms1024M -jar /usr/share/phoenixthrush/phoenixMC/vanilla-1.16.4.jar nogui
+cd /etc/phoenixthrush/phoenixMC/
+java -Xmx1024M -Xms1024M -jar ./vanilla-1.16.4.jar nogui
 
 (
 echo enable-jmx-monitoring=false
@@ -306,7 +306,7 @@ echo max-world-size=29999984
 
 echo eula=true > ./eula.txt
 
-sudo echo cd /usr/share/phoenixthrush/PhoenixMC > /bin/phoenixMC
+sudo echo cd /etc/phoenixthrush/PhoenixMC > /bin/phoenixMC
 sudo echo sudo java -Xmx1024M -Xms1024M -jar ./vanilla-1.16.4.jar nogui >> /bin/phoenixMC
 sudo chmod +x /bin/phoenixMC
 
@@ -327,10 +327,10 @@ if [ "$EUID" -ne 0 ]
   exit
 fi
 
-cd /usr/share/phoenixthrush
+cd /etc/phoenixthrush
 rm -r repo
 git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
-echo sudo bash /usr/share/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenixphish
+echo sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh > /bin/phoenixphish
 chmod +x /bin/phoenixphish
 chmod 777 /bin/phoenixphish
 
