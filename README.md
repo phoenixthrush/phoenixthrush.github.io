@@ -5,8 +5,6 @@ Follow me if u wanna get a&nbsp;<a href="https://instagram.com/phoenixthrush">:c
 
 <br>
 <br>
-<br>
-
 
 NEW UPDATE!
 DOES NOT FUNCTION
