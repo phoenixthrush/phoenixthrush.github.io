@@ -4,7 +4,6 @@ Just memes, codes, malwares, an archive and lots more lol!
 Follow me if u wanna get a&nbsp;<a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao
 
 <br>
-<br>
 
 NEW UPDATE!
 DOES NOT FUNCTION
