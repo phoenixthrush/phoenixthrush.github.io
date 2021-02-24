@@ -13,5 +13,5 @@ cdn.opensourcefonts.org.sds4.rncdn7.com
 camschat.net	
 r3.o.lencr.org	
 (\.|^)evtubescms\.phncdn\.com$	
-(\.|^)hwcdn\.net$	
-(\.|^)rncdn5\.com$
+(\.|^)hwcdn\.net$
+next.reality.news
