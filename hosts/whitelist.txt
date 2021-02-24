@@ -96,3 +96,17 @@ em-h.phncdn.com
 em-h.phncdn.com.lds.rncdn7.com	
 nhentai.net
 codepen.io
+v4-only.eip-ntt.audio-ak.spotify.com.akahost.net
+v10.events.data.microsoft.com
+au.download.windowsupdate.com
+forms.office.com
+www3.l.google.com
+msh.amazon.co.uk
+fls-eu.amazon.com
+device-metrics-us-2.amazon.com
+endpoint.prod.eu-west-1.forester.a2z.com
+djvbdz1obemzo.cloudfront.net
+aax-eu.amazon-adsystem.com
+(\.|^)amazon\.de$
+audio4-akp-spotify-com.akamaized.net
+img.wonderhowto.com
