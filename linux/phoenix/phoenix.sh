@@ -2,20 +2,20 @@
 clear
 
 menue() {
-echo -e "\e[95mWelcome v2.9\e[0m"
+echo -e "\e[95mWelcome v3.0\e[0m"
 echo -e "  ___                   ___   "
 echo -e " (o o)                 (o o)  "
 echo -e "(  V  ) \e[96mPhoenixthrush\e[0m (  V  ) "
 echo -e "--m-m-------------------m-m-- "
 echo
-echo -e "\e[31mThis Tool just work with Arch Linux!\e[0m"
-echo -e "\e[31mSupport for Debian will coming soon!\e[0m"  
+echo -e "\e[31mThis Tool has full support for Arch Linux!\e[0m"
+echo -e "\e[31mFull Support for Debian will be coming soon!\e[0m"  
 echo -e "\e[31mHave Fun <3\e[0m" 
 echo
 echo -e "\e[92m1 - hack ur mum\e[0m"
-echo -e "\e[92m2 - fuck ur sis\e[0m"
+echo -e "\e[92m2 - fuck ur little sis\e[0m"
 echo -e "\e[92m3 - watch hentai\e[0m"
-echo -e "\e[92m4 - destroy pc\e[0m"
+echo -e "\e[92m4 - destroy ur pc\e[0m"
 echo -e "\e[92m5 - real hacking shit\e[0m"
 echo -e "\e[92m6 - Install and Update!\e[0m"
 echo -e "\e[92m7 - Debian (Beta)\e[0m"
@@ -120,7 +120,7 @@ clear
 echo -e "\e[31mHacking Spot\e[0m"
 echo
 echo -e "\e[96m1 - Create Minecraft Server\e[0m"
-echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
+echo -e "\e[96m2 - Create Hidden Hotspot\e[0m \e[31m[Coming Soon!]\e[0m"
 echo -e "\e[96m3 - Website Phishing\e[0m"
 echo -e "\e[96m4 - Install Arch Linux\e[0m \e[31m<3\e[0m"
 echo -e "\e[96m5 - Update Arch Linux\e[0m"
@@ -171,6 +171,7 @@ tools() {
 
 if [ "$EUID" -ne 0 ]
   then
+  sudo pacman -Syu python python3 python-pip --needed --noconfirm
   cd /opt
   git clone https://aur.archlinux.org/yay-git.git
   cd yay-git
@@ -386,7 +387,7 @@ clear
 echo -e "\e[31mHacking Spot\e[0m"
 echo
 echo -e "\e[96m1 - Create Minecraft Server\e[0m"
-echo -e "\e[96m2 - Create Hidden Hotspot\e[0m"
+echo -e "\e[96m2 - Create Hidden Hotspot\e[0m \e[31m[Coming Soon!]\e[0m"
 echo -e "\e[96m3 - Website Phishing\e[0m"
 echo -e "\e[96m4 - Update Linux\e[0m"
 echo -e "\e[96m5 - Install common Tools!\e[0m"
@@ -419,7 +420,7 @@ debian_tools() {
 
 if [ "$EUID" -ne 0 ]
   then
-  sudo apt update && sudo apt install python python3-pip
+  sudo apt update && sudo apt install python python3 python3-pip
   cd /opt
   git clone https://aur.archlinux.org/yay-git.git
   cd yay-git
@@ -438,10 +439,6 @@ if [ "$EUID" -ne 0 ]
   sudo pip3 install -r requirements.txt
   sudo python setup.py
 
-  cd /opt
-  rm -r setoolkit
-  rm -r yay-git
-  rm -r snapd
   curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
   sudo chmod 755 msfinstall && \
   ./msfinstall
