@@ -55,17 +55,13 @@ aws.duplex.snapchat.com
 api.smoot.apple.com	
 (\.|^)smoot\.apple\.com$	
 (\.|^)apple\.com$	
-star.c10r.facebook.com	
 events.gfe.nvidia.com	
 web.archive.org	
 hentaihaven.org	
 hentaihaven.xxx	
-us-east1-aws.api.sc-gw.com	
-cognac-prod.appspot.com	
 aws.api.snapchat.com	
 de.chaturbate.com	
 www.paypalobjects.com	
-px1.vtrtl.de	
 hgc-cf-cache-1.svonm.com	
 www.gstatic.com	
 entitlements.jwplayer.com	
