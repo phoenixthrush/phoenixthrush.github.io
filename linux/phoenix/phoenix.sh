@@ -406,7 +406,7 @@ case $choice in
 	4)debian_update;;
 	5)debian_tools;;
 	6)arch;;
-	*)clear; hacking;;
+	*)clear; debian;;
 esac
 }
 
