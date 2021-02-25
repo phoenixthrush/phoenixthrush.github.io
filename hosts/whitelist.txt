@@ -106,3 +106,5 @@ aax-eu.amazon-adsystem.com
 (\.|^)amazon\.de$
 audio4-akp-spotify-com.akamaized.net
 img.wonderhowto.com
+support.mozilla.org		
+d33wubrfki0l68.cloudfront.net
