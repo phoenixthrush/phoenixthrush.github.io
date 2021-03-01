@@ -108,3 +108,9 @@ audio4-akp-spotify-com.akamaized.net
 img.wonderhowto.com
 support.mozilla.org		
 d33wubrfki0l68.cloudfront.net
+addons.mozilla.org			
+teams.events.data.microsoft.com			
+2.tlu.dl.delivery.mp.microsoft.com			
+s1.gaming-cdn.com			
+s3.gaming-cdn.com			
+l.instagram.com
