@@ -16,3 +16,4 @@ r3.o.lencr.org
 (\.|^)hwcdn\.net$
 next.reality.news
 ht-cdn.trafficjunky.net.sds.rncdn7.com
+(\.|^)xboxlive\.com$
