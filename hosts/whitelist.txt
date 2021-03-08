@@ -114,3 +114,6 @@ teams.events.data.microsoft.com
 s1.gaming-cdn.com			
 s3.gaming-cdn.com			
 l.instagram.com
+code.jquery.com	
+no-ip.com	
+account.np.ac.playstation.net
