@@ -8,4 +8,4 @@ Follow me if u wanna get a&nbsp;<a href="https://instagram.com/phoenixthrush">:c
 NEW UPDATE!
 DOES NOT FUNCTION PROPERLY
 
-wget https://bit.ly/phoenixsploit phoenix.sh && sudo chmod +x phoenix.sh && sudo ./phoenix.sh
+wget https://bit.ly/phoenixsploit && sudo chmod +x phoenixsploit && sudo ./phoenixsploit
