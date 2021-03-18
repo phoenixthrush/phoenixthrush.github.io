@@ -117,3 +117,7 @@ l.instagram.com
 code.jquery.com	
 no-ip.com	
 account.np.ac.playstation.net
+patreon.com
+canyoublockit.com
+translate.google.com
+tiktok.com
