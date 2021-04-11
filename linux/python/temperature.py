@@ -6,39 +6,53 @@ def celsius_to_kelvin():
     k = c + 273.15
     print()
     print("It would be " + str(k) + " in Kelvin")
+    print("Press Enter to exit!")
+    tmp = input()
 
 def celsius_to_fahrenheit():
     c = float(input("Enter your temperature in Celsius!: "))
     f = 32.0 + 1.8 * c
     print()
     print("It would be " + str(f) + " in Fahrenheit")
+    print("Press Enter to exit!")
+    tmp = input()
 
 def kelvin_to_celsius():
     k = float(input("Enter your temperature in Kelvin!: "))
     c = k - 273.15
     print()
     print("It would be " + str(c) + " in Celsius")
+    print("Press Enter to exit!")
+    tmp = input()
 
 def kelvin_to_fahrenheit():
     k = float(input("Enter your temperature in Kelvin!: "))
     f = k*1.8 - 459.67
     print()
     print("It would be " + str(f) + " in Fahrenheit")
+    print("Press Enter to exit!")
+    tmp = input()
 
 def fahrenheit_to_celsius():
     f = float(input("Enter your temperature in Fahrenheit!: "))
     c = 5.0*(f - 32.0)/9.0
     print()
     print("It would be " + str(c) + " in Celsius")
+    print("Press Enter to exit!")
+    tmp = input()
 
 def fahrenheit_to_kelvin():
     f = float(input("Enter your temperature in Faherenheit!: "))
     k = (f + 459.67)/1.8
     print()
     print("It would be " + str(k) + " in Kelvin")
+    print("Press Enter to exit!")
+    tmp = input()
 
 def temperature():
 
+    print()
+    print("Temperature Converter - Phoenixthrush")
     print()
     print("1 -- Celsius to Kelvin!")
     print("2 -- Celsius to Fahrenheit")
@@ -64,3 +78,7 @@ def temperature():
         fahrenheit_to_kelvin()
     else:
         print("Dude that is not a option!")
+        temperature()
+
+if __name__ == "__main__":
+    temperature()
