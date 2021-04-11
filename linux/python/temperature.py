@@ -1,4 +1,5 @@
 # Made by an Asian - Phoenixthrush
+# Temperature
 
 def celsius_to_kelvin():
     c = float(input("Enter your temperature in Celsius!: "))
@@ -10,33 +11,33 @@ def celsius_to_fahrenheit():
     c = float(input("Enter your temperature in Celsius!: "))
     f = 32.0 + 1.8 * c
     print()
-    print("It would be " + str(f) + " in Kelvin")
+    print("It would be " + str(f) + " in Fahrenheit")
 
 def kelvin_to_celsius():
-    k = float(input("Enter your temperature in Celsius!: "))
+    k = float(input("Enter your temperature in Kelvin!: "))
     c = k - 273.15
     print()
-    print("It would be " + str(c) + " in Kelvin")
+    print("It would be " + str(c) + " in Celsius")
 
 def kelvin_to_fahrenheit():
-    k = float(input("Enter your temperature in Celsius!: "))
+    k = float(input("Enter your temperature in Kelvin!: "))
     f = k*1.8 - 459.67
     print()
-    print("It would be " + str(f) + " in Kelvin")
+    print("It would be " + str(f) + " in Fahrenheit")
 
 def fahrenheit_to_celsius():
-    f = float(input("Enter your temperature in Celsius!: "))
+    f = float(input("Enter your temperature in Fahrenheit!: "))
     c = 5.0*(f - 32.0)/9.0
     print()
-    print("It would be " + str(c) + " in Kelvin")
+    print("It would be " + str(c) + " in Celsius")
 
 def fahrenheit_to_kelvin():
-    f = float(input("Enter your temperature in Celsius!: "))
+    f = float(input("Enter your temperature in Faherenheit!: "))
     k = (f + 459.67)/1.8
     print()
     print("It would be " + str(k) + " in Kelvin")
 
-def menue():
+def temperature():
 
     print()
     print("1 -- Celsius to Kelvin!")
@@ -63,6 +64,3 @@ def menue():
         fahrenheit_to_kelvin()
     else:
         print("Dude that is not a option!")
-
-if __name__ == "__main__":
-    menue()
