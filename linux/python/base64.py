@@ -104,6 +104,9 @@ def menue_encode():
         askforpath_encode_save()
         print("Copied to clipboard!")
         print("Saved to Desktop!")
+        print()
+        print("Press Enter to exit!")
+        input()
     elif save == "n":
         askforpath_encode()
         print("Copied to clipboard!")
@@ -119,6 +122,9 @@ def menue_decode():
         askforpath_decode_save()
         print("Copied to clipboard!")
         print("Saved to Desktop!")
+        print()
+        print("Press Enter to exit!")
+        input()
     elif save == "n":
         askforpath_decode()
         print("Copied to clipboard!")
