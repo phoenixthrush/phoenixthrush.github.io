@@ -3,6 +3,13 @@ def addToClipBoard(text):
     command = 'echo ' + text.strip() + '| clip'
     os.system(command)
 
+def clear():
+    import os
+    if os.name == 'posix':
+        _ = os.system('clear')
+    else:
+        _ = os.system('cls')
+
 def base64_encode(filedata):
     import base64
     data = filedata
@@ -23,7 +30,6 @@ def base64_decode(filedata):
     print()
     print("Decoded String:")
     print(decodedStr)
-    print()
 
 def base64_encode_save(filedata):
     import base64
@@ -39,8 +45,8 @@ def base64_encode_save(filedata):
     desktoppath = os.environ['USERPROFILE']
     desktoppath = desktoppath + "\Desktop"
     desktoppath = desktoppath + "\encoded.txt"
-    f = open("destoppath", "x")
-    f.close
+    f = open(desktoppath, "w+")
+    f.close()
     save = open(desktoppath, "r+")
     save.write(encodedStr)
 
@@ -55,16 +61,16 @@ def base64_decode_save(filedata):
     print()
     print("Decoded String:")
     print(decodedStr)
-    print()
     desktoppath = os.environ['USERPROFILE']
     desktoppath = desktoppath + "\Desktop"
-    desktoppath = desktoppath + "\encoded.txt"
-    f = open("destoppath", "x")
-    f.close
+    desktoppath = desktoppath + "\decoded.txt"
+    f = open(desktoppath, "w+")
+    f.close()
     save = open(desktoppath, "r+")
-    save.write("test")
+    save.write(decodedStr)
 
 def askforpath_encode():
+
     filepath = input("Drag n Drop your file here: ")
     data = open(filepath, "r")
     filedata = data.read()
@@ -96,31 +102,36 @@ def menue_encode():
     save = input("Do you want to save it to the Desktop? [y|n] ")
     if save == "y":
         askforpath_encode_save()
+        print("Copied to clipboard!")
         print("Saved to Desktop!")
     elif save == "n":
         askforpath_encode()
         print("Copied to clipboard!")
     else:
+        clear()
         print("That is not a option!")
+        print()
         menue()
 
 def menue_decode():
     save = input("Do you want to save it to the Desktop? [y|n] ")
     if save == "y":
         askforpath_decode_save()
+        print("Copied to clipboard!")
         print("Saved to Desktop!")
     elif save == "n":
         askforpath_decode()
         print("Copied to clipboard!")
     else:
+        clear()
         print("That is not a option!")
+        print()
         menue()
 
 def menue():
+    clear()
     print("Base64 Encoder/ Decoder - Phoenixthrush v.1.0")
-    #print()
-
-    print("Idk why tf that can´t decode I´m gonna bring version 1.1 and fix this problem")
+    print("Made by my asian cat")
     print()
 
     choice = input("Do you want to encode or decode the file? [e|d] ")
@@ -129,7 +140,9 @@ def menue():
     elif choice == "d":
         menue_decode()
     else:
+        clear()
         print("That is not a option!")
+        print()
         menue()
 
 menue()
