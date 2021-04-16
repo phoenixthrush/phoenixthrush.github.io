@@ -15,8 +15,10 @@ def check_sudo():
     if get_sudo_info() == True:
         print("\033[31mRunning as root!\033[00m")
     else:
-        print("\033[31mPlease run this tool with admin rights!\033[00m")
-        print()
+        print("\033[31mTrying to request admin rigths!\033[00m")
+        current_file = (os.path.abspath(__file__))
+        current_file_new = "sudo " + current_file
+        os.system(current_file_new)
         exit()
 
 def get_os_info():
@@ -35,7 +37,7 @@ def check_os():
         print("\033[31mYou´re System is based on Debian right?\033[00m")
         print()
     elif get_os_info() == "Arch":
-        print("\033[31mYou´re System is based on Arch right?\033[00m")
+        print("\033[31mYour System is based on Arch right?\033[00m")
         print()
     else:
         print("\033[31mIdk what your OS is based on!")
@@ -177,6 +179,13 @@ def common_tools():
 
 def update_linux():
     clear()
+    check_sudo()
+    if get_os_info() == "Debian":
+        os.system("apt update -y")
+        os.system("sudo apt full - upgrade -y")
+        os.system("sudo apt autoremove -y")
+
+    print()
     print("\033[31mUpdating Linux!\033[00m")
     print()
 
