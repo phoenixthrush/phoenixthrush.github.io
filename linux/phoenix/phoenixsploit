@@ -31,6 +31,7 @@ def get_os_info():
 def check_os():
     if get_os_info() == "Debian":
         print("\033[31mYou´re System is based on Debian right?\033[00m")
+        print()
     elif get_os_info() == "Arch":
         print("\033[31mYou´re System is based on Arch right?\033[00m")
         print()
@@ -107,10 +108,79 @@ def second_menue():
     clear()
     check_sudo()
     check_os()
-    print("Hacking Hub")
+    hack_menue()
+    user_exit()
 
 def install_and_update():
     clear()
     print("Updated!")
+
+def hack_menue():
+    print("\033[95mHack Menue\033[00m")
+    print()
+    print("\033[96m1 - Create a Minecraft-Server")
+    print("2 - Create a hidden hotspot")
+    print("3 - Website Phishing (blackeye)")
+    print("4 - Install common tools")
+    print("5 - Update Linux")
+    print("6 - Install Arch Linux\033[00m \033[31m<3\033[00m")
+    print()
+    print("\033[34m0 - Back to menue!\033[00m")
+    print()
+
+    try:
+        choice = int(input("\033[92mPlease choose a option! \033[00m"))
+    except ValueError:
+        clear()
+        hack_menue()
+
+    if choice == 1:
+        minecraft_server()
+        exit()
+    elif choice == 2:
+        website_phishing()
+        exit()
+    elif choice == 3:
+        common_tools()
+        exit()
+    elif choice == 4:
+        update_linux()
+        exit()
+    elif choice == 5:
+        update_linux()
+        exit()
+    elif choice == 6:
+        arch_install()
+        exit()
+    elif choice == 0:
+        menue()
+        exit()
+    else:
+        menue()
+        exit()
+
+def minecraft_server():
+    clear()
+    print("\033[31mInstalling Minecraft Server!\033[00m")
+
+def website_phishing():
+    clear()
+    print("\033[31mStarting blackeye!\033[00m")
+    print()
+
+def common_tools():
+    clear()
+    print("\033[31mInstalling common tools!\033[00m")
+    print()
+
+def update_linux():
+    clear()
+    print("\033[31mUpdating Linux!\033[00m")
+    print()
+
+def arch_install():
+    clear()
+    print("\033[31mStarting Arch installation!\033[00m")
+    print()
 
 menue()
