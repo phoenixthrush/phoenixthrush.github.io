@@ -2,6 +2,7 @@
 import os
 import time
 import shutil
+import subprocess
 
 def get_sudo_info():
     if os.geteuid() == 0:
@@ -19,6 +20,16 @@ def check_sudo():
         current_file = (os.path.abspath(__file__))
         current_file_new = "sudo " + current_file
         os.system(current_file_new)
+        exit()
+
+def check_not_sudo():
+    if get_sudo_info() == False:
+        print()
+        print("\033[31mRunning as standart user!\033[00m")
+    else:
+        clear()
+        print("\033[31mPlease run this script with standart user rigths!\033[00m")
+        print()
         exit()
 
 def get_os_info():
@@ -43,6 +54,32 @@ def check_os():
         print("\033[31mIdk what your OS is based on!")
         print("I´m sorry but this tool only supports Debian and Arch based distros!\033[00m")
         print()
+
+def get_package_info(package):
+    status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + package)
+    if not status[0]:
+        return True
+    else:
+        return False
+
+def check_package(package):
+    if get_package_info(package) == True:
+        print()
+        print("\033[96m" + package + "\033[00m\033[31m is installed!\033[00m")
+        return True
+    else:
+        print()
+        print("\033[96m" + package + "\033[00m\033[31m is not installed!\033[00m")
+        print("\033[95mTrying to install it!\033[00m")
+        print()
+        tmp_package = "sudo apt install " + package + " -y"
+        if get_os_info() == "Debian":
+            os.system(tmp_package)
+        elif get_os_info() == "Arch":
+            os.system("sudo pacman -Syu firefox --needed --noconfirm")
+        else:
+            print("\033[31mNot Debian or Arch based!\033[00m")
+        return False
 
 def clear():
     if os.name == 'posix':
@@ -102,11 +139,19 @@ def menue():
 
 def watch_hentai():
     clear()
-    print("You watched it!")
+    check_not_sudo()
+    if check_package("firefox") == True:
+        print()
+        print("\033[32mOkay buddy let me help you!")
+        os.system("firefox -new -tab ´https://hentaihaven.xxx´")
+    else:
+        print()
+        print("\033[31mCouldn´t install a programm!\033[00m")
 
 def destroy_pc():
     clear()
     print("Destroyed!")
+    print("Just kidding")
 
 def second_menue():
     clear()
