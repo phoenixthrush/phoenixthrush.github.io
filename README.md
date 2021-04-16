@@ -6,6 +6,6 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 <br>
 
 NEW UPDATE!
-DOES NOT FUNCTION PROPERLY
+DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
-wget https://bit.ly/phoenixsploit && sudo chmod +x phoenixsploit && sudo ./phoenixsploit
+wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.sh && sudo chmod +x install.sh && sudo ./install.sh
