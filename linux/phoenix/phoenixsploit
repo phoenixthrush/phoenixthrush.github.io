@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import os
+import time
 
 def get_sudo_info():
     if os.geteuid() == 0:
@@ -182,5 +183,83 @@ def arch_install():
     clear()
     print("\033[31mStarting Arch installation!\033[00m")
     print()
+    if os.path.exists("/etc/phoenixthrush/arch"):
+        print("\033[31mOld files for Arch installation detected!\033[00m")
+        choice = input("\033[96mDo you want to remove the old files? [y|n] \033[00m")
+        if choice == "y":
+            print()
+            os.system("rm -rf /etc/phoenixthrush/arch")
+            print("\033[31mOld files removed!\033[00m")
+            arch_install_step_2()
+            exit()
+
+        elif choice == "n":
+            print()
+            print("\033[31mexiting!\033[00m")
+            time.sleep(3)
+            user_exit()
+            exit()
+    else:
+        arch_install_step_2()
+        exit()
+
+def arch_install_step_2():
+    print()
+    print("Credits picodotdev")
+    print("https://github.com/picodotdev")
+    print()
+    print("WARNING! All data will be erased!")
+    print("Unplug all Drives that are not needed!")
+    print()
+    print("Please burn the official Arch Live ISO to the USB!")
+    print("Boot into it and type: loadkeys [ur keymap like de-latin1 for germany]")
+    print()
+    print("Edit the alis.conf and alis-packages.conf")
+    print("Default password is phoenixthrush")
+    print()
+    input(("\033[95mPress Enter to continue! \033[00m"))
+    arch_install_step_3()
+    exit()
+
+def arch_install_step_3():
+    print()
+    print("\033[96mCreating new Directory at /etc/phoenixthrush/arch\033[00m")
+    os.system("mkdir -p /etc/phoenixthrush")
+    os.system("mkdir /etc/phoenixthrush/arch")
+    print("\033[96mDownloading files that are needed to /etc/phoenixthrush/arch\033[00m")
+    print()
+    os.system("cd /etc/phoenixthrush/arch")
+    os.system("curl https://raw.githubusercontent.com/picodotdev/alis/master/download.sh | bash")
+    os.system("rm alis.conf")
+    os.system("rm alis-packages.conf")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis.conf")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/alis-packages.conf")
+    print()
+    print("\033[96mEditing config files for you!\033[00m")
+    choice = input("\033[96mDo you want to manually edit them? [y|n] \033[00m")
+    if choice == "y":
+        print("\033[96mEditing Files!\033[00m")
+        os.system("nano /etc/phoenixthrush/arch/alis.conf")
+        os.system("nano /etc/phoenixthrush/arch/alis-packages.conf")
+        print("\033[96mManually edited files!\033[00m")
+        print()
+        tmp = input("\033[95mPress Enter to start installation! \033[00m")
+        arch_install_step_4()
+        exit()
+
+    elif choice == "n":
+        print("\033[96mUsing default configs!\033[00m")
+        tmp = input("\033[95mPress Enter to start installation! \033[00m")
+        arch_install_step_4()
+        exit()
+    else:
+        arch_install_step_3()
+        exit()
+
+def arch_install_step_4():
+    os.system("/etc/phoenixthrush/arch/alis.sh")
+    print()
+    print("\033[96mCleaning up files!\033[00m")
+    os.system("rm -rf /etc/phoenixthrush/arch")
 
 menue()
