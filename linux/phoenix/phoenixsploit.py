@@ -99,8 +99,16 @@ def menue_check_sudo_status():
     else:
         print("\033[96mYou have normal user rights!\033[00m")
 
+def run_sudo_menue():
+    clear()
+    check_sudo()
+    current_path = os.path.abspath(__file__)
+    current_path = "sudo python3 " + current_path
+    os.system(current_path)
+    exit()
+
 def random_cat():
-    cat = random.randint(1,9)
+    cat = random.randint(1,10)
     if cat == 1:
         asian_cat_1()
         exit()
@@ -246,7 +254,7 @@ def asian_cat_7():
 (,__....----'''       (,..--''   *asian meow*
     """)
 
-def asian_cat_7():
+def asian_cat_8():
     clear()
     print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
     print(r"""
@@ -258,7 +266,7 @@ def asian_cat_7():
                 ``--..,)       ```----....__,) *bug*
     """)
 
-def asian_cat_8():
+def asian_cat_9():
     clear()
     print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
     print(r"""
@@ -269,7 +277,7 @@ def asian_cat_8():
     / // // //  `-._,_)' // / ``--...____..-' /// / //
         """)
 
-def asian_cat_9():
+def asian_cat_10():
     clear()
     print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
     print(r"""
@@ -345,6 +353,9 @@ def menue():
         exit()
     elif choice == 5:
         remove_phoenixsploit()
+        exit()
+    elif choice == 6:
+        run_sudo_menue()
         exit()
     elif choice == 666:
         random_cat()
@@ -426,6 +437,7 @@ def install_and_update_2():
     os.system("sudo chmod 777 /bin/phoenixupdate")
 
     os.system("sudo python3 /etc/phoenixthrush/update/install.py")
+    print()
 
 def remove_phoenixsploit():
     clear()
