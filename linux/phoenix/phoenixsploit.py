@@ -520,7 +520,7 @@ def hack_menue():
         menue()
         exit()
     else:
-        menue()
+        hack_menue()
         exit()
 
 def minecraft_server():
