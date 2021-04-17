@@ -504,19 +504,20 @@ def minecraft_server():
     clear()
     check_sudo()
     print()
+    check_package("nano")
     check_package("default-jdk")
     check_package("default-jre")
-    check_package("nano")
-    clear()
+    print()
     if os.path.exists("/etc/phoenixthrush/phoenixMC"):
-        choice = input("\033[96mDo you want to install or remove the old Server files? [install|uninstall] \033[00m")
-        if choice == "install":
+        choice = input("\033[96mDo you want to overwrite or remove the old Server files? [overwrite|uninstall] \033[00m")
+        if choice == "overwrite":
             minecraft_server_step_1()
             exit()
         elif choice == "uninstall":
             os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
             os.system("sudo rm /bin/phoenixMC")
             print("\033[31mRemoved Server!\033[00m")
+            print()
         else:
             minecraft_server()
             exit()
@@ -532,14 +533,15 @@ def minecraft_server_step_1():
     print("\033[31mChecking files\033[00m")
     if os.path.exists("/bin/phoenixMC"):
         print("\033[31mFound old bin files!\033[00m")
-        choice = input("\033[96mDo you want to remove them?\033[00m")
+        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
+        print()
         if choice == "y":
             print("\033[31mRemoving Files!\033[00m")
             os.system("sudo rm /bin/phoenixMC")
             print("\033[31mRemoved Files!\033[00m")
         elif choice == "n":
             print("\033[31mExiting Minecraft Installer!\033[00m")
-            time.sleep(5)
+            time.sleep(10)
             user_exit()
             exit()
         else:
@@ -548,12 +550,16 @@ def minecraft_server_step_1():
     else:
         print("\033[96mNo old bin files found!\033[00m")
     if os.path.exists("/etc/phoenixthrush/phoenixMC"):
+        print()
         print("\033[31mFound old Server files!\033[00m")
-        choice = input("\033[96mDo you want to remove them?\033[00m")
+        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
         if choice == "y":
+            print()
             print("\033[31mRemoving Files!\033[00m")
             os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
             print("\033[31mRemoved Files!\033[00m")
+            minecraft_server_step_2()
+            exit()
         elif choice == "n":
             print("\033[31mExiting Minecraft Installer!\033[00m")
             time.sleep(5)
@@ -576,12 +582,12 @@ def minecraft_server_step_2():
     clear()
     print("\033[96mDownloading Minecraft Forge Server jar\033[00m")
     print("\033[96mVersion 1.16.5-36.1.4\033[00m")
+    print()
 
     os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
     os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
     os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/forge-1.16.5-36.1.4-installer.jar")
     print("\033[96mDownloaded jar\033[00m")
-    print()
 
     current_dir = os.getcwd()
     current_dir += "/forge-1.16.5-36.1.4-installer.jar"
@@ -596,20 +602,21 @@ def minecraft_server_step_2():
 def minecraft_server_step_3():
     print()
     try:
-        ram = int(input("\033[96mHow much GB ram do you want for your minecraft server? [1,2,3...,16] \033[00m"))
+        ram = int(input("\033[31mHow much GB ram do you want for your minecraft server? [1,2,3...,16] \033[00m"))
     except ValueError:
         print("\033[31mError wrong input!\033[00m")
         minecraft_server_step_3()
         exit()
 
     if ram < 17 and not ram == 0:
-        print("\033[96mSetting ram to " + str(ram) + "GB\033[00m")
+        print("\033[31mSetting ram to " + str(ram) + "GB\033[00m")
     else:
         print("\033[31mError wrong input!\033[00m")
         minecraft_server_step_3()
         exit()
 
-    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./vanilla-1.16.4.jar nogui"
+    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./forge-1.16.5-36.1.4-installer.jar nogui"
+    print()
     print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
 
     os.system(phoenix_mc_start_command)
@@ -624,6 +631,7 @@ def minecraft_server_step_3():
     minecraft_server_step_4()
 
 def minecraft_server_step_4():
+    print()
     choice = input("\033[96mDo you want to manually edit settings? (recommended) [y|n] \033[00m")
     if choice == "y":
         minecraft_server_config_manually()
@@ -636,7 +644,7 @@ def minecraft_server_step_4():
 
 def minecraft_server_config():
     os.system("nano /etc/phoenixMC/eula.txt")
-    #x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
+    minecraft_eula()
     print("\033[31mYou can start the Server with phoenixMC\033[00m")
     exit()
 
@@ -644,9 +652,13 @@ def minecraft_server_config():
 def minecraft_server_config_manually():
     os.system("nano /etc/phoenixMC/server.properties")
     os.system("nano /etc/phoenixMC/eula.txt")
-    #x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
+    minecraft_eula()
     print("\033[31mYou can start the Server with phoenixMC\033[00m")
     exit()
+
+def minecraft_eula():
+    x = open("/etc/phoenixthrush/phoenixMC/eula.txt", "w")
+    x.write("eula=true")
 
 def hidden_hotspot():
     clear()
