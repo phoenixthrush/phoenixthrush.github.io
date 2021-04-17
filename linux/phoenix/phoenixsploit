@@ -17,6 +17,7 @@ def check_sudo():
         print("\033[31mRunning as root!\033[00m")
     else:
         print("\033[31mTrying to request admin rigths!\033[00m")
+        time.sleep(3)
         current_file = (os.path.abspath(__file__))
         current_file_new = "sudo " + current_file
         os.system(current_file_new)
@@ -95,7 +96,7 @@ def user_exit():
 
 def menue():
     clear()
-    print("\033[95mWelcome v.3.1")
+    print("\033[95mWelcome to Phoenixloit v.3.4")
     print("  ___                   ___   ")
     print(" (o o)                 (o o)  ")
     print("(  V  ) \033[96mPhoenixthrush\033[95m (  V  )")
@@ -109,6 +110,8 @@ def menue():
     print("2 - destroy ur pc")
     print("3 - real hacking shit")
     print("4 - Install and Update!\033[00m \033[31m<3\033[00m")
+    print("\033[92m5 - Remove phoenixsploit!\033[00m")
+
     print()
     print("\033[96m0 - exit\033[00m")
 
@@ -129,6 +132,9 @@ def menue():
         exit()
     elif choice == 4:
         install_and_update()
+        exit()
+    elif choice == 5:
+        remove_phoenixsploit()
         exit()
     elif choice == 0:
         user_exit()
@@ -164,6 +170,19 @@ def install_and_update():
     clear()
     print("Updated!")
 
+def remove_phoenixsploit():
+    clear()
+    check_sudo()
+    print("\033[31mTrying to remove phoenixsploit!\033[00m")
+    os.system("sudo rm -rf /etc/phoenixthrush")
+    os.system("sudo rm /bin/phoenixsploit")
+    os.system("sudo rm /bin/phoenixphish")
+    print("\033[31mSuccessfully uninstalled it!\033[00m")
+    print()
+    print("\033[96mWe had a good time, see ya!\033[31m")
+    print("\033[96mAnd have a nice Day!\033[31m \033[31m<3\033[00m")
+    print()
+
 def hack_menue():
     print("\033[95mHack Menue\033[00m")
     print()
@@ -187,13 +206,13 @@ def hack_menue():
         minecraft_server()
         exit()
     elif choice == 2:
-        website_phishing()
+        hidden_hotspot()
         exit()
     elif choice == 3:
-        common_tools()
+        website_phishing()
         exit()
     elif choice == 4:
-        update_linux()
+        common_tools()
         exit()
     elif choice == 5:
         update_linux()
@@ -212,10 +231,72 @@ def minecraft_server():
     clear()
     print("\033[31mInstalling Minecraft Server!\033[00m")
 
+def hidden_hotspot():
+    clear()
+    print("\033[31mComing soon!\033[00m")
+
 def website_phishing():
     clear()
-    print("\033[31mStarting blackeye!\033[00m")
+    check_sudo()
     print()
+    print("\033[31mStarting blackeye!\033[00m")
+    print("\033[96mChecking for requests!\033[00m")
+    check_package("php")
+    print()
+    if os.path.exists("/etc/phoenixthrush/repo"):
+        print("\033[31mFound existing repo!\033[00m")
+        choice = input("\033[96mDo you want to update it? [y|n] \033[00m")
+        if choice == "y":
+            print()
+            os.system("sudo rm -rf /etc/phoenixthrush/repo")
+            os.system("sudo rm -r /etc/phoenixthrush/repo")
+            current_dir = os.getcwd()
+            tmp_dir = current_dir + "repo"
+            tmp_sh = "rm -r " + tmp_dir
+            os.system(tmp_sh)
+
+            print("\033[96mDownloading files!\033[00m")
+            os.system("git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo")
+            print()
+            print("\033[96mCopying files!\033[00m")
+
+            current_dir = os.getcwd()
+            current_dir += "/repo"
+            original = current_dir
+            target = "/etc/phoenixthrush/repo"
+            shutil.move(original, target)
+
+            print("\033[96mInstalling files!\033[00m")
+            x = open("/bin/phoenixphish", "x")
+            x.write("sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
+            os.system("sudo chmod +x /bin/phoenixphish")
+            os.system("sudo chmod 777 /bin/phoenixphish")
+            print()
+            print("\033[31mYou can start it with phoenixphish\033[00m")
+        elif choice == "n":
+            clear()
+            os.system("sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
+    else:
+        print("\033[96mNo old files found!\033[00m")
+        print("\033[96mDownloading files!\033[00m")
+        print()
+        os.system("git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo")
+        print()
+        print("\033[96mCopying files!\033[00m")
+
+        current_dir = os.getcwd()
+        current_dir += "/repo"
+        original = current_dir
+        target = "/etc/phoenixthrush/repo"
+        shutil.move(original, target)
+
+        print("\033[96mInstalling files!\033[00m")
+        x = open("/bin/phoenixphish", "x")
+        x.write("sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
+        os.system("sudo chmod +x /bin/phoenixphish")
+        os.system("sudo chmod 777 /bin/phoenixphish")
+        print()
+        print("\033[31mYou can start it with phoenixphish\033[00m")
 
 def common_tools():
     clear()
