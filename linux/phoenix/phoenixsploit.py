@@ -385,7 +385,7 @@ def destroy_pc():
 
 def second_menue():
     clear()
-    check_sudo()
+    menue_check_sudo_status()
     check_os()
     hack_menue()
     user_exit()
