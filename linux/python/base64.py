@@ -1,17 +1,17 @@
+import base64
+import os
+
 def addToClipBoard(text):
-    import os
     command = 'echo ' + text.strip() + '| clip'
     os.system(command)
 
 def clear():
-    import os
     if os.name == 'posix':
         _ = os.system('clear')
     else:
         _ = os.system('cls')
 
 def base64_encode(filedata):
-    import base64
     data = filedata
     encodedBytes = base64.b64encode(data.encode("utf-8"))
     encodedStr = str(encodedBytes, "utf-8")
@@ -22,7 +22,6 @@ def base64_encode(filedata):
     print()
 
 def base64_decode(filedata):
-    import base64
     data = filedata
     decodedBytes = base64.b64decode(data.encode("utf-8"))
     decodedStr = str(decodedBytes, "utf-8")
@@ -32,8 +31,6 @@ def base64_decode(filedata):
     print(decodedStr)
 
 def base64_encode_save(filedata):
-    import base64
-    import os
     data = filedata
     encodedBytes = base64.b64encode(data.encode("utf-8"))
     encodedStr = str(encodedBytes, "utf-8")
@@ -52,8 +49,6 @@ def base64_encode_save(filedata):
 
 
 def base64_decode_save(filedata):
-    import base64
-    import os
     data = filedata
     decodedBytes = base64.b64decode(data.encode("utf-8"))
     decodedStr = str(decodedBytes, "utf-8")
@@ -70,7 +65,6 @@ def base64_decode_save(filedata):
     save.write(decodedStr)
 
 def askforpath_encode():
-
     filepath = input("Drag n Drop your file here: ")
     data = open(filepath, "r")
     filedata = data.read()
