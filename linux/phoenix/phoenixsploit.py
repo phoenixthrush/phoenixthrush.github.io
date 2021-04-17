@@ -961,7 +961,7 @@ def arch_install_step_4():
 def base64():
     clear()
     check_sudo()
-    if os.path.exists("/etc/phoenixthrush/base64.py"):
+    if os.path.exists("/etc/phoenixthrush/phoenix_base64"):
         base64_1()
         exit()
     else:
@@ -971,12 +971,12 @@ def base64():
         print()
         os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/python/base64.py")
         print("\033[96mDownloaded it!\033[00m")
-        print("\033[96mMoving file to /etc/phoenixthrush/base64.py!\033[00m")
+        print("\033[96mMoving file to /etc/phoenixthrush/phoenix_base64!\033[00m")
         print()
         current_dir1 = os.getcwd()
         current_dir1 += "/base64.py"
         original1 = current_dir1
-        target1 = "/etc/phoenixthrush/base64.py"
+        target1 = "/etc/phoenixthrush/phoenix_base64"
         shutil.move(original1, target1)
         time.sleep(3)
         base64_1()
