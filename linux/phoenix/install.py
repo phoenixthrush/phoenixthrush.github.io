@@ -13,6 +13,7 @@ def clear():
 clear()
 print("\033[31m[*]\033[00m \033[96mChecking if old files are installed...\033[00m")
 if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
+    print("\033[31m[*]\033[00m \033[96mOld files detected...\033[00m")
     os.system("rm /etc/phoenixthrush/phoenixsploit")
     print("\033[31m[*]\033[00m \033[96mOld files removed...\033[00m")
 else:
@@ -48,9 +49,10 @@ print("\033[31m[*]\033[00m \033[96mCreating launcher for phoenixsploit...\033[00
 filewrite = open("/bin/phoenixsploit", "w")
 filewrite.write("clear && python3 /etc/phoenixthrush/phoenixsploit")
 filewrite.close()
-print("\033[31m[*]\033[00m \033[96mDone. Chmoding +x....\033[00m")
+print("\033[31m[*]\033[00m \033[96mDone. Chmoding +x...\033[00m")
 os.system("sudo chmod +x /etc/phoenixthrush/phoenixsploit")
 os.system("sudo chmod 777 /etc/phoenixthrush/phoenixsploit")
-os.system("phoenixsploit")
+os.system("sudo chmod +x /bin/phoenixsploit")
+os.system("sudo chmod 777 /bin/phoenixsploit")
 print()
 print("\033[31m[*]\033[00m \033[31mFinished. Run 'phoenixsploit' to start it!\033[00m")
