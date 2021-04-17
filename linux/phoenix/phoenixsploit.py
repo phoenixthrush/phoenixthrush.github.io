@@ -426,7 +426,6 @@ def install_and_update_2():
     os.system("sudo chmod 777 /bin/phoenixupdate")
 
     os.system("sudo python3 /etc/phoenixthrush/update/install.py")
-    print()
 
 def remove_phoenixsploit():
     clear()
