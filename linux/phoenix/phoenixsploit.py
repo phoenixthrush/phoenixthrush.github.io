@@ -213,11 +213,11 @@ def install_and_update_2():
         pass
 
     x = open("/bin/phoenixupdate", "x")
-    x.write("clear && sudo bash /etc/phoenixthrush/update/install.py")
+    x.write("clear && sudo python3 /etc/phoenixthrush/update/install.py")
     os.system("sudo chmod +x /bin/phoenixupdate")
     os.system("sudo chmod 777 /bin/phoenixupdate")
 
-    os.system("sudo bash /etc/phoenixthrush/update/install.py")
+    os.system("sudo python3 /etc/phoenixthrush/update/install.py")
     print()
     print("\033[31mUpdated!\033[00m")
     print("\033[31mYou can also run phoenixupdate to update phoenixsploit!\033[00m")
