@@ -9,11 +9,11 @@ NEW UPDATE!
 DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
 Method 1: <br>
-sudo su
+sudo su <br>
 curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3
 
 Method 2: <br>
-curl https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py > install && \
-  chmod 777 install && \
-  ./install
-  rm ./install
+curl https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py > install && \ <br>
+chmod 777 install && \ <br>
+./install \ <br>
+rm ./install
