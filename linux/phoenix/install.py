@@ -33,6 +33,7 @@ else:
     pass
 
 os.system("mkdir -p /etc/phoenixthrush")
+os.system("sudo chmod 777 /etc/phoenixthrush")
 print("\033[31m[*]\033[00m \033[96mDownloading package from github...\033[00m")
 print()
 os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/phoenixsploit.py")
@@ -48,6 +49,7 @@ filewrite = open("/bin/phoenixsploit", "w")
 filewrite.write("clear && python3 /etc/phoenixthrush/phoenixsploit")
 filewrite.close()
 print("\033[31m[*]\033[00m \033[96mDone. Chmoding +x....\033[00m")
-subprocess.Popen("chmod +x /bin/phoenixsploit", shell=True).wait()
+os.system("sudo chmod +x /etc/phoenixthrush/phoenixsploit")
+os.system("phoenixsploit")
 print()
 print("\033[31m[*]\033[00m \033[31mFinished. Run 'phoenixsploit' to start it!\033[00m")
