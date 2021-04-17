@@ -92,9 +92,17 @@ def user_exit():
     print("Have a nice Day!\033[00m \033[31m<3\033[00m")
     print()
 
+def menue_check_sudo_status():
+    if get_sudo_info() == True:
+        print("\033[96mYou are sudo!\033[00m")
+    else:
+        print("\033[96mYou have normal user rights!\033[00m")
+
+
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixloit v.3.4")
+    print("\033[95mWelcome to Phoenixsploit v.3.4\033[00m")
+    menue_check_sudo_status()
     print("  ___                   ___   ")
     print(" (o o)                 (o o)  ")
     print("(  V  ) \033[96mPhoenixthrush\033[95m (  V  )")
@@ -168,6 +176,8 @@ def install_and_update():
     clear()
     check_sudo()
     print()
+    print("\033[31mChecking dependency\033[00m")
+    print()
     check_package("wget")
     check_package("python3")
     if os.path.exists("/etc/phoenixthrush/update"):
@@ -201,7 +211,7 @@ def install_and_update_2():
         os.system("sudo rm /bin/phoenixupdate")
     else:
         pass
-    
+
     x = open("/bin/phoenixupdate", "x")
     x.write("clear && sudo bash /etc/phoenixthrush/update/install.py")
     os.system("sudo chmod +x /bin/phoenixupdate")
@@ -222,17 +232,17 @@ def remove_phoenixsploit():
         os.system("sudo rm /bin/phoenixsploit")
     else:
         pass
-    
+
     if os.path.exists("/bin/phoenixphish"):
         os.system("sudo rm /bin/phoenixphish")
     else:
         pass
-    
+
     if os.path.exists("/bin/phoenixupdate"):
         os.system("sudo rm /bin/phoenixupdate")
     else:
         pass
-    
+
     print("\033[31mSuccessfully uninstalled it!\033[00m")
     print()
     print("\033[96mWe had a good time, see ya!\033[31m")
