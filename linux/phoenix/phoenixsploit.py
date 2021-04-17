@@ -313,7 +313,7 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.9\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.3.7\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
@@ -961,7 +961,7 @@ def arch_install_step_4():
 def base64():
     clear()
     check_sudo()
-    if os.path.exists("/etc/phoenixthrush/phoenix_base64"):
+    if os.path.exists("/etc/phoenixthrush/phoenix_base64.py"):
         base64_1()
         exit()
     else:
@@ -976,7 +976,7 @@ def base64():
         current_dir1 = os.getcwd()
         current_dir1 += "/base64.py"
         original1 = current_dir1
-        target1 = "/etc/phoenixthrush/phoenix_base64"
+        target1 = "/etc/phoenixthrush/phoenix_base64.py"
         shutil.move(original1, target1)
         time.sleep(3)
         base64_1()
