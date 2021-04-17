@@ -984,7 +984,7 @@ def base64():
 
 def base64_1():
     import phoenix_base64
-    phoenix_base64.base64()
+    phoenix_base64.menue()
 
 if __name__ == "__main__":
     menue()
