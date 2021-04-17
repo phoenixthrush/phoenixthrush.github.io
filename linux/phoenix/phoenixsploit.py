@@ -427,12 +427,11 @@ def install_and_update_2():
 
     os.system("sudo python3 /etc/phoenixthrush/update/install.py")
     print()
-    print("\033[31mUpdated!\033[00m")
-    print("\033[31mYou can also run phoenixupdate to update phoenixsploit!\033[00m")
 
 def remove_phoenixsploit():
     clear()
     check_sudo()
+    print()
     print("\033[31mTrying to remove phoenixsploit!\033[00m")
     os.system("sudo rm -rf /etc/phoenixthrush")
 
