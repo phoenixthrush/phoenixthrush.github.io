@@ -94,7 +94,7 @@ def user_exit():
 
 def menue_check_sudo_status():
     if get_sudo_info() == True:
-        print("\033[96mYou are sudo!\033[00m")
+        print("\033[96mYou have \033[31msudo\033[96m rights!\033[00m")
     else:
         print("\033[96mYou have normal user rights!\033[00m")
 
