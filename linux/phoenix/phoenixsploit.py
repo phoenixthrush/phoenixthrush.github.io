@@ -143,7 +143,7 @@ def random_cat():
 
 def asian_cat_1():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
         _..---...,""-._     ,/}/)
      .''        ,      ``..'(/-<
@@ -157,7 +157,7 @@ def asian_cat_1():
 
 def asian_cat_2():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
    |\---/|
    | ,_, |
@@ -169,7 +169,7 @@ def asian_cat_2():
 
 def asian_cat_3():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
  ,_     _
  |\\_,-~/
@@ -185,7 +185,7 @@ def asian_cat_3():
 
 def asian_cat_4():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
   ,-.       _,---._ __  / \
  /  )    .-'       `./ /   \
@@ -202,7 +202,7 @@ def asian_cat_4():
 
 def asian_cat_5():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
        _                        
        \`*-.                    
@@ -223,7 +223,7 @@ def asian_cat_5():
 
 def asian_cat_6():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
            ___
           (___)
@@ -244,7 +244,7 @@ def asian_cat_6():
 
 def asian_cat_7():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
         _,'|             _.-''``-...___..--';)
        /_ \'.      __..-' ,      ,--...--'''
@@ -256,7 +256,7 @@ def asian_cat_7():
 
 def asian_cat_8():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
 (:`--..___...-''``-._             |`._
   ```--...--.      . `-..__      .`/ _\  
@@ -268,7 +268,7 @@ def asian_cat_8():
 
 def asian_cat_9():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
               __..--''``---....___   _..._    __
     /// //_.-'    .-/";  `        ``<._  ``.''_ `. / // /
@@ -279,7 +279,7 @@ def asian_cat_9():
 
 def asian_cat_10():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
     print(r"""
        ,
        \`-._           __
@@ -376,7 +376,7 @@ def watch_hentai():
         os.system("firefox -new -tab ´https://hentaihaven.xxx´")
     else:
         print()
-        print("\033[31mCouldn´t install a programm!\033[00m")
+        print("\033[31mCouldn´t install a program!\033[00m")
 
 def destroy_pc():
     clear()
@@ -944,4 +944,5 @@ def arch_install_step_4():
     os.system("rm -rf /etc/phoenixthrush/arch")
     print("\033[96mCleaned files!\033[00m")
 
-menue()
+if __name__ == "__main__":
+    menue()
