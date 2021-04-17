@@ -65,11 +65,9 @@ def get_package_info(package):
 
 def check_package(package):
     if get_package_info(package) == True:
-        print()
         print("\033[96m" + package + "\033[00m\033[31m is installed!\033[00m")
         return True
     else:
-        print()
         print("\033[96m" + package + "\033[00m\033[31m is not installed!\033[00m")
         print("\033[95mTrying to install it!\033[00m")
         print()
@@ -168,15 +166,73 @@ def second_menue():
 
 def install_and_update():
     clear()
-    print("Updated!")
+    check_sudo()
+    print()
+    check_package("wget")
+    check_package("python3")
+    if os.path.exists("/etc/phoenixthrush/update"):
+        print()
+        print("\033[96mOld files found!\033[00m")
+        print("\033[96mDeleting old files\033[00m")
+        os.system("sudo rm -rf /etc/phoenixthrush/update")
+        os.system("sudo rm -r /etc/phoenixthrush/update")
+        os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
+        print("\033[96mDeleted old files!\033[00m")
+    else:
+        install_and_update_2()
+        exit()
+
+def install_and_update_2():
+    print()
+    print("\033[96mCreating new Directory\033[00m")
+    os.system("mkdir -p /etc/phoenixthrush")
+    os.system("mkdir -p /etc/phoenixthrush/update")
+    print("\033[96mDownloading files!\033[00m")
+    print()
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py")
+
+    current_dir = os.getcwd()
+    current_dir += "/install.py"
+    original = current_dir
+    target = "/etc/phoenixthrush/update"
+    shutil.move(original, target)
+
+    if os.path.exists("/bin/phoenixupdate"):
+        os.system("sudo rm /bin/phoenixupdate")
+    else:
+        pass
+    
+    x = open("/bin/phoenixupdate", "x")
+    x.write("clear && sudo bash /etc/phoenixthrush/update/install.py")
+    os.system("sudo chmod +x /bin/phoenixupdate")
+    os.system("sudo chmod 777 /bin/phoenixupdate")
+
+    os.system("sudo bash /etc/phoenixthrush/update/install.py")
+    print()
+    print("\033[31mUpdated!\033[00m")
+    print("\033[31mYou can also run phoenixupdate to update phoenixsploit!\033[00m")
 
 def remove_phoenixsploit():
     clear()
     check_sudo()
     print("\033[31mTrying to remove phoenixsploit!\033[00m")
     os.system("sudo rm -rf /etc/phoenixthrush")
-    os.system("sudo rm /bin/phoenixsploit")
-    os.system("sudo rm /bin/phoenixphish")
+
+    if os.path.exists("/bin/phoenixsploit"):
+        os.system("sudo rm /bin/phoenixsploit")
+    else:
+        pass
+    
+    if os.path.exists("/bin/phoenixphish"):
+        os.system("sudo rm /bin/phoenixphish")
+    else:
+        pass
+    
+    if os.path.exists("/bin/phoenixupdate"):
+        os.system("sudo rm /bin/phoenixupdate")
+    else:
+        pass
+    
     print("\033[31mSuccessfully uninstalled it!\033[00m")
     print()
     print("\033[96mWe had a good time, see ya!\033[31m")
