@@ -47,7 +47,7 @@ def get_os_info():
 
 def check_os():
     if get_os_info() == "Debian":
-        print("\033[31mYour System System is based on Debian right?\033[00m")
+        print("\033[31mYour System is based on Debian right?\033[00m")
         print()
     elif get_os_info() == "Arch":
         print("\033[31mYour System is based on Arch right?\033[00m")
@@ -313,7 +313,7 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.7\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.3.8\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
