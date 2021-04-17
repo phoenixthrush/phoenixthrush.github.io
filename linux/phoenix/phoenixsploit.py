@@ -4,7 +4,6 @@ import time
 import shutil
 import subprocess
 import random
-import phoenix_base64
 
 def get_sudo_info():
     if os.geteuid() == 0:
@@ -963,7 +962,7 @@ def base64():
     clear()
     check_sudo()
     if os.path.exists("/etc/phoenixthrush/base64.py"):
-        phoenix_base64.base64()
+        base64_1()
         exit()
     else:
         print("\033[31mDidn´t found installed base64 file!\033[00m")
@@ -980,8 +979,12 @@ def base64():
         target1 = "/etc/phoenixthrush/base64.py"
         shutil.move(original1, target1)
         time.sleep(3)
-        phoenix_base64.base64()
+        base64_1()
         exit()
+
+def base64_1():
+    import phoenix_base64
+    phoenix_base64.base64()
 
 if __name__ == "__main__":
     menue()
