@@ -481,6 +481,7 @@ def hack_menue():
     print("\033[96m4 - Install common tools\033[00m")
     print("\033[96m5 - Update Linux\033[00m")
     print("\033[96m6 - Install Arch Linux\033[00m \033[31m<3\033[00m")
+    print("\033[96m7 - Base64 Encoder/ Decoder\033[00m \033[31m<3\033[00m")
     print()
     print("\033[34m0 - Back to menue!\033[00m")
     print()
@@ -508,6 +509,9 @@ def hack_menue():
         exit()
     elif choice == 6:
         arch_install()
+        exit()
+    elif choice == 7:
+        base64()
         exit()
     elif choice == 0:
         menue()
@@ -943,6 +947,28 @@ def arch_install_step_4():
     print("\033[96mCleaning up files!\033[00m")
     os.system("rm -rf /etc/phoenixthrush/arch")
     print("\033[96mCleaned files!\033[00m")
+
+def base64():
+    clear()
+    check_sudo()
+    if os.path.exists("/etc/phoenixthrush/repo/linux/python/base64.py"):
+        os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
+        exit()
+    else:
+        print("\033[31mDidn´t found installed base64 file!\033[00m")
+        print("\033[96mTrying to download it!\033[00m")
+        print()
+        os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/python/base64.py")
+        print("\033[96mDownloaded it!\033[00m")
+        print("\033[96mMoving file to /etc/phoenixthrush/repo/linux/python/base64.py!\033[00m")
+        current_dir = os.getcwd()
+        current_dir += "/base64.py"
+        original = current_dir
+        target = "/etc/phoenixthrush/arch/alis-recovery-reboot.sh"
+        shutil.move(original, target)
+        time.sleep(3)
+        os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
+        exit()
 
 if __name__ == "__main__":
     menue()
