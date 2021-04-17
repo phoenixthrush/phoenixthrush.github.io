@@ -268,7 +268,7 @@ def website_phishing():
 
             print("\033[96mInstalling files!\033[00m")
             x = open("/bin/phoenixphish", "x")
-            x.write("sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
+            x.write("clear && sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
             os.system("sudo chmod +x /bin/phoenixphish")
             os.system("sudo chmod 777 /bin/phoenixphish")
             print()
@@ -292,7 +292,7 @@ def website_phishing():
 
         print("\033[96mInstalling files!\033[00m")
         x = open("/bin/phoenixphish", "x")
-        x.write("sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
+        x.write("clear && sudo bash /etc/phoenixthrush/repo/linux/blackeye/blackeye.sh")
         os.system("sudo chmod +x /bin/phoenixphish")
         os.system("sudo chmod 777 /bin/phoenixphish")
         print()
