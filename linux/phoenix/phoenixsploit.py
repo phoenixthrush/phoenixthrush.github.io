@@ -46,7 +46,7 @@ def get_os_info():
 
 def check_os():
     if get_os_info() == "Debian":
-        print("\033[31mYou´re System is based on Debian right?\033[00m")
+        print("\033[31mYour System System is based on Debian right?\033[00m")
         print()
     elif get_os_info() == "Arch":
         print("\033[31mYour System is based on Arch right?\033[00m")
@@ -374,11 +374,11 @@ def update_linux():
     check_sudo()
     if get_os_info() == "Debian":
         os.system("apt update -y")
-        os.system("sudo apt full - upgrade -y")
+        os.system("sudo apt full-upgrade -y")
         os.system("sudo apt autoremove -y")
 
     print()
-    print("\033[31mUpdating Linux!\033[00m")
+    print("\033[31mUpdated Linux!\033[00m")
     print()
 
 def arch_install():
