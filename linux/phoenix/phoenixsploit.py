@@ -313,7 +313,7 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.8\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.3.7\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
@@ -749,6 +749,8 @@ def website_phishing():
 
 def common_tools():
     clear()
+    check_sudo()
+    print()
     print("\033[31mInstalling common tools!\033[00m")
     print()
     check_package("vim")
@@ -766,6 +768,9 @@ def common_tools():
 def update_linux():
     clear()
     check_sudo()
+    print()
+    print("\033[31mUpdating Linux!\033[00m")
+    print()
     if get_os_info() == "Debian":
         os.system("apt update -y")
         os.system("sudo apt full-upgrade -y")
@@ -777,6 +782,8 @@ def update_linux():
 
 def arch_install():
     clear()
+    check_sudo()
+    print()
     check_package("nano")
     print("\033[31mStarting Arch installation!\033[00m")
     print()
