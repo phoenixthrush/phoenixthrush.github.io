@@ -14,6 +14,7 @@ clear()
 print("\033[31m[*]\033[00m \033[96mStarting installation of phoenixsploit...\033[00m")
 print()
 print("\033[31m[*]\033[00m \033[96mChecking if old files are installed...\033[00m")
+
 if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
     print("\033[31m[*]\033[00m \033[96mOld files detected...\033[00m")
     os.system("rm /etc/phoenixthrush/phoenixsploit")
