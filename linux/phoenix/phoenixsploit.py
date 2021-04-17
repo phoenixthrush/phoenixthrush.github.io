@@ -252,7 +252,7 @@ def remove_phoenixsploit():
 def hack_menue():
     print("\033[95mHack Menue\033[00m")
     print()
-    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Coming soon!]\033[00m")
+    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Beta!]\033[00m")
     print("\033[96m2 - Create a hidden hotspot      \033[31m[Coming soon!]\033[00m")
     print("\033[96m3 - Website Phishing (blackeye)\033[00m")
     print("\033[96m4 - Install common tools         \033[31m[Coming soon!]\033[00m")
@@ -298,6 +298,7 @@ def minecraft_server():
     print()
     check_package("default-jdk")
     check_package("default-jre")
+    check_package("nano")
     clear()
     if os.path.exists("/etc/phoenixthrush/phoenixMC"):
         choice = input("\033[96mDo you want to install or remove the old Server files? [install|uninstall] \033[00m")
@@ -404,8 +405,15 @@ def minecraft_server_step_3():
     print("Using " + phoenix_mc_start_command + " as start trigger!")
 
     os.system(phoenix_mc_start_command)
+
+    java_start = str(phoenix_mc_start_command)
+    java_start1 = "clear && " + java_start
+
+    x = open("/bin/phoenixMC", "x")
+    x.write(java_start1)
+    os.system("sudo chmod +x /bin/phoenixMC")
+    os.system("sudo chmod 777 /bin/phoenixMC")
     minecraft_server_step_4()
-    exit()
 
 def minecraft_server_step_4():
     choice = input("Do you want to manually edit settings? (recommended) [y|n] ")
@@ -419,10 +427,19 @@ def minecraft_server_step_4():
         exit()
 
 def minecraft_server_config():
-    x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
+    os.system("nano /etc/phoenixMC/eula.txt")
+    #x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
+    print("You can start the Server with phoenixMC")
+    exit()
+
 
 def minecraft_server_config_manually():
-    x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
+    os.system("nano /etc/phoenixMC/server.properties")
+    os.system("nano /etc/phoenixMC/eula.txt")
+    #x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
+    print("You can start the Server with phoenixMC")
+    exit()
+
 
 def hidden_hotspot():
     clear()
@@ -510,6 +527,7 @@ def update_linux():
 
 def arch_install():
     clear()
+    check_package("nano")
     print("\033[31mStarting Arch installation!\033[00m")
     print()
     if os.path.exists("/etc/phoenixthrush/arch"):
