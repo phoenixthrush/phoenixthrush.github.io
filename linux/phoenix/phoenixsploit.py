@@ -76,7 +76,7 @@ def check_package(package):
         if get_os_info() == "Debian":
             os.system(tmp_package)
         elif get_os_info() == "Arch":
-            os.system("sudo pacman -Syu firefox --needed --noconfirm")
+            os.system("sudo pacman -Syu " + package + " --needed --noconfirm")
         else:
             print("\033[31mNot Debian or Arch based!\033[00m")
         return False
@@ -467,7 +467,7 @@ def hack_menue():
     print("\033[96m1 - Create a Minecraft-Server    \033[31m[Beta!]\033[00m")
     print("\033[96m2 - Create a hidden hotspot      \033[31m[Coming soon!]\033[00m")
     print("\033[96m3 - Website Phishing (blackeye)\033[00m")
-    print("\033[96m4 - Install common tools         \033[31m[Coming soon!]\033[00m")
+    print("\033[96m4 - Install common tools\033[00m")
     print("\033[96m5 - Update Linux\033[00m")
     print("\033[96m6 - Install Arch Linux\033[00m \033[31m<3\033[00m")
     print()
@@ -735,6 +735,17 @@ def website_phishing():
 def common_tools():
     clear()
     print("\033[31mInstalling common tools!\033[00m")
+    print()
+    check_package("vim")
+    check_package("nano")
+    check_package("neofetch")
+    check_package("htop")
+    check_package("default-jdk")
+    check_package("default-jre")
+    check_package("python3")
+    check_package("python3-pip")
+    print()
+    print("\033[31mCommon tools are installed!\033[00m")
     print()
 
 def update_linux():
