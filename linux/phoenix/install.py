@@ -1,21 +1,53 @@
 #!/usr/bin/python
 
-from __future__ import print_function
 import subprocess
 import shutil
 import os
-print("[*] Installing phoenixsploit to /etc/phoenixthrush/update...")
-os.system("rm /etc/phoenixthrush/phoenixsploit")
+
+def clear():
+    if os.name == 'posix':
+        _ = os.system('clear')
+    else:
+        _ = os.system('cls')
+
+clear()
+print("\033[31m[*]\033[00m \033[96mChecking if old files are installed...\033[00m")
+if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
+    os.system("rm /etc/phoenixthrush/phoenixsploit")
+    print("\033[31m[*]\033[00m \033[96mOld files removed...\033[00m")
+else:
+    print("\033[31m[*]\033[00m \033[96mNo old files were found...\033[00m")
+    pass
+
+if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
+    print("\033[96mFound phoenixsploit in /etc/phoenixthrush\033[00m")
+    print("\033[96mRemoving phoenixsploit in /etc/phoenixthrush\033[00m")
+    os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
+    if os.path.exists("/etc/phoenixthrush/update"):
+        print("\033[96mFound dir in /etc/phoenixthrush/update\033[00m")
+        print("\033[96mRemoving dir in /etc/phoenixthrush/update\033[00m")
+        os.system("rm -rf /etc/phoenixthrush/update")
+    else:
+        pass
+else:
+    pass
+
+os.system("mkdir -p /etc/phoenixthrush")
+print("\033[31m[*]\033[00m \033[96mDownloading package from github...\033[00m")
+print()
 os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/phoenixsploit.py")
+print("\033[31m[*]\033[00m \033[96mMoving files to install dir...\033[00m")
 current_dir = os.getcwd()
 current_dir += "/phoenixsploit.py"
 original = current_dir
 target = "/etc/phoenixthrush/phoenixsploit"
 shutil.move(original, target)
-print("[*] Creating launcher for phoenixsploit...")
+
+print("\033[31m[*]\033[00m \033[96mCreating launcher for phoenixsploit...\033[00m")
 filewrite = open("/bin/phoenixsploit", "w")
-filewrite.write("#!/bin/sh\ncd /etc/phoenixthrush/phoenixsploit")
+filewrite.write("clear && python3 /etc/phoenixthrush/phoenixsploit")
 filewrite.close()
-print("[*] Done. Chmoding +x.... ")
+print("\033[31m[*]\033[00m \033[96mDone. Chmoding +x....\033[00m")
 subprocess.Popen("chmod +x /bin/phoenixsploit", shell=True).wait()
-print("[*] Finished. Run 'phoenixsploit' to start it!")
+print()
+print("\033[31m[*]\033[00m \033[31mFinished. Run 'phoenixsploit' to start it!\033[00m")
