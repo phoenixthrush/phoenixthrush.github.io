@@ -965,6 +965,8 @@ def base64():
         os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
         exit()
     else:
+        os.system("sudo mkdir -p /etc/phoenixthrush/repo/linux/python/")
+        os.system("sudo chmod 777 /etc/phoenixthrush/repo/linux/python/")
         print("\033[31mDidn´t found installed base64 file!\033[00m")
         print()
         print("\033[96mTrying to download it!\033[00m")
