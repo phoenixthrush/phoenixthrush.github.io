@@ -15,4 +15,4 @@ curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.i
 Method 2: <br>
 curl https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py > install && \ <br>
 sudo chmod +x install && \ <br>
-sudo python3 install \
+sudo python3 install
