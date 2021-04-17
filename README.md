@@ -8,10 +8,10 @@ NEW UPDATE!
 DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
 Method 1: <br>
-sudo su <br>
-curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3
-
-Method 2: <br>
 curl https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py > install && \ <br>
 sudo chmod +x install && \ <br>
 sudo python3 install
+
+Method 2: <br>
+sudo su <br>
+curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3
