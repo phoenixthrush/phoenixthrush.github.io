@@ -513,6 +513,9 @@ def hack_menue():
     elif choice == 7:
         base64()
         exit()
+    elif choice == 666:
+        random_cat()
+        exit()
     elif choice == 0:
         menue()
         exit()
@@ -973,7 +976,7 @@ def base64():
         current_dir1 = os.getcwd()
         current_dir1 += "/base64.py"
         original1 = current_dir1
-        target1 = "/etc/phoenixthrush/arch/alis-recovery-reboot.sh"
+        target1 = "/etc/phoenixthrush/repo/linux/python/base64.py"
         shutil.move(original1, target1)
         time.sleep(3)
         os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
