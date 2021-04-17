@@ -17,7 +17,7 @@ print("\033[31m[*]\033[00m \033[96mChecking if old files are installed...\033[00
 
 if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
     print("\033[31m[*]\033[00m \033[96mOld files detected...\033[00m")
-    os.system("rm /etc/phoenixthrush/phoenixsploit")
+    os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
     print("\033[31m[*]\033[00m \033[96mOld files removed...\033[00m")
 else:
     print("\033[31m[*]\033[00m \033[96mNo old files were found...\033[00m")
@@ -30,7 +30,7 @@ if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
     if os.path.exists("/etc/phoenixthrush/update"):
         print("\033[96mFound dir in /etc/phoenixthrush/update\033[00m")
         print("\033[96mRemoving dir in /etc/phoenixthrush/update\033[00m")
-        os.system("rm -rf /etc/phoenixthrush/update")
+        os.system("sudo rm -rf /etc/phoenixthrush/update")
     else:
         pass
 else:
