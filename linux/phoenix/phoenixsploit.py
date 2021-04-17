@@ -4,6 +4,7 @@ import time
 import shutil
 import subprocess
 import random
+import phoenix_base64
 
 def get_sudo_info():
     if os.geteuid() == 0:
@@ -961,27 +962,25 @@ def arch_install_step_4():
 def base64():
     clear()
     check_sudo()
-    if os.path.exists("/etc/phoenixthrush/repo/linux/python/base64.py"):
-        os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
+    if os.path.exists("/etc/phoenixthrush/base64.py"):
+        phoenix_base64.base64()
         exit()
     else:
-        os.system("sudo mkdir -p /etc/phoenixthrush/repo/linux/python/")
-        os.system("sudo chmod 777 /etc/phoenixthrush/repo/linux/python/")
         print("\033[31mDidn´t found installed base64 file!\033[00m")
         print()
         print("\033[96mTrying to download it!\033[00m")
         print()
         os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/python/base64.py")
         print("\033[96mDownloaded it!\033[00m")
-        print("\033[96mMoving file to /etc/phoenixthrush/repo/linux/python/base64.py!\033[00m")
+        print("\033[96mMoving file to /etc/phoenixthrush/base64.py!\033[00m")
         print()
         current_dir1 = os.getcwd()
         current_dir1 += "/base64.py"
         original1 = current_dir1
-        target1 = "/etc/phoenixthrush/repo/linux/python/base64.py"
+        target1 = "/etc/phoenixthrush/base64.py"
         shutil.move(original1, target1)
         time.sleep(3)
-        os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
+        phoenix_base64.base64()
         exit()
 
 if __name__ == "__main__":
