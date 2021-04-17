@@ -151,4 +151,5 @@ def menue():
         print()
         menue()
 
-menue()
+if __name__ == "__main__"
+    menue()
