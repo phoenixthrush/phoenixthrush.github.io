@@ -3,6 +3,7 @@ import os
 import time
 import shutil
 import subprocess
+import random
 
 def get_sudo_info():
     if os.geteuid() == 0:
@@ -98,12 +99,215 @@ def menue_check_sudo_status():
     else:
         print("\033[96mYou have normal user rights!\033[00m")
 
+def random_cat():
+    cat = random.randint(1,9)
+    if cat == 1:
+        asian_cat_1()
+        exit()
+    elif cat == 2:
+        asian_cat_2()
+        exit()
+    elif cat == 3:
+        asian_cat_3()
+        exit()
+    elif cat == 4:
+        asian_cat_4()
+        exit()
+    elif cat == 5:
+        asian_cat_5()
+        exit()
+    elif cat == 6:
+        asian_cat_6()
+        exit()
+    elif cat == 7:
+        asian_cat_7()
+        exit()
+    elif cat == 8:
+        asian_cat_8()
+        exit()
+    elif cat == 9:
+        asian_cat_9()
+        exit()
+    else:
+        print()
+        print("\033[31mError sorry buddy!\033[00m")
+    exit()
+
+def asian_cat_1():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+        _..---...,""-._     ,/}/)
+     .''        ,      ``..'(/-<
+    /   _      {      )         \
+   ;   _ `.     `.   <         a(
+ ,'   ( \  )      `.  \ __.._ .: y
+(  <\_-) )'-.____...\  `._   //-'
+ `. `-' /-._)))      `-._)))
+   `...'            my asian cat <3
+    """)
+
+def asian_cat_2():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+   |\---/|
+   | ,_, |
+    \_`_/-..----.
+ ___/ `   ' ,""+ \
+(__...'   __\    |`.___.';
+  (_,...'(_,.`__)/'.....+
+    """)
+
+def asian_cat_3():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+ ,_     _
+ |\\_,-~/
+ / _  _ |    ,--.
+(  @  @ )   / ,-'
+ \  _T_/-._( (
+ /         `. \
+|         _  \ |
+ \ \ ,  /      |
+  || |-_\__   /
+ ((_/`(____,-'
+     """)
+
+def asian_cat_4():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+  ,-.       _,---._ __  / \
+ /  )    .-'       `./ /   \
+(  (   ,'            `/    /|
+ \  `-"             \'\   / |
+  `.              ,  \ \ /  |
+   /`.          ,'-`----Y   |
+  (            ;        |   '
+  |  ,-.    ,-'         |  /
+  |  | (   |            | /
+  )  |  \  `.___________|/
+  `--'   `--'
+     """)
+
+def asian_cat_5():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+       _                        
+       \`*-.                    
+        )  _`-.                 
+       .  : `. .                
+       : _   '  \               
+       ; *` _.   `*-._          
+       `-.-'          `-.       
+         ;       `       `.     
+         :.       .        \    
+         . \  .   :   .-'   .   
+         '  `+.;  ;  '      :   
+         :  '  |    ;       ;-. 
+         ; '   : :`-:     _.`* ;
+*bug* .*' /  .*' ; .*`- +'  `*' 
+      `*-*   `*-*  `*-*'
+     """)
+
+def asian_cat_6():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+           ___
+          (___)
+   ____
+ _\___ \  |\_/|
+\     \ \/ , , \ ___
+ \__   \ \ ="= //|||\
+  |===  \/____)_)||||
+  \______|    | |||||
+      _/_|  | | =====
+     (_/  \_)_)
+  _________________
+ (                _)
+  (__   '          )
+    (___    _____)
+        '--'
+    """)
+
+def asian_cat_7():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+        _,'|             _.-''``-...___..--';)
+       /_ \'.      __..-' ,      ,--...--'''
+      <\    .`--'''       `     /'
+       `-';'               ;   ; ;
+ __...--''     ___...--_..'  .;.'
+(,__....----'''       (,..--''   *asian meow*
+    """)
+
+def asian_cat_7():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+(:`--..___...-''``-._             |`._
+  ```--...--.      . `-..__      .`/ _\  
+            `\     '       ```--`.    />
+            : :   :               `:`-'
+             `.:.  `.._--...___     ``--...__      
+                ``--..,)       ```----....__,) *bug*
+    """)
+
+def asian_cat_8():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+              __..--''``---....___   _..._    __
+    /// //_.-'    .-/";  `        ``<._  ``.''_ `. / // /
+   ///_.-' _..--.'_    \                    `( ) ) // //
+   / (_..-' // (< _     ;_..__               ; `' / ///
+    / // // //  `-._,_)' // / ``--...____..-' /// / //
+        """)
+
+def asian_cat_9():
+    clear()
+    print("\033[31mYou found my easteregg and yeah you could see it beacause it´s open-source lmao\033[00m")
+    print(r"""
+       ,
+       \`-._           __
+        \\  `-..____,.'  `.
+         :`.         /    \`.
+         :  )       :      : \
+          ;'        '   ;  |  :
+          )..      .. .:.`.;  :
+         /::...  .:::...   ` ;
+         ; _ '    __        /:\
+         `:o>   /\o_>      ;:. `.
+        `-`.__ ;   __..--- /:.   \
+        === \_/   ;=====_.':.     ;
+         ,/'`--'...`--....        ;
+              ;                    ;
+            .'                      ;
+          .'                        ;
+        .'     ..     ,      .       ;
+       :       ::..  /      ;::.     |
+      /      `.;::.  |       ;:..    ;
+     :         |:.   :       ;:.    ;
+     :         ::     ;:..   |.    ;
+      :       :;      :::....|     |
+      /\     ,/ \      ;:::::;     ;
+    .:. \:..|    :     ; '.--|     ;
+   ::.  :''  `-.,,;     ;'   ;     ;
+.-'. _.'\      / `;      \,__:      \
+`---'    `----'   ;      /    \,.,,,/
+                   `----`              *meow*
+        """)
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.4\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.3.7\033[00m")
     menue_check_sudo_status()
-    print("  ___                   ___   ")
+    print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
     print("(  V  ) \033[96mPhoenixthrush\033[95m (  V  )")
     print("--m-m-------------------m-m--\033[00m")
@@ -115,9 +319,9 @@ def menue():
     print("\033[92m1 - watch hentai")
     print("2 - destroy ur pc")
     print("3 - real hacking shit")
-    print("4 - Install and Update!\033[00m \033[31m<3\033[00m")
-    print("\033[92m5 - Remove phoenixsploit!\033[00m")
-
+    print("4 - Install and Update\033[00m \033[31m<3\033[00m")
+    print("\033[92m5 - Remove phoenixsploit")
+    print("6 - Run as\033[00m \033[31msudo\033[00m")
     print()
     print("\033[96m0 - exit\033[00m")
 
@@ -141,6 +345,9 @@ def menue():
         exit()
     elif choice == 5:
         remove_phoenixsploit()
+        exit()
+    elif choice == 666:
+        random_cat()
         exit()
     elif choice == 0:
         user_exit()
@@ -294,6 +501,7 @@ def hack_menue():
         exit()
 
 def minecraft_server():
+    clear()
     check_sudo()
     print()
     check_package("default-jdk")
@@ -395,14 +603,14 @@ def minecraft_server_step_3():
         exit()
 
     if ram < 17 and not ram == 0:
-        print("Setting ram to " + str(ram) + "GB")
+        print("\033[96mSetting ram to " + str(ram) + "GB\033[00m")
     else:
-        print("Error wrong input!")
+        print("\033[31mError wrong input!\033[00m")
         minecraft_server_step_3()
         exit()
 
     phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./vanilla-1.16.4.jar nogui"
-    print("Using " + phoenix_mc_start_command + " as start trigger!")
+    print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
 
     os.system(phoenix_mc_start_command)
 
@@ -416,7 +624,7 @@ def minecraft_server_step_3():
     minecraft_server_step_4()
 
 def minecraft_server_step_4():
-    choice = input("Do you want to manually edit settings? (recommended) [y|n] ")
+    choice = input("\033[96mDo you want to manually edit settings? (recommended) [y|n] \033[00m")
     if choice == "y":
         minecraft_server_config_manually()
     elif choice == "n":
@@ -429,7 +637,7 @@ def minecraft_server_step_4():
 def minecraft_server_config():
     os.system("nano /etc/phoenixMC/eula.txt")
     #x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
-    print("You can start the Server with phoenixMC")
+    print("\033[31mYou can start the Server with phoenixMC\033[00m")
     exit()
 
 
@@ -437,9 +645,8 @@ def minecraft_server_config_manually():
     os.system("nano /etc/phoenixMC/server.properties")
     os.system("nano /etc/phoenixMC/eula.txt")
     #x = open("/etc/phoenixthrush/phoenixMC/eula.txt")
-    print("You can start the Server with phoenixMC")
+    print("\033[31mYou can start the Server with phoenixMC\033[00m")
     exit()
-
 
 def hidden_hotspot():
     clear()
