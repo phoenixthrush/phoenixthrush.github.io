@@ -971,7 +971,7 @@ def base64():
         print()
         os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/python/base64.py")
         print("\033[96mDownloaded it!\033[00m")
-        print("\033[96mMoving file to /etc/phoenixthrush/phoenix_base64!\033[00m")
+        print("\033[96mMoving file to /etc/phoenixthrush/phoenix_base64.py!\033[00m")
         print()
         current_dir1 = os.getcwd()
         current_dir1 += "/base64.py"
