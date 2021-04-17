@@ -392,9 +392,10 @@ def install_and_update():
         print("\033[96mOld files found!\033[00m")
         print("\033[96mDeleting old files\033[00m")
         os.system("sudo rm -rf /etc/phoenixthrush/update")
-        os.system("sudo rm -r /etc/phoenixthrush/update")
         os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
         print("\033[96mDeleted old files!\033[00m")
+        install_and_update_2()
+        exit()
     else:
         install_and_update_2()
         exit()
@@ -447,6 +448,11 @@ def remove_phoenixsploit():
 
     if os.path.exists("/bin/phoenixupdate"):
         os.system("sudo rm /bin/phoenixupdate")
+    else:
+        pass
+
+    if os.path.exists("/bin/phoenixMC"):
+        os.system("sudo rm /bin/phoenixMC")
     else:
         pass
 
