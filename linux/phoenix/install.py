@@ -2,6 +2,7 @@
 
 from __future__ import print_function
 import subprocess
+import shutil
 import os
 print("[*] Installing phoenixsploit to /etc/phoenixthrush/update...")
 os.system("rm /etc/phoenixthrush/phoenixsploit")
