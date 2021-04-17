@@ -956,16 +956,18 @@ def base64():
         exit()
     else:
         print("\033[31mDidn´t found installed base64 file!\033[00m")
+        print()
         print("\033[96mTrying to download it!\033[00m")
         print()
         os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/python/base64.py")
         print("\033[96mDownloaded it!\033[00m")
         print("\033[96mMoving file to /etc/phoenixthrush/repo/linux/python/base64.py!\033[00m")
-        current_dir = os.getcwd()
-        current_dir += "/base64.py"
-        original = current_dir
-        target = "/etc/phoenixthrush/arch/alis-recovery-reboot.sh"
-        shutil.move(original, target)
+        print()
+        current_dir1 = os.getcwd()
+        current_dir1 += "/base64.py"
+        original1 = current_dir1
+        target1 = "/etc/phoenixthrush/arch/alis-recovery-reboot.sh"
+        shutil.move(original1, target1)
         time.sleep(3)
         os.system("python3 /etc/phoenixthrush/repo/linux/python/base64.py")
         exit()
