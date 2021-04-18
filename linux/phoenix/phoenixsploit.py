@@ -603,19 +603,20 @@ def minecraft_server_step_1():
 def minecraft_server_step_2():
     time.sleep(3)
     clear()
-    print("\033[96mDownloading Minecraft Forge Server jar\033[00m")
-    print("\033[96mVersion 1.16.5-36.1.4\033[00m")
+    print("\033[96mSupport for forge Minecraft Server coming soon!\033[00m")
+    print("\033[96mDownloading Minecraft Server Vanilla jar\033[00m")
+    print("\033[96mVersion 1.16.5\033[00m")
     print()
 
     os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
     os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
-    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/forge-1.16.5-36.1.4-installer.jar")
+    os.system("wget https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar")
     print("\033[96mDownloaded jar\033[00m")
 
     current_dir = os.getcwd()
-    current_dir += "/forge-1.16.5-36.1.4-installer.jar"
+    current_dir += "/server.jar"
     original = current_dir
-    target = "/etc/phoenixthrush/phoenixMC/forge-1.16.5-36.1.4-installer.jar"
+    target = "/etc/phoenixthrush/phoenixMC/server.jar"
     shutil.move(original, target)
 
     print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
@@ -638,7 +639,7 @@ def minecraft_server_step_3():
         minecraft_server_step_3()
         exit()
 
-    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./forge-1.16.5-36.1.4-installer.jar nogui"
+    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./server.jar nogui"
     print()
     print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
 
