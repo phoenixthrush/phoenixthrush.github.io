@@ -81,6 +81,14 @@ def check_package(package):
             print("\033[31mNot Debian or Arch based!\033[00m")
         return False
 
+def check_interface():
+    check_sudo()
+    print()
+    os.system("ifconfig")
+    print()
+    interface = input("\033[96mPlease enter you interface name!\033[00m")
+    return interface
+
 def clear():
     if os.name == 'posix':
         _ = os.system('clear')
@@ -466,6 +474,11 @@ def remove_phoenixsploit():
     else:
         pass
 
+    if os.path.exists("/bin/phoenixMAC"):
+        os.system("sudo rm /bin/phoenixMAC")
+    else:
+        pass
+
     print("\033[31mSuccessfully uninstalled it!\033[00m")
     print()
     print("\033[96mWe had a good time, see ya!\033[31m")
@@ -482,6 +495,7 @@ def hack_menue():
     print("\033[96m5 - Update Linux\033[00m")
     print("\033[96m6 - Install Arch Linux\033[00m \033[31m<3\033[00m")
     print("\033[96m7 - Base64 Encoder/ Decoder\033[00m \033[31m<3\033[00m")
+    print("\033[96m8 - Change MAC Address\033[00m   \033[31m[Coming soon!]\033[00m")
     print()
     print("\033[34m0 - Back to menue!\033[00m")
     print()
@@ -512,6 +526,9 @@ def hack_menue():
         exit()
     elif choice == 7:
         base64()
+        exit()
+    elif choice == 8:
+        change_mac_addr()
         exit()
     elif choice == 666:
         random_cat()
@@ -1038,6 +1055,50 @@ def base64():
         time.sleep(3)
         base64_1()
         exit()
+
+def change_mac_addr():
+    print("Coming soon!")
+    input("If you press enter it will start with a non finished script!")
+    input("Last warning!")
+    input("Ok buddy")
+
+    check_sudo()
+    if os.path.exists("/etc/phoenixthrush/phoenix_mac_status"):
+        macstatus = open("/etc/phoenixthrush/phoenix_mac_status")
+        mac_status = macstatus.read()
+        macstatus.close()
+        if mac_status == 1:
+            print("\033[96mResetting MAC to original state!\033[00m")
+            interface = check_interface()
+            interface = "macchanger -p" + interface
+            os.system(interface)
+            print()
+            exit()
+        elif mac_status == 0:
+            print("\033[96mNo previous MAC change found!\033[00m")
+            change_mac_addr_2()
+        else:
+            os.system("sudo rm /etc/phoenixthrush/phoenix_mac_status")
+    else:
+        pass
+
+def change_mac_addr_2():
+
+    new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status")
+    new_mac_status.write("1")
+    new_mac_status.close()
+
+    print()
+    check_package("macchanger")
+    check_package("net-tools")
+    x = open("/bin/phoenixMAC", "x")
+    x.write("sudo macchanger --random")
+    x.close()
+    os.system("sudo chmod +x /bin/phoenixMAC")
+    os.system("sudo chmod 777 /bin/phoenixMAC")
+    print()
+    print("\033[31mYou can change your mac to a random one by typing phoenixMAC!\033[00m")
+    print("\033[31mRun this menue again to change you mac back!\033[00m")
 
 def base64_1():
     import phoenix_base64
