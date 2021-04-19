@@ -475,7 +475,7 @@ def remove_phoenixsploit():
 def hack_menue():
     print("\033[95mHack Menue\033[00m")
     print()
-    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Beta!]\033[00m")
+    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Support for Forge Server coming soon!]\033[00m")
     print("\033[96m2 - Create a hidden hotspot      \033[31m[Coming soon!]\033[00m")
     print("\033[96m3 - Website Phishing (blackeye)\033[00m")
     print("\033[96m4 - Install common tools\033[00m")
@@ -611,6 +611,7 @@ def minecraft_server_step_2():
     os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
     os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
     os.system("wget https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/server.properties")
     print("\033[96mDownloaded jar\033[00m")
 
     current_dir = os.getcwd()
@@ -618,6 +619,14 @@ def minecraft_server_step_2():
     original = current_dir
     target = "/etc/phoenixthrush/phoenixMC/server.jar"
     shutil.move(original, target)
+
+    current_dir = os.getcwd()
+    current_dir += "/server.properties"
+    original = current_dir
+    target = "/etc/phoenixthrush/phoenixMC/server.properties"
+    shutil.move(original, target)
+
+    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC/server.properties")
 
     print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
     minecraft_server_step_3()
@@ -639,17 +648,16 @@ def minecraft_server_step_3():
         minecraft_server_step_3()
         exit()
 
-    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./server.jar nogui"
+    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./server.jar nogui"
     print()
     print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
-
-    os.system(phoenix_mc_start_command)
 
     java_start = str(phoenix_mc_start_command)
     java_start1 = "clear && " + java_start
 
     x = open("/bin/phoenixMC", "x")
     x.write(java_start1)
+    x.close()
     os.system("sudo chmod +x /bin/phoenixMC")
     os.system("sudo chmod 777 /bin/phoenixMC")
     minecraft_server_step_4()
@@ -667,21 +675,22 @@ def minecraft_server_step_4():
         exit()
 
 def minecraft_server_config():
-    os.system("nano /etc/phoenixMC/eula.txt")
     minecraft_eula()
     print("\033[31mYou can start the Server with phoenixMC\033[00m")
+    print()
     exit()
 
 def minecraft_server_config_manually():
-    os.system("nano /etc/phoenixMC/server.properties")
-    os.system("nano /etc/phoenixMC/eula.txt")
+    os.system("sudo nano /etc/phoenixthrush/phoenixMC/server.properties")
     minecraft_eula()
     print("\033[31mYou can start the Server with phoenixMC\033[00m")
+    print()
     exit()
 
 def minecraft_eula():
-    x = open("/etc/phoenixthrush/phoenixMC/eula.txt", "w")
-    x.write("eula=true")
+    e = open("/etc/phoenixthrush/phoenixMC/eula.txt", "x")
+    e.write("eula=true")
+    e.close()
 
 def hidden_hotspot():
     print("Coming soon!")
