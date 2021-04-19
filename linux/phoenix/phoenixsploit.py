@@ -381,7 +381,9 @@ def watch_hentai():
     if check_package("firefox") == True:
         print()
         print("\033[32mOkay buddy let me help you!")
-        os.system("firefox -new -tab ´https://hentaihaven.xxx´")
+        os.system("firefox -new -tab https://hentaihaven.com")
+        os.system("firefox -new -tab https://nhentai.net/")
+        os.system("firefox -new -tab https://hanime.tv/")
     else:
         print()
         print("\033[31mCouldn´t install a program!\033[00m")
@@ -1080,19 +1082,25 @@ def change_mac_addr():
         else:
             os.system("sudo rm /etc/phoenixthrush/phoenix_mac_status")
     else:
-        pass
+        change_mac_addr_2()
+        exit()
 
 def change_mac_addr_2():
 
-    new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status")
-    new_mac_status.write("1")
-    new_mac_status.close()
+    if os.path.exists("/etc/phoenixthrush/phoenix_mac_status"):
+        new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status", "x")
+        new_mac_status.write("1")
+        new_mac_status.close()
+    else:
+        new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status", "w")
+        new_mac_status.write("1")
+        new_mac_status.close()
 
     print()
     check_package("macchanger")
     check_package("net-tools")
     x = open("/bin/phoenixMAC", "x")
-    x.write("sudo macchanger --random")
+    x.write("sudo macchanger --random wlan0")
     x.close()
     os.system("sudo chmod +x /bin/phoenixMAC")
     os.system("sudo chmod 777 /bin/phoenixMAC")
