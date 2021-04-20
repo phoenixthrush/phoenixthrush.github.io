@@ -86,7 +86,7 @@ def check_interface():
     print()
     os.system("ifconfig")
     print()
-    interface = input("\033[96mPlease enter you interface name!\033[00m")
+    interface = input("\033[96mPlease enter you interface name! \033[00m")
     return interface
 
 def clear():
@@ -509,7 +509,7 @@ def hack_menue():
         hack_menue()
 
     if choice == 1:
-        minecraft_server()
+        ask_minecraft_server()
         exit()
     elif choice == 2:
         hidden_hotspot()
@@ -540,6 +540,45 @@ def hack_menue():
         exit()
     else:
         second_menue()
+        exit()
+
+def ask_minecraft_server():
+    check_sudo()
+    print("\033[31mStarting Minecraft Server installation!\033[00m")
+    choice = input("\033[96mDo you want Install a normal or a Forge Server (Forge supports Mods) [normal|forge] ? \033[00m")
+    if choice == "normal":
+        minecraft_server()
+        exit()
+    elif choice == "forge":
+        forge_minecraft_server()
+        exit()
+    else:
+        ask_minecraft_server()
+        exit()
+
+def forge_minecraft_server():
+    clear()
+    check_sudo()
+    print()
+    check_package("nano")
+    check_package("default-jdk")
+    check_package("default-jre")
+    print()
+    if os.path.exists("/etc/phoenixthrush/phoenixMC"):
+        choice = input("\033[96mDo you want to overwrite or remove the old Server files? [overwrite|uninstall] \033[00m")
+        if choice == "overwrite":
+            minecraft_server_step_1()
+            exit()
+        elif choice == "uninstall":
+            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
+            os.system("sudo rm /bin/phoenixMC")
+            print("\033[31mRemoved Server!\033[00m")
+            print()
+        else:
+            forge_minecraft_server()
+            exit()
+    else:
+        forge_minecraft_server_step_1()
         exit()
 
 def minecraft_server():
@@ -619,17 +658,67 @@ def minecraft_server_step_1():
         minecraft_server_step_2()
         exit()
 
+def forge_minecraft_server_step_1():
+    clear()
+    print("\033[31mStarting Minecraft Server installation!\033[00m")
+    print()
+    print("\033[31mChecking files\033[00m")
+    if os.path.exists("/bin/phoenixMC"):
+        print("\033[31mFound old bin files!\033[00m")
+        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
+        print()
+        if choice == "y":
+            print("\033[31mRemoving Files!\033[00m")
+            os.system("sudo rm /bin/phoenixMC")
+            print("\033[31mRemoved Files!\033[00m")
+        elif choice == "n":
+            print("\033[31mExiting Minecraft Installer!\033[00m")
+            time.sleep(10)
+            user_exit()
+            exit()
+        else:
+            forge_minecraft_server_step_1()
+            exit()
+    else:
+        print("\033[96mNo old bin files found!\033[00m")
+    if os.path.exists("/etc/phoenixthrush/phoenixMC"):
+        print()
+        print("\033[31mFound old Server files!\033[00m")
+        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
+        if choice == "y":
+            print()
+            print("\033[31mRemoving Files!\033[00m")
+            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
+            print("\033[31mRemoved Files!\033[00m")
+            forge_minecraft_server_step_2()
+            exit()
+        elif choice == "n":
+            print("\033[31mExiting Minecraft Installer!\033[00m")
+            time.sleep(5)
+            user_exit()
+            exit()
+        else:
+            forge_minecraft_server_step_1()
+            exit()
+
+    else:
+        print("\033[96mNo old Server files found!\033[00m")
+        print()
+        print("\033[31mChecked files!\033[00m")
+        print("\033[31mStarting configs!\033[00m")
+        minecraft_server_step_2()
+        exit()
+
 def minecraft_server_step_2():
     time.sleep(3)
     clear()
-    print("\033[96mSupport for forge Minecraft Server coming soon!\033[00m")
     print("\033[96mDownloading Minecraft Server Vanilla jar\033[00m")
     print("\033[96mVersion 1.16.5\033[00m")
     print()
 
     os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
     os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
-    os.system("wget https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/forge-1.16.5-36.1.6-installer.jar")
     os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/server.properties")
     print("\033[96mDownloaded jar\033[00m")
 
@@ -649,6 +738,38 @@ def minecraft_server_step_2():
 
     print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
     minecraft_server_step_3()
+    exit()
+
+def forge_minecraft_server_step_2():
+    time.sleep(3)
+    clear()
+    print("\033[96mSupport for forge Minecraft Server coming soon!\033[00m")
+    print("\033[96mDownloading Minecraft Server Vanilla jar\033[00m")
+    print("\033[96mVersion 1.16.5\033[00m")
+    print()
+
+    os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
+    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/forge-1.16.5-36.1.6-installer.jar")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/server.properties")
+    print("\033[96mDownloaded jar\033[00m")
+
+    current_dir = os.getcwd()
+    current_dir += "/forge-1.16.5-36.1.6-installer.jar"
+    original = current_dir
+    target = "/etc/phoenixthrush/phoenixMC/forge-1.16.5-36.1.6-installer.jar"
+    shutil.move(original, target)
+
+    current_dir = os.getcwd()
+    current_dir += "/server.properties"
+    original = current_dir
+    target = "/etc/phoenixthrush/phoenixMC/server.properties"
+    shutil.move(original, target)
+
+    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC/server.properties")
+
+    print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
+    forge_minecraft_server_step_3()
     exit()
 
 def minecraft_server_step_3():
@@ -679,6 +800,38 @@ def minecraft_server_step_3():
     x.close()
     os.system("sudo chmod +x /bin/phoenixMC")
     os.system("sudo chmod 777 /bin/phoenixMC")
+    minecraft_server_step_4()
+
+def forge_minecraft_server_step_3():
+    print()
+    try:
+        ram = int(input("\033[31mHow much GB ram do you want for your minecraft server? [1,2,3...,16] \033[00m"))
+    except ValueError:
+        print("\033[31mError wrong input!\033[00m")
+        forge_minecraft_server_step_3()
+        exit()
+
+    if ram < 17 and not ram == 0:
+        print("\033[31mSetting ram to " + str(ram) + "GB\033[00m")
+    else:
+        print("\033[31mError wrong input!\033[00m")
+        forge_minecraft_server_step_3()
+        exit()
+
+    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./forge-1.16.5-36.1.6.jar nogui"
+    print()
+    print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
+
+    java_start = str(phoenix_mc_start_command)
+    java_start1 = "clear && " + java_start
+
+    x = open("/bin/phoenixMC", "x")
+    x.write(java_start1)
+    x.close()
+    os.system("sudo chmod +x /bin/phoenixMC")
+    os.system("sudo chmod 777 /bin/phoenixMC")
+    os.system("cd /etc/phoenixthrush/phoenixMC/ && sudo java -jar forge-1.16.5-36.1.6.jar --installServer")
+    os.system("sudo rm /etc/phoenixthrush/phoenixMC/forge-1.16.5-36.1.6-installer.jar")
     minecraft_server_step_4()
 
 def minecraft_server_step_4():
@@ -1072,13 +1225,14 @@ def change_mac_addr():
         if mac_status == 1:
             print("\033[96mResetting MAC to original state!\033[00m")
             interface = check_interface()
-            interface = "macchanger -p" + interface
+            interface = "sudo macchanger -p " + interface
             os.system(interface)
             print()
             exit()
         elif mac_status == 0:
             print("\033[96mNo previous MAC change found!\033[00m")
             change_mac_addr_2()
+            exit()
         else:
             os.system("sudo rm /etc/phoenixthrush/phoenix_mac_status")
     else:
