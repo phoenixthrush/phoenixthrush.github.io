@@ -58,6 +58,7 @@ def check_os():
         print()
 
 def get_package_info(package):
+    os.system("sudo apt update -y")
     status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + package)
     if not status[0]:
         return True
@@ -321,7 +322,7 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.7\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.3.8\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
@@ -329,7 +330,7 @@ def menue():
     print("--m-m-------------------m-m--\033[00m")
     print()
     print("\033[31mThis Tool has full support for Arch Linux!")
-    print("Full Support for Debian will be coming soon!")
+    print("Full Support for Arch will be coming soon!")
     print("Have Fun <3\033[0;0m")
     print()
     print("\033[92m1 - watch hentai")
