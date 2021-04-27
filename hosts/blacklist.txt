@@ -17,3 +17,9 @@ r3.o.lencr.org
 next.reality.news
 ht-cdn.trafficjunky.net.sds.rncdn7.com
 (\.|^)xboxlive\.com$
+(\.|^)secureblogeu\.com$	
+(\.|^)\.top$	
+adblocker-update.lf6m84tcrbwo.top
+earphonesvehicleexploded.com	
+a.320981a9244924ef86ebdbb9eb877e9f21ce83f1e3cc89b2c5e7c3ff.com	
+(\.|^)app-measurement\.com$
