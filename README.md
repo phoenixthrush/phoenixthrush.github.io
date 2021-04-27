@@ -8,7 +8,7 @@ NEW UPDATE!
 DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
 Method 1: <br>
-curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py > install && \ <br>
+curl -sSL https://bit.ly/phoenixsploit-install > install && \ <br>
 sudo chmod +x install && \ <br>
 sudo python3 install
 
