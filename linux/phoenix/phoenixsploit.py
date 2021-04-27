@@ -48,7 +48,7 @@ def get_os_info():
     else:
         pass
 
-    os.system("grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
+    os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
 
     name = open("/etc/phoenixthrush/os.txt","r")
 
@@ -58,6 +58,10 @@ def get_os_info():
         return system
     elif name == "ID=arch":
         system = "Arch"
+        name.close()
+        return system
+    elif name == "ID=ubuntu":
+        system = "Debian"
         name.close()
         return system
     else:
