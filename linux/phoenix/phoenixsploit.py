@@ -80,7 +80,7 @@ def check_os():
         print("\033[31mIdk what your OS is based on!")
         print("I´m sorry but this tool only supports Debian and Arch based distros!\033[00m")
         print()
-        time.sleep(3)
+        time.sleep(5)
         user_exit()
 
 def get_package_info(package):
