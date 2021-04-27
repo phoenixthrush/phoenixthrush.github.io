@@ -37,7 +37,7 @@ def check_not_sudo():
 def check_not_windows():
     if os.name == "nt":
         print("\033[31mThis Script can´t run on windows!\033[00m")
-        time.sleep(5)
+        time.sleep(3)
         user_exit()
     else:
         pass
@@ -130,9 +130,28 @@ def user_exit():
     clear()
     print("\033[96mThanks for using!")
     print("Have a nice Day!\033[00m \033[31m<3\033[00m")
-    print()
+    print(r"""
+               ___
+              (___)
+       ____
+     _\___ \  |\_/|
+    \     \ \/ , , \ ___
+     \__   \ \ ="= //|||\
+      |===  \/____)_)||||
+      \______|    | |||||
+          _/_|  | | =====
+         (_/  \_)_)
+      _________________
+     (                _)
+      (__   '          )
+        (___    _____)
+            '--'
+        """)
+    time.sleep(5)
+    exit()
 
 def menue_check_sudo_status():
+    check_not_windows()
     if get_sudo_info() == True:
         print("\033[96mYou have \033[31msudo\033[96m rights!\033[00m")
     else:
