@@ -34,15 +34,35 @@ def check_not_sudo():
         print()
         exit()
 
+def check_not_windows():
+    if os.name == "nt":
+        print("\033[31mThis Script can´t run on windows!\033[00m")
+        time.sleep(5)
+        user_exit()
+    else:
+        pass
+
 def get_os_info():
-    if os.name == "posix":
+    if os.path.exists("/etc/phoenixthrush/os.txt"):
+        os.system("rm /etc/phoenixthrush/os.txt")
+    else:
+        pass
+
+    os.system("grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
+
+    name = open("/etc/phoenixthrush/os.txt","r")
+
+    if name == "ID=debian":
         system = "Debian"
+        name.close()
         return system
-    elif os.name == "arch":
+    elif name == "ID=arch":
         system = "Arch"
+        name.close()
         return system
     else:
         system = "unknown OS"
+        name.close()
         return system
 
 def check_os():
@@ -58,12 +78,22 @@ def check_os():
         print()
 
 def get_package_info(package):
-    os.system("sudo apt update -y")
     status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + package)
     if not status[0]:
         return True
     else:
         return False
+
+def first_package():
+    if get_os_info() == "Debian":
+        os.system("sudo apt update")
+        print()
+    elif get_os_info() == "Arch":
+        os.system("sudo pacman -Sy")
+        print()
+    else:
+        print("\033[31mIdk what your OS is based on!")
+        print()
 
 def check_package(package):
     if get_package_info(package) == True:
@@ -144,6 +174,9 @@ def random_cat():
         exit()
     elif cat == 9:
         asian_cat_9()
+        exit()
+    elif cat == 10:
+        asian_cat_10()
         exit()
     else:
         print()
@@ -322,7 +355,7 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.8\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.3.9\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
@@ -585,6 +618,7 @@ def forge_minecraft_server():
 def minecraft_server():
     clear()
     check_sudo()
+    check_not_windows()
     print()
     check_package("nano")
     check_package("default-jdk")
@@ -873,6 +907,7 @@ def hidden_hotspot():
 
     clear()
     check_sudo()
+    check_not_windows()
     print()
     print("\033[96mChecking for requests!\033[00m")
     check_package("hostapd")
@@ -920,6 +955,7 @@ def hidden_hotspot():
 def website_phishing():
     clear()
     check_sudo()
+    check_not_windows()
     print()
     print("\033[31mStarting blackeye!\033[00m")
     print("\033[96mChecking for requests!\033[00m")
@@ -983,6 +1019,8 @@ def website_phishing():
 def common_tools():
     clear()
     check_sudo()
+    check_not_windows()
+    first_package()
     print()
     print("\033[31mInstalling common tools!\033[00m")
     print()
@@ -1016,6 +1054,8 @@ def update_linux():
 def arch_install():
     clear()
     check_sudo()
+    print()
+    first_package()
     print()
     check_package("nano")
     print("\033[31mStarting Arch installation!\033[00m")
@@ -1241,7 +1281,8 @@ def change_mac_addr():
         exit()
 
 def change_mac_addr_2():
-
+    check_sudo()
+    first_package()
     if os.path.exists("/etc/phoenixthrush/phoenix_mac_status"):
         new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status", "x")
         new_mac_status.write("1")
