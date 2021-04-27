@@ -380,7 +380,7 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.3.9\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.4.0\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
