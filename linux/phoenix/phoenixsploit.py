@@ -36,7 +36,9 @@ def check_not_sudo():
 
 def check_not_windows():
     if os.name == "nt":
+        print()
         print("\033[31mThis Script can´t run on windows!\033[00m")
+        print("\033[96mExiting in 3 seconds!\033[00m")
         time.sleep(3)
         user_exit()
     else:
@@ -44,12 +46,11 @@ def check_not_windows():
 
 def get_os_info():
     if os.path.exists("/etc/phoenixthrush/os.txt"):
-        os.system("rm /etc/phoenixthrush/os.txt")
+        os.system("sudo rm /etc/phoenixthrush/os.txt")
     else:
         pass
 
     os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-
     name = open("/etc/phoenixthrush/os.txt","r")
 
     if name == "ID=debian":
@@ -91,10 +92,13 @@ def get_package_info(package):
         return False
 
 def first_package():
-    if get_os_info() == "Debian":
+    if get_os_info() == "ID=ubuntu":
         os.system("sudo apt update")
         print()
-    elif get_os_info() == "Arch":
+    elif get_os_info() == "ID=debian":
+        os.system("sudo apt update")
+        print()
+    elif get_os_info() == "ID=arch":
         os.system("sudo pacman -Sy")
         print()
     else:
@@ -135,7 +139,7 @@ def clear():
 def user_exit():
     clear()
     print("\033[96mThanks for using!")
-    print("Have a nice Day!\033[00m \033[31m<3\033[00m")
+    print("Have a nice Day!\033[00m \033[31m<3\033[31m")
     print(r"""
                ___
               (___)
@@ -153,6 +157,7 @@ def user_exit():
         (___    _____)
             '--'
         """)
+    print("\033[00m")
     time.sleep(5)
     exit()
 
