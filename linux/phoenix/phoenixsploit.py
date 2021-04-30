@@ -215,7 +215,7 @@ def random_cat():
 
 def asian_cat_1():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
         _..---...,""-._     ,/}/)
      .''        ,      ``..'(/-<
@@ -226,10 +226,11 @@ def asian_cat_1():
  `. `-' /-._)))      `-._)))
    `...'            my asian cat <3
     """)
+    print("\033[00m")
 
 def asian_cat_2():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
    |\---/|
    | ,_, |
@@ -238,10 +239,11 @@ def asian_cat_2():
 (__...'   __\    |`.___.';
   (_,...'(_,.`__)/'.....+
     """)
+    print("\033[00m")
 
 def asian_cat_3():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
  ,_     _
  |\\_,-~/
@@ -254,10 +256,11 @@ def asian_cat_3():
   || |-_\__   /
  ((_/`(____,-'
      """)
+    print("\033[00m")
 
 def asian_cat_4():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
   ,-.       _,---._ __  / \
  /  )    .-'       `./ /   \
@@ -271,10 +274,11 @@ def asian_cat_4():
   )  |  \  `.___________|/
   `--'   `--'
      """)
+    print("\033[00m")
 
 def asian_cat_5():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
        _                        
        \`*-.                    
@@ -292,10 +296,11 @@ def asian_cat_5():
 *bug* .*' /  .*' ; .*`- +'  `*' 
       `*-*   `*-*  `*-*'
      """)
+    print("\033[00m")
 
 def asian_cat_6():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
            ___
           (___)
@@ -313,10 +318,11 @@ def asian_cat_6():
     (___    _____)
         '--'
     """)
+    print("\033[00m")
 
 def asian_cat_7():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
         _,'|             _.-''``-...___..--';)
        /_ \'.      __..-' ,      ,--...--'''
@@ -325,10 +331,11 @@ def asian_cat_7():
  __...--''     ___...--_..'  .;.'
 (,__....----'''       (,..--''   *asian meow*
     """)
+    print("\033[00m")
 
 def asian_cat_8():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
 (:`--..___...-''``-._             |`._
   ```--...--.      . `-..__      .`/ _\  
@@ -337,10 +344,11 @@ def asian_cat_8():
              `.:.  `.._--...___     ``--...__      
                 ``--..,)       ```----....__,) *bug*
     """)
+    print("\033[00m")
 
 def asian_cat_9():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
               __..--''``---....___   _..._    __
     /// //_.-'    .-/";  `        ``<._  ``.''_ `. / // /
@@ -348,10 +356,11 @@ def asian_cat_9():
    / (_..-' // (< _     ;_..__               ; `' / ///
     / // // //  `-._,_)' // / ``--...____..-' /// / //
         """)
+    print("\033[00m")
 
 def asian_cat_10():
     clear()
-    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[00m")
+    print("\033[31mYou found my easteregg and yeah you could see it because it´s open-source lmao\033[95m")
     print(r"""
        ,
        \`-._           __
@@ -382,6 +391,7 @@ def asian_cat_10():
 `---'    `----'   ;      /    \,.,,,/
                    `----`              *meow*
         """)
+    print("\033[00m")
 
 def menue():
     clear()
