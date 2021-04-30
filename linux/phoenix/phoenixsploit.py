@@ -1,9 +1,16 @@
-#!/usr/bin/env python3
+# !/usr/bin/env python3
 import os
 import time
-import shutil
-import subprocess
 import random
+import shutil
+import argparse
+import subprocess
+
+def phoenixparse():
+    parser = argparse.ArgumentParser(usage="phoenixsploit --sudo")
+    parser.add_argument("--sudo", help="uh instantly starting tool with admin rigths!", action="store_true")
+
+    return parser.parse_args()
 
 def get_sudo_info():
     if os.geteuid() == 0:
@@ -145,7 +152,7 @@ def user_exit():
               (___)
        ____
      _\___ \  |\_/|
-    \     \ \/ , , \ ___
+    \     \ \/ , , \ ___    See ya soon!
      \__   \ \ ="= //|||\
       |===  \/____)_)||||
       \______|    | |||||
@@ -157,12 +164,13 @@ def user_exit():
         (___    _____)
             '--'
         """)
-    print("\033[00m")
+    print("\033[96mExiting in 3 seconds!\033[00m")
     time.sleep(5)
+    print()
     exit()
 
 def menue_check_sudo_status():
-    check_not_windows()
+    #check_not_windows()
     if get_sudo_info() == True:
         print("\033[96mYou have \033[31msudo\033[96m rights!\033[00m")
     else:
@@ -395,14 +403,14 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.4.0\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.4.1\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
     print("(  V  ) \033[96mPhoenixthrush\033[95m (  V  )")
     print("--m-m-------------------m-m--\033[00m")
     print()
-    print("\033[31mThis Tool has full support for Arch Linux!")
+    print("\033[31mThis Tool has full support for Debian based Distros!")
     print("Full Support for Arch will be coming soon!")
     print("Have Fun <3\033[0;0m")
     print()
@@ -470,7 +478,7 @@ def destroy_pc():
 def second_menue():
     clear()
     menue_check_sudo_status()
-    check_os()
+    #check_os()
     hack_menue()
     user_exit()
 
@@ -564,7 +572,7 @@ def remove_phoenixsploit():
 def hack_menue():
     print("\033[95mHack Menue\033[00m")
     print()
-    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Support for Forge Server coming soon!]\033[00m")
+    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Coming soon!]\033[00m")
     print("\033[96m2 - Create a hidden hotspot      \033[31m[Coming soon!]\033[00m")
     print("\033[96m3 - Website Phishing (blackeye)\033[00m")
     print("\033[96m4 - Install common tools\033[00m")
@@ -1349,4 +1357,11 @@ def base64_1():
     phoenix_base64.menue()
 
 if __name__ == "__main__":
+    phoenixargs = phoenixparse()
+
+    if phoenixargs.sudo == True:
+        print("hi")
+        exit()
+
+    print("\033[31mStarting Tool\033[00m")
     menue()
