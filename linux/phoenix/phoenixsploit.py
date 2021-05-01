@@ -1,19 +1,36 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 import os
 import time
-import random
 import shutil
-import argparse
+import random
 import subprocess
+import argparse
+from sys import platform
 
 def phoenixparse():
-    parser = argparse.ArgumentParser(usage="phoenixsploit --sudo")
+    parser = argparse.ArgumentParser(usage="phoenixsploit [--sudo --update --remove]")
     parser.add_argument("--sudo", help="uh instantly starting tool with admin rigths!", action="store_true")
+    parser.add_argument("--update", help="uh installs or updates phoenixsploit", action="store_true")
+    parser.add_argument("--remove", help="uh it uninstalls phoenixsploit", action="store_true")
 
     return parser.parse_args()
 
+def remove_check_sudo():
+    clear()
+    if get_sudo_info() == True:
+            print("\033[31mRunning as root!\033[00m")
+            remove_phoenixsploit()
+            exit()
+    else:
+        print("\033[31mTrying to request admin rigths!\033[00m")
+        time.sleep(3)
+        current_file = (os.path.abspath(__file__))
+        current_file_new = "sudo " + current_file + " --remove"
+        os.system(current_file_new)
+        exit()
+
 def get_sudo_info():
-    if os.geteuid() == 0:
+    if os.getuid() == 0:
         admin_check = True
         return admin_check
     else:
@@ -22,12 +39,23 @@ def get_sudo_info():
 
 def check_sudo():
     if get_sudo_info() == True:
-        print("\033[31mRunning as root!\033[00m")
+            print("\033[31mRunning as root!\033[00m")
     else:
         print("\033[31mTrying to request admin rigths!\033[00m")
         time.sleep(3)
         current_file = (os.path.abspath(__file__))
         current_file_new = "sudo " + current_file
+        os.system(current_file_new)
+        exit()
+
+def update_check_sudo():
+    if get_sudo_info() == True:
+            print("\033[31mRunning as root!\033[00m")
+    else:
+        print("\033[31mTrying to request admin rigths!\033[00m")
+        time.sleep(3)
+        current_file = (os.path.abspath(__file__))
+        current_file_new = "sudo " + current_file + " --update"
         os.system(current_file_new)
         exit()
 
@@ -41,66 +69,111 @@ def check_not_sudo():
         print()
         exit()
 
-def check_not_windows():
-    if os.name == "nt":
-        print()
+def check_right_os():
+    if platform == "linux":
+        pass
+    elif platform == "linux2":
+        pass
+    elif platform == "darwin":
+        print("\033[31mThis Script can´t run on MacOS!\033[00m")
+        print("\033[96mExiting in 3 seconds!\033[00m")
+        time.sleep(3)
+        user_exit()
+    elif platform == "win32":
         print("\033[31mThis Script can´t run on windows!\033[00m")
         print("\033[96mExiting in 3 seconds!\033[00m")
         time.sleep(3)
         user_exit()
-    else:
-        pass
 
 def get_os_info():
     if os.path.exists("/etc/phoenixthrush/os.txt"):
-        os.system("sudo rm /etc/phoenixthrush/os.txt")
-    else:
         pass
+    else:
+        os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
 
-    os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-    with open("/etc/phoenixthrush/os.txt","r") as file:
-        data = file.read()
-        if data == "debian":
-            return data
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=debian":
+        return f.read()
+    f.close()
 
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=ubuntu":
+        return f.read()
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=arch":
+        return f.read()
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=blackarch":
+        return f.read()
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=kali":
+        return f.read()
+    f.close()
 
 def check_os():
-    if get_os_info() == "Debian":
-        print("\033[31mYour System is based on Debian right?\033[00m")
-        print()
-    elif get_os_info() == "Arch":
-        print("\033[31mYour System is based on Arch right?\033[00m")
-        print()
+    if os.path.exists("/etc/phoenixthrush/os.txt"):
+        pass
     else:
-        print("\033[31mIdk what your OS is based on!")
-        print("I´m sorry but this tool only supports Debian and Arch based distros!\033[00m")
-        print()
-        time.sleep(5)
-        user_exit()
+        os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
+
+    f = open("/etc/phoenixthrush/os.txt","r")
+    if f.read() == "ID=debian":
+        print("Your System is Debian based right?")
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=ubuntu":
+        print("Your System is Debian based right?")
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=arch":
+        print("Your System is Arch based right?")
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=blackarch":
+        print("Your System is Arch based right?")
+    f.close()
+
+    f = open("/etc/phoenixthrush/os.txt", "r")
+    if f.read() == "ID=kali":
+        print("Your System is Debian based right?")
+    f.close()
 
 def get_package_info(package):
-    status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + package)
+    new_package = package
+
+    if get_os_info() == "ID=debian":
+        debian_get_package_info(new_package)
+    elif get_os_info() == "ID=arch":
+        arch_get_package_info(new_package)
+    else:
+        print("Error")
+
+def debian_get_package_info(new_package):
+    status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + new_package)
     if not status[0]:
         return True
     else:
         return False
 
+def arch_get_package_info(new_package):
+    print("Coming soon!")
+    print("Please install the programm " + new_package + " manually!")
+
 def first_package():
-    if get_os_info() == "ID=ubuntu":
-        os.system("sudo apt update")
-        print()
-    elif get_os_info() == "ID=debian":
-        os.system("sudo apt update")
-        print()
-    elif get_os_info() == "ID=arch":
-        os.system("sudo pacman -Sy")
-        print()
-    else:
-        print("\033[31mIdk what your OS is based on!")
-        print()
+    os.system("sudo apt update")
+    print()
 
 def check_package(package):
-    if get_package_info(package) == True:
+    if debian_get_package_info(package) == True:
         print("\033[96m" + package + "\033[00m\033[31m is installed!\033[00m")
         return True
     else:
@@ -108,7 +181,7 @@ def check_package(package):
         print("\033[95mTrying to install it!\033[00m")
         print()
         tmp_package = "sudo apt install " + package + " -y"
-        if get_os_info() == "Debian":
+        if get_os_info() == "ebian":
             os.system(tmp_package)
         elif get_os_info() == "Arch":
             os.system("sudo pacman -Syu " + package + " --needed --noconfirm")
@@ -139,7 +212,7 @@ def user_exit():
               (___)
        ____
      _\___ \  |\_/|
-    \     \ \/ , , \ ___    See ya soon!
+    \     \ \/ , , \ ___
      \__   \ \ ="= //|||\
       |===  \/____)_)||||
       \______|    | |||||
@@ -151,17 +224,20 @@ def user_exit():
         (___    _____)
             '--'
         """)
-    print("\033[96mExiting in 3 seconds!\033[00m")
-    time.sleep(5)
-    print()
+    print("\033[00m")
+    time.sleep(3)
     exit()
 
 def menue_check_sudo_status():
-    #check_not_windows()
-    if get_sudo_info() == True:
-        print("\033[96mYou have \033[31msudo\033[96m rights!\033[00m")
-    else:
-        print("\033[96mYou have normal user rights!\033[00m")
+    if platform == "linux" or "linux2":
+        if get_sudo_info() == True:
+            print("\033[96mYou have \033[31msudo\033[96m rights!\033[00m")
+        else:
+            print("\033[96mYou have normal user rights!\033[00m")
+    elif platform == "darwin":
+        pass
+    elif platform == "win32":
+        pass
 
 def run_sudo_menue():
     clear()
@@ -390,15 +466,16 @@ def asian_cat_10():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.4.1\033[00m")
+    check_right_os()
+    print("\033[95mWelcome to Phoenixsploit v.4.3\033[00m")
     menue_check_sudo_status()
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
     print("(  V  ) \033[96mPhoenixthrush\033[95m (  V  )")
     print("--m-m-------------------m-m--\033[00m")
     print()
-    print("\033[31mThis Tool has full support for Debian based Distros!")
-    print("Full Support for Arch will be coming soon!")
+    print("\033[31mThis Tool has full support for Debian Based Distros!")
+    print("Full Support for Arch and Windows will be coming soon!")
     print("Have Fun <3\033[0;0m")
     print()
     print("\033[92m1 - watch hentai")
@@ -429,7 +506,7 @@ def menue():
         install_and_update()
         exit()
     elif choice == 5:
-        remove_phoenixsploit()
+        remove_check_sudo()
         exit()
     elif choice == 6:
         run_sudo_menue()
@@ -465,13 +542,12 @@ def destroy_pc():
 def second_menue():
     clear()
     menue_check_sudo_status()
-    get_os_info()
     hack_menue()
     user_exit()
 
 def install_and_update():
     clear()
-    check_sudo()
+    update_check_sudo()
     print()
     print("\033[31mChecking dependency\033[00m")
     print()
@@ -559,7 +635,7 @@ def remove_phoenixsploit():
 def hack_menue():
     print("\033[95mHack Menue\033[00m")
     print()
-    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Coming soon!]\033[00m")
+    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Support for Forge Server coming soon!]\033[00m")
     print("\033[96m2 - Create a hidden hotspot      \033[31m[Coming soon!]\033[00m")
     print("\033[96m3 - Website Phishing (blackeye)\033[00m")
     print("\033[96m4 - Install common tools\033[00m")
@@ -653,7 +729,7 @@ def forge_minecraft_server():
 def minecraft_server():
     clear()
     check_sudo()
-    check_not_windows()
+    check_right_os()
     print()
     check_package("nano")
     check_package("default-jdk")
@@ -942,7 +1018,7 @@ def hidden_hotspot():
 
     clear()
     check_sudo()
-    check_not_windows()
+    check_right_os()
     print()
     print("\033[96mChecking for requests!\033[00m")
     check_package("hostapd")
@@ -990,7 +1066,7 @@ def hidden_hotspot():
 def website_phishing():
     clear()
     check_sudo()
-    check_not_windows()
+    check_right_os()
     print()
     print("\033[31mStarting blackeye!\033[00m")
     print("\033[96mChecking for requests!\033[00m")
@@ -1054,19 +1130,18 @@ def website_phishing():
 def common_tools():
     clear()
     check_sudo()
-    check_not_windows()
+    check_right_os()
     first_package()
-    print()
     print("\033[31mInstalling common tools!\033[00m")
     print()
-    check_package("vim")
-    check_package("nano")
-    check_package("neofetch")
-    check_package("htop")
-    check_package("default-jdk")
-    check_package("default-jre")
-    check_package("python3")
-    check_package("python3-pip")
+    get_package_info("vim")
+    get_package_info("nano")
+    get_package_info("neofetch")
+    get_package_info("htop")
+    get_package_info("default-jdk")
+    get_package_info("default-jre")
+    get_package_info("python3")
+    get_package_info("python3-pip")
     print()
     print("\033[31mCommon tools are installed!\033[00m")
     print()
@@ -1347,8 +1422,15 @@ if __name__ == "__main__":
     phoenixargs = phoenixparse()
 
     if phoenixargs.sudo == True:
-        print("hi")
+        check_sudo()
+        exit()
+    if phoenixargs.update == True:
+        install_and_update()
+        exit()
+    if phoenixargs.remove == True:
+        remove_check_sudo()
         exit()
 
     print("\033[31mStarting Tool\033[00m")
+    print()
     menue()
