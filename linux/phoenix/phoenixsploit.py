@@ -58,24 +58,11 @@ def get_os_info():
         pass
 
     os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-    name = open("/etc/phoenixthrush/os.txt","r")
+    with open("/etc/phoenixthrush/os.txt","r") as file:
+        data = file.read()
+        if data == "debian":
+            return data
 
-    if name == "ID=debian":
-        system = "Debian"
-        name.close()
-        return system
-    elif name == "ID=arch":
-        system = "Arch"
-        name.close()
-        return system
-    elif name == "ID=ubuntu":
-        system = "Debian"
-        name.close()
-        return system
-    else:
-        system = "unknown OS"
-        name.close()
-        return system
 
 def check_os():
     if get_os_info() == "Debian":
@@ -478,7 +465,7 @@ def destroy_pc():
 def second_menue():
     clear()
     menue_check_sudo_status()
-    #check_os()
+    get_os_info()
     hack_menue()
     user_exit()
 
