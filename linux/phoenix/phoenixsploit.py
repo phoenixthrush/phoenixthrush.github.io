@@ -1419,6 +1419,7 @@ def base64_1():
     phoenix_base64.menue()
 
 if __name__ == "__main__":
+    os.system("mkdir -p /etc/phoenixthrush")
     phoenixargs = phoenixparse()
 
     if phoenixargs.sudo == True:
