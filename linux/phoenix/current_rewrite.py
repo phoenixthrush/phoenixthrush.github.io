@@ -305,14 +305,14 @@ def check_sudo(verbose = False, req_perm = False, admin = True):
                 if req_perm is True:
                     print("\033[31mRequesting normal user rights!\033[00m")
                     time.sleep(2)
-                    rerun_sudo()
+                    rerun_sudo(False)
                     exit()
                 else:
                     print("\033[31mRunning with \033[96mnormal \033[31muser rights!\033[00m")
             else:
                 if req_perm is True:
                     time.sleep(2)
-                    rerun_sudo()
+                    rerun_sudo(False)
                     exit()
                 else:
                     return sudo
@@ -353,7 +353,20 @@ def check_os_platform(verbose = True):
                 print("\033[31mExiting!\033[00m")
                 user_exit()
         else:
-            return content
+            if content == "ID=arch\n":
+                return "arch"
+            elif content == "ID=blackarch\n":
+                return "arch"
+            elif content == "ID=debian\n":
+                return "debian"
+            elif content == "ID=ubuntu\n":
+                return "debian"
+            elif content == "ID=kali\n":
+                return "debian"
+            else:
+                print("\033[31mCould not detect your distro!\033[00m")
+                print("\033[31mExiting!\033[00m")
+                user_exit()
 
 def check_os_compatibility(verbose = True):
     system = platform
@@ -378,9 +391,41 @@ def rerun_sudo(sudo = True):
         os.system(current)
         exit()
     else:
-        current = (os.path.abspath(__file__))
-        os.system(current)
+        print("\033[31mPlease run that script without admin rights!")
         exit()
+
+def check_package(package):
+
+    if check_os_platform(False) == "debian":
+
+        status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + package)
+        if not status[0]:
+            print(status)
+            print("installed")
+            input("DEBUG")
+            return True
+        else:
+            print(status)
+            print("not installed")
+            input("DEBUG")
+            print("\033[96mInstalling the package \033[31m" + package + "\033[96m!\033[00m")
+            print()
+            os.system("sudo apt update")
+            command = "sudo apt install " + package
+            print()
+            os.system(command)
+            return True
+    elif check_os_platform(False) == "arch":
+        print("\033[96mInstalling the package \033[31m" + package + "\033[96m!\033[00m")
+        print()
+        command = "sudo pacman -Sy " + package
+        print()
+        os.system(command)
+        return True
+    else:
+        print("\033[31mCould not detect your distro!\033[00m")
+        print("\033[31mExiting!\033[00m")
+        user_exit()
 
 def menue():
     clear()
@@ -411,7 +456,7 @@ def menue():
         menue()
 
     if choice == 1:
-        watch_hentai()
+        #watch_hentai()
         exit()
     elif choice == 2:
         destroy_pc()
@@ -439,7 +484,17 @@ def menue():
         exit()
 
 def watch_hentai():
-    print("hentai menue")
+    check_sudo(False,True,False)
+
+    if check_package("firefox") is True:
+        print()
+        print("\033[96mOkay buddy let me help you!\033[00m")
+        os.system("firefox -new -tab https://hentaihaven.com")
+        os.system("firefox -new -tab https://nhentai.net/")
+        os.system("firefox -new -tab https://hanime.tv/")
+    else:
+        print()
+        print("\033[31mCouldn´t install firefox!\033[00m")
 
 def destroy_pc():
     print("destroy menue")
@@ -468,4 +523,5 @@ if __name__ == "__main__":
         random_cat()
         exit()
 
-    menue()
+    #menue()
+    watch_hentai()
