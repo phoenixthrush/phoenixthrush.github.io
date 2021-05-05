@@ -7,15 +7,18 @@ import argparse
 import subprocess
 from sys import platform
 
-
 def phoenixparse():
     parser = argparse.ArgumentParser(usage="phoenixsploit [--sudo --update --remove]")
     parser.add_argument("--sudo", help="uh instantly starting tool with admin rigths!", action="store_true")
     parser.add_argument("--update", help="uh installs or updates phoenixsploit", action="store_true")
     parser.add_argument("--remove", help="uh it uninstalls phoenixsploit", action="store_true")
-    parser.add_argument("--666", action="store_true")
+    parser.add_argument("--ilovecats",help="uh it shows an easter egg which isn´t an easteregg anymore", action="store_true")
 
     return parser.parse_args()
+
+def first_time():
+    os.system("sudo mkdir -p /etc/phoenixthrush")
+    os.system("sudo chmod 777 /etc/phoenixthrush")
 
 def clear():
     if os.name == 'posix':
@@ -339,19 +342,21 @@ def check_os_platform(verbose=True):
             return system
     else:
         os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-        with open("/etc/phoenixthrush/os.txt") as f:
+        os.system("sudo chmod 777 /etc/phoenixthrush/os.txt")
+        
+        with open("/etc/phoenixthrush/os.txt","r") as f:
             content = f.read()
 
         if verbose == True:
-            if content == "OS=arch":
+            if content == "ID=arch\n":
                 print("\033[31mArch based Distro detected!\033[00m")
-            elif content == "OS=blackarch":
+            elif content == "ID=blackarch\n":
                 print("\033[31mArch based Distro detected!\033[00m")
-            elif content == "OS=debian":
+            elif content == "ID=debian\n":
                 print("\033[31mDebian based Distro detected!\033[00m")
-            elif content == "OS=ubuntu":
+            elif content == "ID=ubuntu\n":
                 print("\033[31mDebian based Distro detected!\033[00m")
-            elif content == "OS=kali":
+            elif content == "ID=kali\n":
                 print("\033[31mDebian based Distro detected!\033[00m")
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
@@ -360,19 +365,26 @@ def check_os_platform(verbose=True):
         else:
             return content
 
-def check_os_compatibility():
-    os = check_os_platform()
-    if os == "darwin":
-        print("\033[31mThis Script doesn´t support MacOS yet!\033[00m")
-    elif os == "win32":
-        print("\033[31mThis Script doesn´t support Windows yet!\033[00m")
-    else:
-        pass
+def check_os_compatibility(verbose = True):
+    system = platform
+
+    if system == "darwin":
+        if verbose == True:
+            print("\033[31mThis Script doesn´t support MacOS yet!\033[00m")
+            exit()
+        else:
+            return system
+    elif system == "win32":
+        if verbose == True:
+            print("\033[31mThis Script doesn´t support Windows yet!\033[00m")
+            exit()
+        else:
+            return system
 
 if __name__ == "__main__":
-    check_os_compatibility()
     phoenixargs = phoenixparse()
-    os.system("mkdir -p /etc/phoenixthrush")
+    check_os_compatibility()
+    first_time()
 
     if phoenixargs.sudo == True:
         exit()
@@ -380,6 +392,6 @@ if __name__ == "__main__":
         exit()
     if phoenixargs.remove == True:
         exit()
-    if phoenixargs.666 == True:
+    if phoenixargs.ilovecats == True:
         random_cat()
         exit()
