@@ -523,5 +523,5 @@ if __name__ == "__main__":
         random_cat()
         exit()
 
-    #menue()
-    watch_hentai()
+    menue()
+
