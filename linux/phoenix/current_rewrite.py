@@ -282,19 +282,14 @@ def check_sudo(verbose = False, req_perm = False, admin = True):
             if verbose == True:
                 if req_perm == True:
                     print("\033[31mRequesting admin rights!\033[00m")
-                    time.sleep(3)
-                    run_sudo = (os.path.abspath(__file__))
-                    run_sudo = "sudo " + run_sudo
-                    os.system(run_sudo)
+                    rerun_sudo()
                     exit()
                 else:
                     print("\033[31mRunning with normal user rights!\033[00m")
             else:
                 if req_perm == True:
                     time.sleep(3)
-                    run_sudo = (os.path.abspath(__file__))
-                    run_sudo = "sudo " + run_sudo
-                    os.system(run_sudo)
+                    rerun_sudo()
                     exit()
                 else:
                     return sudo
@@ -310,17 +305,14 @@ def check_sudo(verbose = False, req_perm = False, admin = True):
                 if req_perm == True:
                     print("\033[31mRequesting normal user rights!\033[00m")
                     time.sleep(3)
-                    run_sudo = (os.path.abspath(__file__))
-                    run_sudo = "sudo " + run_sudo
-                    os.system(run_sudo)
+                    rerun_sudo()
                     exit()
                 else:
                     print("\033[31mRunning with normal user rights!\033[00m")
             else:
                 if req_perm == True:
                     time.sleep(3)
-                    run_sudo = (os.path.abspath(__file__))
-                    os.system(run_sudo)
+                    rerun_sudo()
                     exit()
                 else:
                     return sudo
@@ -341,9 +333,7 @@ def check_os_platform(verbose=True):
         else:
             return system
     else:
-        os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-        os.system("sudo chmod 777 /etc/phoenixthrush/os.txt")
-        
+        os.system("grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
         with open("/etc/phoenixthrush/os.txt","r") as f:
             content = f.read()
 
@@ -381,13 +371,19 @@ def check_os_compatibility(verbose = True):
         else:
             return system
 
+def rerun_sudo():
+    current = (os.path.abspath(__file__))
+    current = "sudo " + current
+    os.system(current)
+    exit()
+
 if __name__ == "__main__":
     phoenixargs = phoenixparse()
     check_os_compatibility()
     first_time()
 
     if phoenixargs.sudo == True:
-        exit()
+        check_sudo(True, True)
     if phoenixargs.update == True:
         exit()
     if phoenixargs.remove == True:
