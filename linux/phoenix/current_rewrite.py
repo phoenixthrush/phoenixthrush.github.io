@@ -541,7 +541,7 @@ def second_menue():
         second_menue()
 
     if choice == 1:
-        #ask_minecraft_server()
+        #minecraft()
         exit()
     elif choice == 2:
         #hidden_hotspot()
@@ -573,6 +573,52 @@ def second_menue():
     else:
         second_menue()
         exit()
+
+def minecraft():
+    print("\033[31mStarting Minecraft Server installation!\033[00m")
+    choice = input("\033[96mDo you want Install a normal or a Forge Server (Forge supports Mods) [normal|forge] ? \033[00m")
+    if choice == "normal":
+        minecraft_server_setup()
+        exit()
+    elif choice == "forge":
+        forge_minecraft_server_setup()
+        exit()
+    else:
+        minecraft()
+        exit()
+
+def minecraft_server_setup():
+    clear()
+    check_sudo(False, True)
+    print()
+    check_package("nano")
+    os.system("sudo apt update")
+    os.system("sudo apt install default-jdk -y")
+    os.system("sudo apt install default-jre -y")
+
+    print()
+    if os.path.exists("/etc/phoenixthrush/phoenixMC"):
+        choice = input("\033[96mDo you want to overwrite or remove the old Server files? [overwrite|uninstall] \033[00m")
+        if choice == "overwrite":
+            minecraft_server_setup_1()
+            exit()
+        elif choice == "uninstall":
+            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
+            os.system("sudo rm /bin/phoenixMC")
+            print("\033[31mRemoved Server!\033[00m")
+            print()
+        else:
+            minecraft_server_setup()
+            exit()
+    else:
+        minecraft_server_setup_1()
+        exit()
+
+def minecraft_server_setup_1():
+    print()
+
+def forge_minecraft_server_setup():
+    print("Coming soon!")
 
 def website_phishing():
     clear()
