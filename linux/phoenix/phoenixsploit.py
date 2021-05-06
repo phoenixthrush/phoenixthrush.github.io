@@ -529,7 +529,7 @@ def second_menue():
     print("\033[96m5 - Update Linux\033[00m")
     print("\033[96m6 - Install Arch Linux\033[00m \033[31m<3\033[00m")
     print("\033[96m7 - Base64 Encoder/ Decoder\033[00m      \033[31m[Coming soon!]\033[00m")
-    print("\033[96m8 - Change MAC Address\033[00m   \033[31m[Coming soon!]\033[00m")
+    print("\033[96m8 - Change MAC Address           \033[00m\033[31m[Coming soon!]\033[00m")
     print()
     print("\033[34m0 - Back to menue!\033[00m")
     print()
@@ -559,7 +559,7 @@ def second_menue():
         arch_install()
         exit()
     elif choice == 7:
-        base64()
+        #base64()
         exit()
     elif choice == 8:
         #change_mac_addr()
@@ -581,7 +581,7 @@ def minecraft():
         minecraft_server_setup()
         exit()
     elif choice == "forge":
-        forge_minecraft_server_setup()
+        forge_minecraft_server_setup_2()
         exit()
     else:
         minecraft()
@@ -599,6 +599,8 @@ def minecraft_server_setup():
     if os.path.exists("/etc/phoenixthrush/phoenixMC"):
         choice = input("\033[96mDo you want to overwrite or remove the old Server files? [overwrite|uninstall] \033[00m")
         if choice == "overwrite":
+            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
+            os.system("sudo rm /bin/phoenixMC")
             minecraft_server_setup_1()
             exit()
         elif choice == "uninstall":
@@ -606,6 +608,7 @@ def minecraft_server_setup():
             os.system("sudo rm /bin/phoenixMC")
             print("\033[31mRemoved Server!\033[00m")
             print()
+            exit()
         else:
             minecraft_server_setup()
             exit()
@@ -614,10 +617,110 @@ def minecraft_server_setup():
         exit()
 
 def minecraft_server_setup_1():
+    choice = input("\033[96mDo you want to make a normal or a Forge Server? [normal|forge] \033[00m")
+    if choice == "normal":
+        minecraft_server_setup_2()
+    elif choice == "forge":
+        forge_minecraft_server_setup_2()
+    else:
+        minecraft_server_setup_1()
+
+def minecraft_server_setup_2():
+    time.sleep(3)
+    clear()
+    print("\033[96mDownloading Minecraft Server Vanilla jar\033[00m")
+    print("\033[96mVersion 1.16.5\033[00m")
     print()
 
-def forge_minecraft_server_setup():
+    os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
+    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
+    os.system("wget https://launcher.mojang.com/v1/objects/1b557e7b033b583cd9f66746b7a9ab1ec1673ced/server.jar")
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/server.properties")
+    print("\033[96mDownloaded the minecraft jar file!\033[00m")
+
+    current_dir = os.getcwd()
+    current_jar = current_dir + "/server.jar"
+    target_jar = "/etc/phoenixthrush/phoenixMC/server.jar"
+    shutil.move(current_jar, target_jar)
+
+    current_prop = current_dir + "/server.properties"
+    target_prop = "/etc/phoenixthrush/phoenixMC/server.properties"
+    shutil.move(current_prop, target_prop)
+
+    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC/server.jar")
+    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC/server.properties")
+
+    print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
+    minecraft_server_setup_3()
+    exit()
+
+def minecraft_server_setup_3():
+    print()
+    try:
+        ram = int(input("\033[31mHow much GB ram do you want for your minecraft server? [1,2,3...,16] \033[00m"))
+    except ValueError:
+        print("\033[31mError wrong input!\033[00m")
+        minecraft_server_setup_3()
+        exit()
+
+    if ram < 17 and not ram == 0:
+        print("\033[31mSetting ram to " + str(ram) + "GB\033[00m")
+    else:
+        print("\033[31mError wrong input!\033[00m")
+        minecraft_server_setup_3()
+        exit()
+
+    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./server.jar nogui"
+    print()
+    print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
+
+    java_start = str(phoenix_mc_start_command)
+    java_start = "clear && " + java_start
+
+    x = open("/bin/phoenixMC", "x")
+    x.write(java_start)
+    x.close()
+    os.system("sudo chmod +x /bin/phoenixMC")
+    os.system("sudo chmod 777 /bin/phoenixMC")
+    minecraft_server_setup_4()
+
+def minecraft_server_setup_4():
+    print()
+    choice = input("\033[96mDo you want to manually edit settings? (recommended) [y|n] \033[00m")
+    if choice == "y":
+        minecraft_server_config_manually()
+        exit()
+    elif choice == "n":
+        minecraft_server_config()
+        exit()
+    else:
+        minecraft_server_setup_4()
+        exit()
+
+def minecraft_server_config():
+    minecraft_eula()
+    print()
+    print("\033[31mYou can start the Server with phoenixMC\033[00m")
+    print()
+    exit()
+
+def minecraft_server_config_manually():
+    print()
+    print("\033[31mYou can start the Server with phoenixMC\033[00m")
+    print()
+    exit()
+
+def minecraft_eula():
+    eula = open("/etc/phoenixthrush/phoenixMC/eula.txt", "x")
+    eula.write("eula=true")
+    eula.close()
+
+
+
+def forge_minecraft_server_setup_2():
     print("Coming soon!")
+    time.sleep(3)
+    exit()
 
 def website_phishing():
     clear()
