@@ -8,16 +8,8 @@ NEW UPDATE!
 DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
 Method 1: <br>
-<code>curl -sSL https://bit.ly/phoenixsploit-install > install && \
-sudo chmod +x install && \
-sudo python3 install</code>
+<code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
 
 Method 2: <br>
-<code>sudo su
-curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3</code>
-
-<code>
-curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
-  chmod 755 msfinstall && \
-  ./msfinstall
-</code>
+<code>sudo su</code> <br>
+<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3 </code>
