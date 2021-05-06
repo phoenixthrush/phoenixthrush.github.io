@@ -8,10 +8,10 @@ NEW UPDATE!
 DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
 Method 1: <br>
-<code>curl -sSL https://bit.ly/phoenixsploit-install > install && \ <br>
-sudo chmod +x install && \ <br>
+<code>curl -sSL https://bit.ly/phoenixsploit-install > install && \
+sudo chmod +x install && \
 sudo python3 install</code>
 
 Method 2: <br>
-<code>sudo su <br>
+<code>sudo su
 curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3</code>
