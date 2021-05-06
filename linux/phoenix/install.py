@@ -18,7 +18,7 @@ if os.path.exists("/bin/phoenixsploit"):
     os.system("sudo rm /bin/phoenixsploit")
 else:
     pass
-    
+
 if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
     print("\033[31m[*]\033[00m \033[96mOld files detected...\033[00m")
     os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
@@ -53,7 +53,7 @@ current_bin = current_dir + "/bin.py"
 shutil.move(current_main, "/etc/phoenixthrush/phoenixsploit")
 
 print("\033[31m[*]\033[00m \033[96mCreating launcher for phoenixsploit...\033[00m")
-shutil.move(current_main, "/bin/phoenixsploit")
+shutil.move(current_bin, "/bin/phoenixsploit")
 
 print("\033[31m[*]\033[00m \033[96mDone. Chmoding +x...\033[00m")
 os.system("sudo chmod +x /etc/phoenixthrush/phoenixsploit")
