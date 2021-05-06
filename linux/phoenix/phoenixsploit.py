@@ -3,7 +3,6 @@ import os
 import time
 import shutil
 import random
-import subprocess
 import argparse
 from sys import platform
 
@@ -12,190 +11,16 @@ def phoenixparse():
     parser.add_argument("--sudo", help="uh instantly starting tool with admin rigths!", action="store_true")
     parser.add_argument("--update", help="uh installs or updates phoenixsploit", action="store_true")
     parser.add_argument("--remove", help="uh it uninstalls phoenixsploit", action="store_true")
+    parser.add_argument("--ilovecats", help="uh it shows an easter egg which isn´t an easteregg anymore", action="store_true")
 
     return parser.parse_args()
 
-def remove_check_sudo():
-    clear()
-    if get_sudo_info() == True:
-            print("\033[31mRunning as root!\033[00m")
-            remove_phoenixsploit()
-            exit()
-    else:
-        print("\033[31mTrying to request admin rigths!\033[00m")
-        time.sleep(3)
-        current_file = (os.path.abspath(__file__))
-        current_file_new = "sudo " + current_file + " --remove"
-        os.system(current_file_new)
-        exit()
-
-def get_sudo_info():
-    if os.getuid() == 0:
-        admin_check = True
-        return admin_check
-    else:
-        admin_check = False
-        return admin_check
-
-def check_sudo():
-    if get_sudo_info() == True:
-            print("\033[31mRunning as root!\033[00m")
-    else:
-        print("\033[31mTrying to request admin rigths!\033[00m")
-        time.sleep(3)
-        current_file = (os.path.abspath(__file__))
-        current_file_new = "sudo " + current_file
-        os.system(current_file_new)
-        exit()
-
-def update_check_sudo():
-    if get_sudo_info() == True:
-            print("\033[31mRunning as root!\033[00m")
-    else:
-        print("\033[31mTrying to request admin rigths!\033[00m")
-        time.sleep(3)
-        current_file = (os.path.abspath(__file__))
-        current_file_new = "sudo " + current_file + " --update"
-        os.system(current_file_new)
-        exit()
-
-def check_not_sudo():
-    if get_sudo_info() == False:
-        print()
-        print("\033[31mRunning as standart user!\033[00m")
-    else:
-        clear()
-        print("\033[31mPlease run this script with standart user rigths!\033[00m")
-        print()
-        exit()
-
-def check_right_os():
-    if platform == "linux":
-        pass
-    elif platform == "linux2":
-        pass
-    elif platform == "darwin":
-        print("\033[31mThis Script can´t run on MacOS!\033[00m")
-        print("\033[96mExiting in 3 seconds!\033[00m")
-        time.sleep(3)
-        user_exit()
-    elif platform == "win32":
-        print("\033[31mThis Script can´t run on windows!\033[00m")
-        print("\033[96mExiting in 3 seconds!\033[00m")
-        time.sleep(3)
-        user_exit()
-
-def get_os_info():
-    if os.path.exists("/etc/phoenixthrush/os.txt"):
+def first_time():
+    if os.path.exists("/etc/phoenixthrush"):
         pass
     else:
-        os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=debian":
-        return f.read()
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=ubuntu":
-        return f.read()
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=arch":
-        return f.read()
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=blackarch":
-        return f.read()
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=kali":
-        return f.read()
-    f.close()
-
-def check_os():
-    if os.path.exists("/etc/phoenixthrush/os.txt"):
-        pass
-    else:
-        os.system("sudo grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
-
-    f = open("/etc/phoenixthrush/os.txt","r")
-    if f.read() == "ID=debian":
-        print("Your System is Debian based right?")
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=ubuntu":
-        print("Your System is Debian based right?")
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=arch":
-        print("Your System is Arch based right?")
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=blackarch":
-        print("Your System is Arch based right?")
-    f.close()
-
-    f = open("/etc/phoenixthrush/os.txt", "r")
-    if f.read() == "ID=kali":
-        print("Your System is Debian based right?")
-    f.close()
-
-def get_package_info(package):
-    new_package = package
-
-    if get_os_info() == "ID=debian":
-        debian_get_package_info(new_package)
-    elif get_os_info() == "ID=arch":
-        arch_get_package_info(new_package)
-    else:
-        print("Error")
-
-def debian_get_package_info(new_package):
-    status = subprocess.getstatusoutput("dpkg-query -W -f='${Status}' " + new_package)
-    if not status[0]:
-        return True
-    else:
-        return False
-
-def arch_get_package_info(new_package):
-    print("Coming soon!")
-    print("Please install the programm " + new_package + " manually!")
-
-def first_package():
-    os.system("sudo apt update")
-    print()
-
-def check_package(package):
-    if debian_get_package_info(package) == True:
-        print("\033[96m" + package + "\033[00m\033[31m is installed!\033[00m")
-        return True
-    else:
-        print("\033[96m" + package + "\033[00m\033[31m is not installed!\033[00m")
-        print("\033[95mTrying to install it!\033[00m")
-        print()
-        tmp_package = "sudo apt install " + package + " -y"
-        if get_os_info() == "ebian":
-            os.system(tmp_package)
-        elif get_os_info() == "Arch":
-            os.system("sudo pacman -Syu " + package + " --needed --noconfirm")
-        else:
-            print("\033[31mNot Debian or Arch based!\033[00m")
-        return False
-
-def check_interface():
-    check_sudo()
-    print()
-    os.system("ifconfig")
-    print()
-    interface = input("\033[96mPlease enter you interface name! \033[00m")
-    return interface
+        os.system("sudo mkdir -p /etc/phoenixthrush")
+        os.system("sudo chmod 777 /etc/phoenixthrush")
 
 def clear():
     if os.name == 'posix':
@@ -204,6 +29,7 @@ def clear():
         _ = os.system('cls')
 
 def user_exit():
+    time.sleep(2)
     clear()
     print("\033[96mThanks for using!")
     print("Have a nice Day!\033[00m \033[31m<3\033[31m")
@@ -228,27 +54,8 @@ def user_exit():
     time.sleep(3)
     exit()
 
-def menue_check_sudo_status():
-    if platform == "linux" or "linux2":
-        if get_sudo_info() == True:
-            print("\033[96mYou have \033[31msudo\033[96m rights!\033[00m")
-        else:
-            print("\033[96mYou have normal user rights!\033[00m")
-    elif platform == "darwin":
-        pass
-    elif platform == "win32":
-        pass
-
-def run_sudo_menue():
-    clear()
-    check_sudo()
-    current_path = os.path.abspath(__file__)
-    current_path = "sudo python3 " + current_path
-    os.system(current_path)
-    exit()
-
 def random_cat():
-    cat = random.randint(1,10)
+    cat = random.randint(1, 10)
     if cat == 1:
         asian_cat_1()
         exit()
@@ -464,11 +271,185 @@ def asian_cat_10():
         """)
     print("\033[00m")
 
+def check_sudo(verbose = False, req_perm = False, admin = True):
+
+    if admin is True:
+        sudo = os.getuid()
+        if sudo == 0:
+            if verbose is True:
+                print("\033[96mRunning as \033[31mroot\033[96m!\033[00m")
+            else:
+                return sudo
+        else:
+            if verbose is True:
+                if req_perm is True:
+                    print("\033[31mRequesting admin rights!\033[00m")
+                    rerun_sudo()
+                    exit()
+                else:
+                    print("\033[31mRunning with \033[96mnormal \033[31muser rights!\033[00m")
+            else:
+                if req_perm is True:
+                    time.sleep(2)
+                    rerun_sudo()
+                    exit()
+                else:
+                    return sudo
+    else:
+        sudo = os.getuid()
+        if sudo != 0:
+            if verbose is True:
+                print("\033[31mRunning with \033[96mnormal \033[31muser rights!\033[00m")
+            else:
+                return sudo
+        else:
+            if verbose is True:
+                if req_perm is True:
+                    print("\033[31mRequesting normal user rights!\033[00m")
+                    time.sleep(2)
+                    rerun_sudo(False)
+                    exit()
+                else:
+                    print("\033[31mRunning with \033[96mnormal \033[31muser rights!\033[00m")
+            else:
+                if req_perm is True:
+                    time.sleep(2)
+                    rerun_sudo(False)
+                    exit()
+                else:
+                    return sudo
+
+def check_os_platform(verbose = True):
+    system = platform
+
+    if system == "darwin":
+        if verbose is True:
+            print("\033[31mMacOS detected!\033[00m")
+            exit()
+        else:
+            return system
+    elif system == "win32":
+        if verbose is True:
+            print("\033[31mWindows detected!\033[00m")
+            exit()
+        else:
+            return system
+    else:
+        os.system("grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
+        with open("/etc/phoenixthrush/os.txt", "r") as f:
+            content = f.read()
+
+        if verbose is True:
+            if content == "ID=arch\n":
+                print("\033[31mArch based Distro detected!\033[00m")
+            elif content == "ID=blackarch\n":
+                print("\033[31mArch based Distro detected!\033[00m")
+            elif content == "ID=debian\n":
+                print("\033[31mDebian based Distro detected!\033[00m")
+            elif content == "ID=ubuntu\n":
+                print("\033[31mDebian based Distro detected!\033[00m")
+            elif content == "ID=kali\n":
+                print("\033[31mDebian based Distro detected!\033[00m")
+            else:
+                print("\033[31mCould not detect your distro!\033[00m")
+                print("\033[31mExiting!\033[00m")
+                user_exit()
+        else:
+            if content == "ID=arch\n":
+                return "arch"
+            elif content == "ID=blackarch\n":
+                return "arch"
+            elif content == "ID=debian\n":
+                return "debian"
+            elif content == "ID=ubuntu\n":
+                return "debian"
+            elif content == "ID=kali\n":
+                return "debian"
+            else:
+                print("\033[31mCould not detect your distro!\033[00m")
+                print("\033[31mExiting!\033[00m")
+                user_exit()
+
+def check_os_compatibility(verbose = True):
+    system = platform
+
+    if system == "darwin":
+        if verbose is True:
+            print("\033[31mThis Script doesn´t support MacOS yet!\033[00m")
+            exit()
+        else:
+            return system
+    elif system == "win32":
+        if verbose is True:
+            print("\033[31mThis Script doesn´t support Windows yet!\033[00m")
+            exit()
+        else:
+            return system
+
+def rerun_sudo(sudo = True):
+    if sudo is True:
+        current = (os.path.abspath(__file__))
+        current = "sudo " + current
+        os.system(current)
+        exit()
+    else:
+        print("\033[31mPlease run that script without admin rights!")
+        exit()
+
+def check_package(package):
+    if check_os_platform(False) == "debian":
+        package_dir = "/bin/" + package
+        if os.path.exists(package_dir):
+            return True
+        else:
+            print("\033[96mInstalling the package \033[31m" + package + "\033[96m!\033[00m")
+            print()
+            os.system("sudo apt update")
+            command = "sudo apt install " + package + " -y"
+            print()
+            os.system(command)
+            return True
+    elif check_os_platform(False) == "arch":
+        package_dir = "/bin/" + package
+        if os.path.exists(package_dir):
+            return True
+        else:
+            print("\033[96mInstalling the package \033[31m" + package + "\033[96m!\033[00m")
+            print()
+            command = "sudo pacman -Sy " + package + " --needed --noconfirm"
+            print()
+            os.system(command)
+            return True
+    else:
+        print("\033[31mCould not detect your distro!\033[00m")
+        print("\033[31mExiting!\033[00m")
+        user_exit()
+
+def update_linux():
+    if check_os_platform(False) == "debian":
+        print("\033[31mUpdating your Linux!\033[00m")
+        print()
+        os.system("sudo apt update")
+        os.system("sudo apt full-upgrade -y")
+        os.system("sudo apt autoremove -y")
+        print()
+        print("\033[31mUpdated your Linux!\033[00m")
+        return True
+    elif check_os_platform(False) == "arch":
+        print("\033[31mUpdating your Linux!\033[00m")
+        print()
+        command = "sudo pacman -Syu --needed --noconfirm"
+        os.system(command)
+        return True
+    else:
+        print("\033[31mCould not detect your distro!\033[00m")
+        print("\033[31mExiting!\033[00m")
+        user_exit()
+
 def menue():
     clear()
-    check_right_os()
     print("\033[95mWelcome to Phoenixsploit v.4.3\033[00m")
-    menue_check_sudo_status()
+    check_sudo(True, False)
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
     print("(  V  ) \033[96mPhoenixthrush\033[95m (  V  )")
@@ -494,7 +475,7 @@ def menue():
         menue()
 
     if choice == 1:
-        watch_hentai()
+        #watch_hentai()
         exit()
     elif choice == 2:
         destroy_pc()
@@ -503,13 +484,13 @@ def menue():
         second_menue()
         exit()
     elif choice == 4:
-        install_and_update()
+        install_or_update()
         exit()
     elif choice == 5:
-        remove_check_sudo()
+        uninstall_phoenixsploit()
         exit()
     elif choice == 6:
-        run_sudo_menue()
+        rerun_sudo()
         exit()
     elif choice == 666:
         random_cat()
@@ -522,126 +503,32 @@ def menue():
         exit()
 
 def watch_hentai():
-    clear()
-    check_not_sudo()
-    if check_package("firefox") == True:
-        print()
-        print("\033[32mOkay buddy let me help you!")
+    check_sudo(False, True, False)
+
+    if check_package("firefox") is True:
+        print("\033[96mOkay buddy let me help you!\033[00m")
         os.system("firefox -new -tab https://hentaihaven.com")
         os.system("firefox -new -tab https://nhentai.net/")
         os.system("firefox -new -tab https://hanime.tv/")
     else:
         print()
-        print("\033[31mCouldn´t install a program!\033[00m")
+        print("\033[31mCouldn´t install firefox!\033[00m")
 
 def destroy_pc():
-    clear()
-    print("Destroyed!")
-    print("Just kidding")
+    print("destroy menue")
 
 def second_menue():
     clear()
-    menue_check_sudo_status()
-    hack_menue()
-    user_exit()
-
-def install_and_update():
-    clear()
-    update_check_sudo()
-    print()
-    print("\033[31mChecking dependency\033[00m")
-    print()
-    check_package("wget")
-    check_package("python3")
-    if os.path.exists("/etc/phoenixthrush/update"):
-        print()
-        print("\033[96mOld files found!\033[00m")
-        print("\033[96mDeleting old files\033[00m")
-        os.system("sudo rm -rf /etc/phoenixthrush/update")
-        os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
-        print("\033[96mDeleted old files!\033[00m")
-        install_and_update_2()
-        exit()
-    else:
-        install_and_update_2()
-        exit()
-
-def install_and_update_2():
-    print()
-    print("\033[96mCreating new Directory\033[00m")
-    os.system("mkdir -p /etc/phoenixthrush")
-    os.system("mkdir -p /etc/phoenixthrush/update")
-    print("\033[96mDownloading files!\033[00m")
-    print()
-    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py")
-
-    current_dir = os.getcwd()
-    current_dir += "/install.py"
-    original = current_dir
-    target = "/etc/phoenixthrush/update"
-    shutil.move(original, target)
-
-    if os.path.exists("/bin/phoenixupdate"):
-        os.system("sudo rm /bin/phoenixupdate")
-    else:
-        pass
-
-    x = open("/bin/phoenixupdate", "x")
-    x.write("clear && sudo python3 /etc/phoenixthrush/update/install.py")
-    os.system("sudo chmod +x /bin/phoenixupdate")
-    os.system("sudo chmod 777 /bin/phoenixupdate")
-
-    os.system("sudo python3 /etc/phoenixthrush/update/install.py")
-    print()
-
-def remove_phoenixsploit():
-    clear()
-    check_sudo()
-    print()
-    print("\033[31mTrying to remove phoenixsploit!\033[00m")
-    os.system("sudo rm -rf /etc/phoenixthrush")
-
-    if os.path.exists("/bin/phoenixsploit"):
-        os.system("sudo rm /bin/phoenixsploit")
-    else:
-        pass
-
-    if os.path.exists("/bin/phoenixphish"):
-        os.system("sudo rm /bin/phoenixphish")
-    else:
-        pass
-
-    if os.path.exists("/bin/phoenixupdate"):
-        os.system("sudo rm /bin/phoenixupdate")
-    else:
-        pass
-
-    if os.path.exists("/bin/phoenixMC"):
-        os.system("sudo rm /bin/phoenixMC")
-    else:
-        pass
-
-    if os.path.exists("/bin/phoenixMAC"):
-        os.system("sudo rm /bin/phoenixMAC")
-    else:
-        pass
-
-    print("\033[31mSuccessfully uninstalled it!\033[00m")
-    print()
-    print("\033[96mWe had a good time, see ya!\033[31m")
-    print("\033[96mAnd have a nice Day!\033[31m \033[31m<3\033[00m")
-    print()
-
-def hack_menue():
     print("\033[95mHack Menue\033[00m")
+    check_sudo(True)
     print()
-    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Support for Forge Server coming soon!]\033[00m")
+    print("\033[96m1 - Create a Minecraft-Server    \033[31m[Coming soon!]\033[00m")
     print("\033[96m2 - Create a hidden hotspot      \033[31m[Coming soon!]\033[00m")
     print("\033[96m3 - Website Phishing (blackeye)\033[00m")
     print("\033[96m4 - Install common tools\033[00m")
     print("\033[96m5 - Update Linux\033[00m")
     print("\033[96m6 - Install Arch Linux\033[00m \033[31m<3\033[00m")
-    print("\033[96m7 - Base64 Encoder/ Decoder\033[00m \033[31m<3\033[00m")
+    print("\033[96m7 - Base64 Encoder/ Decoder\033[00m      \033[31m[Coming soon!]\033[00m")
     print("\033[96m8 - Change MAC Address\033[00m   \033[31m[Coming soon!]\033[00m")
     print()
     print("\033[34m0 - Back to menue!\033[00m")
@@ -651,13 +538,13 @@ def hack_menue():
         choice = int(input("\033[92mPlease choose a option! \033[00m"))
     except ValueError:
         clear()
-        hack_menue()
+        second_menue()
 
     if choice == 1:
-        ask_minecraft_server()
+        #minecraft()
         exit()
     elif choice == 2:
-        hidden_hotspot()
+        #hidden_hotspot()
         exit()
     elif choice == 3:
         website_phishing()
@@ -675,7 +562,7 @@ def hack_menue():
         base64()
         exit()
     elif choice == 8:
-        change_mac_addr()
+        #change_mac_addr()
         exit()
     elif choice == 666:
         random_cat()
@@ -687,32 +574,32 @@ def hack_menue():
         second_menue()
         exit()
 
-def ask_minecraft_server():
-    check_sudo()
+def minecraft():
     print("\033[31mStarting Minecraft Server installation!\033[00m")
     choice = input("\033[96mDo you want Install a normal or a Forge Server (Forge supports Mods) [normal|forge] ? \033[00m")
     if choice == "normal":
-        minecraft_server()
+        minecraft_server_setup()
         exit()
     elif choice == "forge":
-        forge_minecraft_server()
+        forge_minecraft_server_setup()
         exit()
     else:
-        ask_minecraft_server()
+        minecraft()
         exit()
 
-def forge_minecraft_server():
+def minecraft_server_setup():
     clear()
-    check_sudo()
+    check_sudo(False, True)
     print()
     check_package("nano")
-    check_package("default-jdk")
-    check_package("default-jre")
+    os.system("sudo apt install default-jdk -y")
+    os.system("sudo apt install default-jre -y")
+
     print()
     if os.path.exists("/etc/phoenixthrush/phoenixMC"):
         choice = input("\033[96mDo you want to overwrite or remove the old Server files? [overwrite|uninstall] \033[00m")
         if choice == "overwrite":
-            minecraft_server_step_1()
+            minecraft_server_setup_1()
             exit()
         elif choice == "uninstall":
             os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
@@ -720,354 +607,21 @@ def forge_minecraft_server():
             print("\033[31mRemoved Server!\033[00m")
             print()
         else:
-            forge_minecraft_server()
+            minecraft_server_setup()
             exit()
     else:
-        forge_minecraft_server_step_1()
+        minecraft_server_setup_1()
         exit()
 
-def minecraft_server():
-    clear()
-    check_sudo()
-    check_right_os()
-    print()
-    check_package("nano")
-    check_package("default-jdk")
-    check_package("default-jre")
-    print()
-    if os.path.exists("/etc/phoenixthrush/phoenixMC"):
-        choice = input("\033[96mDo you want to overwrite or remove the old Server files? [overwrite|uninstall] \033[00m")
-        if choice == "overwrite":
-            minecraft_server_step_1()
-            exit()
-        elif choice == "uninstall":
-            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
-            os.system("sudo rm /bin/phoenixMC")
-            print("\033[31mRemoved Server!\033[00m")
-            print()
-        else:
-            minecraft_server()
-            exit()
-    else:
-        minecraft_server_step_1()
-        exit()
-
-
-def minecraft_server_step_1():
-    clear()
-    print("\033[31mStarting Minecraft Server installation!\033[00m")
-    print()
-    print("\033[31mChecking files\033[00m")
-    if os.path.exists("/bin/phoenixMC"):
-        print("\033[31mFound old bin files!\033[00m")
-        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
-        print()
-        if choice == "y":
-            print("\033[31mRemoving Files!\033[00m")
-            os.system("sudo rm /bin/phoenixMC")
-            print("\033[31mRemoved Files!\033[00m")
-        elif choice == "n":
-            print("\033[31mExiting Minecraft Installer!\033[00m")
-            time.sleep(10)
-            user_exit()
-            exit()
-        else:
-            minecraft_server_step_1()
-            exit()
-    else:
-        print("\033[96mNo old bin files found!\033[00m")
-    if os.path.exists("/etc/phoenixthrush/phoenixMC"):
-        print()
-        print("\033[31mFound old Server files!\033[00m")
-        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
-        if choice == "y":
-            print()
-            print("\033[31mRemoving Files!\033[00m")
-            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
-            print("\033[31mRemoved Files!\033[00m")
-            minecraft_server_step_2()
-            exit()
-        elif choice == "n":
-            print("\033[31mExiting Minecraft Installer!\033[00m")
-            time.sleep(5)
-            user_exit()
-            exit()
-        else:
-            minecraft_server_step_1()
-            exit()
-
-    else:
-        print("\033[96mNo old Server files found!\033[00m")
-        print()
-        print("\033[31mChecked files!\033[00m")
-        print("\033[31mStarting configs!\033[00m")
-        minecraft_server_step_2()
-        exit()
-
-def forge_minecraft_server_step_1():
-    clear()
-    print("\033[31mStarting Minecraft Server installation!\033[00m")
-    print()
-    print("\033[31mChecking files\033[00m")
-    if os.path.exists("/bin/phoenixMC"):
-        print("\033[31mFound old bin files!\033[00m")
-        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
-        print()
-        if choice == "y":
-            print("\033[31mRemoving Files!\033[00m")
-            os.system("sudo rm /bin/phoenixMC")
-            print("\033[31mRemoved Files!\033[00m")
-        elif choice == "n":
-            print("\033[31mExiting Minecraft Installer!\033[00m")
-            time.sleep(10)
-            user_exit()
-            exit()
-        else:
-            forge_minecraft_server_step_1()
-            exit()
-    else:
-        print("\033[96mNo old bin files found!\033[00m")
-    if os.path.exists("/etc/phoenixthrush/phoenixMC"):
-        print()
-        print("\033[31mFound old Server files!\033[00m")
-        choice = input("\033[96mDo you want to remove them? [y|n] \033[00m")
-        if choice == "y":
-            print()
-            print("\033[31mRemoving Files!\033[00m")
-            os.system("sudo rm -rf /etc/phoenixthrush/phoenixMC")
-            print("\033[31mRemoved Files!\033[00m")
-            forge_minecraft_server_step_2()
-            exit()
-        elif choice == "n":
-            print("\033[31mExiting Minecraft Installer!\033[00m")
-            time.sleep(5)
-            user_exit()
-            exit()
-        else:
-            forge_minecraft_server_step_1()
-            exit()
-
-    else:
-        print("\033[96mNo old Server files found!\033[00m")
-        print()
-        print("\033[31mChecked files!\033[00m")
-        print("\033[31mStarting configs!\033[00m")
-        minecraft_server_step_2()
-        exit()
-
-def minecraft_server_step_2():
-    time.sleep(3)
-    clear()
-    print("\033[96mDownloading Minecraft Server Vanilla jar\033[00m")
-    print("\033[96mVersion 1.16.5\033[00m")
+def minecraft_server_setup_1():
     print()
 
-    os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
-    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
-    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/forge-1.16.5-36.1.6-installer.jar")
-    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/server.properties")
-    print("\033[96mDownloaded jar\033[00m")
-
-    current_dir = os.getcwd()
-    current_dir += "/server.jar"
-    original = current_dir
-    target = "/etc/phoenixthrush/phoenixMC/server.jar"
-    shutil.move(original, target)
-
-    current_dir = os.getcwd()
-    current_dir += "/server.properties"
-    original = current_dir
-    target = "/etc/phoenixthrush/phoenixMC/server.properties"
-    shutil.move(original, target)
-
-    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC/server.properties")
-
-    print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
-    minecraft_server_step_3()
-    exit()
-
-def forge_minecraft_server_step_2():
-    time.sleep(3)
-    clear()
-    print("\033[96mSupport for forge Minecraft Server coming soon!\033[00m")
-    print("\033[96mDownloading Minecraft Server Vanilla jar\033[00m")
-    print("\033[96mVersion 1.16.5\033[00m")
-    print()
-
-    os.system("sudo mkdir -p /etc/phoenixthrush/phoenixMC")
-    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC")
-    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/forge-1.16.5-36.1.6-installer.jar")
-    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/sites/assets/server.properties")
-    print("\033[96mDownloaded jar\033[00m")
-
-    current_dir = os.getcwd()
-    current_dir += "/forge-1.16.5-36.1.6-installer.jar"
-    original = current_dir
-    target = "/etc/phoenixthrush/phoenixMC/forge-1.16.5-36.1.6-installer.jar"
-    shutil.move(original, target)
-
-    current_dir = os.getcwd()
-    current_dir += "/server.properties"
-    original = current_dir
-    target = "/etc/phoenixthrush/phoenixMC/server.properties"
-    shutil.move(original, target)
-
-    os.system("sudo chmod 777 /etc/phoenixthrush/phoenixMC/server.properties")
-
-    print("\033[96mMoved jar to /etc/phoenixthrush/phoenixMC\033[00m")
-    forge_minecraft_server_step_3()
-    exit()
-
-def minecraft_server_step_3():
-    print()
-    try:
-        ram = int(input("\033[31mHow much GB ram do you want for your minecraft server? [1,2,3...,16] \033[00m"))
-    except ValueError:
-        print("\033[31mError wrong input!\033[00m")
-        minecraft_server_step_3()
-        exit()
-
-    if ram < 17 and not ram == 0:
-        print("\033[31mSetting ram to " + str(ram) + "GB\033[00m")
-    else:
-        print("\033[31mError wrong input!\033[00m")
-        minecraft_server_step_3()
-        exit()
-
-    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./server.jar nogui"
-    print()
-    print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
-
-    java_start = str(phoenix_mc_start_command)
-    java_start1 = "clear && " + java_start
-
-    x = open("/bin/phoenixMC", "x")
-    x.write(java_start1)
-    x.close()
-    os.system("sudo chmod +x /bin/phoenixMC")
-    os.system("sudo chmod 777 /bin/phoenixMC")
-    minecraft_server_step_4()
-
-def forge_minecraft_server_step_3():
-    print()
-    try:
-        ram = int(input("\033[31mHow much GB ram do you want for your minecraft server? [1,2,3...,16] \033[00m"))
-    except ValueError:
-        print("\033[31mError wrong input!\033[00m")
-        forge_minecraft_server_step_3()
-        exit()
-
-    if ram < 17 and not ram == 0:
-        print("\033[31mSetting ram to " + str(ram) + "GB\033[00m")
-    else:
-        print("\033[31mError wrong input!\033[00m")
-        forge_minecraft_server_step_3()
-        exit()
-
-    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./forge-1.16.5-36.1.6.jar nogui"
-    print()
-    print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
-
-    java_start = str(phoenix_mc_start_command)
-    java_start1 = "clear && " + java_start
-
-    x = open("/bin/phoenixMC", "x")
-    x.write(java_start1)
-    x.close()
-    os.system("sudo chmod +x /bin/phoenixMC")
-    os.system("sudo chmod 777 /bin/phoenixMC")
-    os.system("cd /etc/phoenixthrush/phoenixMC/ && sudo java -jar forge-1.16.5-36.1.6.jar --installServer")
-    os.system("sudo rm /etc/phoenixthrush/phoenixMC/forge-1.16.5-36.1.6-installer.jar")
-    minecraft_server_step_4()
-
-def minecraft_server_step_4():
-    print()
-    choice = input("\033[96mDo you want to manually edit settings? (recommended) [y|n] \033[00m")
-    if choice == "y":
-        minecraft_server_config_manually()
-    elif choice == "n":
-        minecraft_server_config()
-        exit()
-    else:
-        minecraft_server_step_4()
-        exit()
-
-def minecraft_server_config():
-    minecraft_eula()
-    print("\033[31mYou can start the Server with phoenixMC\033[00m")
-    print()
-    exit()
-
-def minecraft_server_config_manually():
-    os.system("sudo nano /etc/phoenixthrush/phoenixMC/server.properties")
-    minecraft_eula()
-    print("\033[31mYou can start the Server with phoenixMC\033[00m")
-    print()
-    exit()
-
-def minecraft_eula():
-    e = open("/etc/phoenixthrush/phoenixMC/eula.txt", "x")
-    e.write("eula=true")
-    e.close()
-
-def hidden_hotspot():
+def forge_minecraft_server_setup():
     print("Coming soon!")
-    input("If you press enter it will start with a non finished script!")
-    input("Last warning!")
-    input("Ok buddy")
-
-    clear()
-    check_sudo()
-    check_right_os()
-    print()
-    print("\033[96mChecking for requests!\033[00m")
-    check_package("hostapd")
-    check_package("udhcpd")
-    print()
-    os.system("sudo iw phy phy0 interface add new1 type __ap")
-    os.system("ifconfig hotspot 192.168.3.1 up")
-    hostapd = open("/etc/phoenixthrush/hostapd.conf", "x")
-    hostapd.write("interface=wlan0")
-    hostapd.close()
-    hostapd1 = open("/etc/phoenixthrush/hostapd.conf", "a")
-    hostapd1.write("\ndriver=nl80211)")
-    hostapd1.write("\nssid=phoenix")
-    hostapd1.write("\nchannel=7")
-    hostapd1.write("\nhw_mode=g")
-    hostapd1.write("\nwme_enabled=1")
-    hostapd1.write("\nmacaddr_acl=0")
-    hostapd1.write("\nauth_algs=1")
-    hostapd1.write("\nignore_broadcast_ssid=1")
-    hostapd1.write("\nwpa=3")
-    hostapd1.write("\nwpa_passphrase=phoenixthrush")
-    hostapd1.write("\nwpa_key_mgmt=WPA-PSK")
-    hostapd1.write("\nwpa_pairwise=TKIP")
-    hostapd1.write("\nrsn_pairwise=CCMP")
-    #os.system("cd /etc/phoenixthrush && sudo hostapd hostapd.conf")
-    hostapd1.close()
-    udhcpd = open("/etc/udhcpd.conf", "w")
-    udhcpd.write("start 192.168.3.2")
-    udhcpd.write("\nend 192.168.3.254")
-    udhcpd.write("\ninterface hotspot")
-    udhcpd.write("\nopt dns 1.1.1.1 1.0.0.1")
-    udhcpd.write("\noption subnet 255.255.255.0")
-    udhcpd.write("\nopt router 192.168.2.118")
-    udhcpd.write("\noption domain local")
-    udhcpd.write("\noption lease 864000")
-    udhcpd.close()
-    #os.system("sudo udhcd -f")
-
-    print("Please open up 2 terminals and type \"sudo udhcd -f\" and on the other one \"cd /etc/phoenixthrush && sudo hostapd hostapd.conf\"")
-
-    os.system("sudo echo \"1\" > /proc/sys/net/ipv4/ip_forward")
-    os.system("sudo iptables --table nat --append POSTROUTING --out-interface wlo1 -j MASQUERADE")
-    os.system("sudo iptables --append FORWARD --in-interface hotspot -j ACCEPT")
 
 def website_phishing():
     clear()
-    check_sudo()
-    check_right_os()
-    print()
+    check_sudo(False, True)
     print("\033[31mStarting blackeye!\033[00m")
     print("\033[96mChecking for requests!\033[00m")
     check_package("php")
@@ -1129,45 +683,26 @@ def website_phishing():
 
 def common_tools():
     clear()
-    check_sudo()
-    check_right_os()
-    first_package()
+    check_sudo(False, True)
     print("\033[31mInstalling common tools!\033[00m")
     print()
-    get_package_info("vim")
-    get_package_info("nano")
-    get_package_info("neofetch")
-    get_package_info("htop")
-    get_package_info("default-jdk")
-    get_package_info("default-jre")
-    get_package_info("python3")
-    get_package_info("python3-pip")
+    check_package("vim")
+    check_package("nano")
+    check_package("neofetch")
+    check_package("htop")
+    check_package("default-jdk")
+    check_package("default-jre")
+    check_package("python3")
+    check_package("python3-pip")
     print()
     print("\033[31mCommon tools are installed!\033[00m")
     print()
 
-def update_linux():
-    clear()
-    check_sudo()
-    print()
-    print("\033[31mUpdating Linux!\033[00m")
-    print()
-    if get_os_info() == "Debian":
-        os.system("apt update -y")
-        os.system("sudo apt full-upgrade -y")
-        os.system("sudo apt autoremove -y")
-
-    print()
-    print("\033[31mUpdated Linux!\033[00m")
-    print()
-
 def arch_install():
     clear()
-    check_sudo()
-    print()
-    first_package()
-    print()
+    check_sudo(False, True)
     check_package("nano")
+    print()
     print("\033[31mStarting Arch installation!\033[00m")
     print()
     if os.path.exists("/etc/phoenixthrush/arch"):
@@ -1204,7 +739,7 @@ def arch_install_step_2():
     print("Edit the alis.conf and alis-packages.conf")
     print("Default password is phoenixthrush")
     print()
-    input(("\033[95mPress Enter to continue! \033[00m"))
+    input("\033[95mPress Enter to continue! \033[00m")
     arch_install_step_3()
     exit()
 
@@ -1318,7 +853,7 @@ def arch_install_step_3():
         os.system("nano /etc/phoenixthrush/arch/alis-packages.conf")
         print("\033[96mManually edited files!\033[00m")
         print()
-        tmp = input("\033[95mPress Enter to start installation! \033[00m")
+        input("\033[95mPress Enter to start installation! \033[00m")
         arch_install_step_4()
         exit()
 
@@ -1362,76 +897,88 @@ def base64():
         base64_1()
         exit()
 
-def change_mac_addr():
-    print("Coming soon!")
-    input("If you press enter it will start with a non finished script!")
-    input("Last warning!")
-    input("Ok buddy")
-
-    check_sudo()
-    if os.path.exists("/etc/phoenixthrush/phoenix_mac_status"):
-        macstatus = open("/etc/phoenixthrush/phoenix_mac_status")
-        mac_status = macstatus.read()
-        macstatus.close()
-        if mac_status == 1:
-            print("\033[96mResetting MAC to original state!\033[00m")
-            interface = check_interface()
-            interface = "sudo macchanger -p " + interface
-            os.system(interface)
-            print()
-            exit()
-        elif mac_status == 0:
-            print("\033[96mNo previous MAC change found!\033[00m")
-            change_mac_addr_2()
-            exit()
-        else:
-            os.system("sudo rm /etc/phoenixthrush/phoenix_mac_status")
-    else:
-        change_mac_addr_2()
-        exit()
-
-def change_mac_addr_2():
-    check_sudo()
-    first_package()
-    if os.path.exists("/etc/phoenixthrush/phoenix_mac_status"):
-        new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status", "x")
-        new_mac_status.write("1")
-        new_mac_status.close()
-    else:
-        new_mac_status = open("/etc/phoenixthrush/phoenix_mac_status", "w")
-        new_mac_status.write("1")
-        new_mac_status.close()
-
-    print()
-    check_package("macchanger")
-    check_package("net-tools")
-    x = open("/bin/phoenixMAC", "x")
-    x.write("sudo macchanger --random wlan0")
-    x.close()
-    os.system("sudo chmod +x /bin/phoenixMAC")
-    os.system("sudo chmod 777 /bin/phoenixMAC")
-    print()
-    print("\033[31mYou can change your mac to a random one by typing phoenixMAC!\033[00m")
-    print("\033[31mRun this menue again to change you mac back!\033[00m")
-
 def base64_1():
     import phoenix_base64
     phoenix_base64.menue()
 
-if __name__ == "__main__":
-    os.system("mkdir -p /etc/phoenixthrush")
-    phoenixargs = phoenixparse()
-
-    if phoenixargs.sudo == True:
-        check_sudo()
-        exit()
-    if phoenixargs.update == True:
-        install_and_update()
-        exit()
-    if phoenixargs.remove == True:
-        remove_check_sudo()
-        exit()
-
-    print("\033[31mStarting Tool\033[00m")
+def install_or_update():
+    clear()
+    check_sudo(True, True)
     print()
+    print("\033[31mChecking dependency\033[00m")
+    print()
+    check_package("wget")
+    check_package("python3")
+    if os.path.exists("/etc/phoenixthrush/update"):
+        print()
+        print("\033[96mOld files found!\033[00m")
+        print("\033[96mDeleting old files\033[00m")
+        os.system("sudo rm -rf /etc/phoenixthrush/update")
+        os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
+        print("\033[96mDeleted old files!\033[00m")
+        install_and_update_2()
+        exit()
+    else:
+        install_and_update_2()
+        exit()
+
+def install_and_update_2():
+    print()
+    print("\033[96mCreating new Directory\033[00m")
+    os.system("mkdir -p /etc/phoenixthrush/update")
+    print("\033[96mDownloading files!\033[00m")
+    print()
+    os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py")
+
+    current_dir = os.getcwd()
+    current_dir += "/install.py"
+    target = "/etc/phoenixthrush/update"
+    shutil.move(current_dir, target)
+
+    if os.path.exists("/bin/phoenixupdate"):
+        os.system("sudo rm /bin/phoenixupdate")
+    else:
+        pass
+
+    os.system("sudo python3 /etc/phoenixthrush/update/install.py")
+    exit()
+
+def uninstall_phoenixsploit():
+    print("uninstall menue")
+    clear()
+    check_sudo(False, True)
+    print()
+    print("\033[31mTrying to remove phoenixsploit!\033[00m")
+    os.system("sudo rm -rf /etc/phoenixthrush")
+
+    if os.path.exists("/bin/phoenixsploit"):
+        os.system("sudo rm /bin/phoenixsploit")
+    if os.path.exists("/bin/phoenixphish"):
+        os.system("sudo rm /bin/phoenixphish")
+    if os.path.exists("/bin/phoenixMC"):
+        os.system("sudo rm /bin/phoenixMC")
+    if os.path.exists("/bin/phoenixMAC"):
+        os.system("sudo rm /bin/phoenixMAC")
+
+    print("\033[31mSuccessfully uninstalled it!\033[00m")
+    print()
+    print("\033[96mWe had a good time, see ya!\033[31m")
+    print("\033[96mAnd have a nice Day!\033[31m \033[31m<3\033[00m")
+    print()
+
+if __name__ == "__main__":
+    phoenixargs = phoenixparse()
+    check_os_compatibility()
+    first_time()
+
+    if phoenixargs.sudo is True:
+        check_sudo(True, True)
+    if phoenixargs.update is True:
+        exit()
+    if phoenixargs.remove is True:
+        exit()
+    if phoenixargs.ilovecats is True:
+        random_cat()
+        exit()
+
     menue()
