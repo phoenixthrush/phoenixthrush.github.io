@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-import subprocess
-import shutil
 import os
+import shutil
 
 def clear():
     if os.name == 'posix':
@@ -15,6 +14,11 @@ print("\033[31m[*]\033[00m \033[96mStarting installation of phoenixsploit...\033
 print()
 print("\033[31m[*]\033[00m \033[96mChecking if old files are installed...\033[00m")
 
+if os.path.exists("/bin/phoenixsploit"):
+    os.system("sudo rm /bin/phoenixsploit")
+else:
+    pass
+    
 if os.path.exists("/etc/phoenixthrush/phoenixsploit"):
     print("\033[31m[*]\033[00m \033[96mOld files detected...\033[00m")
     os.system("sudo rm /etc/phoenixthrush/phoenixsploit")
@@ -38,20 +42,19 @@ else:
 
 os.system("mkdir -p /etc/phoenixthrush")
 os.system("sudo chmod 777 /etc/phoenixthrush")
-print("\033[31m[*]\033[00m \033[96mDownloading package from github...\033[00m")
+print("\033[31m[*]\033[00m \033[96mDownloading packages from github...\033[00m")
 print()
 os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/phoenixsploit.py")
+os.system("wget https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/bin.py")
 print("\033[31m[*]\033[00m \033[96mMoving files to install dir...\033[00m")
 current_dir = os.getcwd()
-current_dir += "/phoenixsploit.py"
-original = current_dir
-target = "/etc/phoenixthrush/phoenixsploit"
-shutil.move(original, target)
+current_main = current_dir + "/phoenixsploit.py"
+current_bin = current_dir + "/bin.py"
+shutil.move(current_main, "/etc/phoenixthrush/phoenixsploit")
 
 print("\033[31m[*]\033[00m \033[96mCreating launcher for phoenixsploit...\033[00m")
-filewrite = open("/bin/phoenixsploit", "w")
-filewrite.write("clear && python3 /etc/phoenixthrush/phoenixsploit")
-filewrite.close()
+shutil.move(current_main, "/bin/phoenixsploit")
+
 print("\033[31m[*]\033[00m \033[96mDone. Chmoding +x...\033[00m")
 os.system("sudo chmod +x /etc/phoenixthrush/phoenixsploit")
 os.system("sudo chmod 777 /etc/phoenixthrush/phoenixsploit")
