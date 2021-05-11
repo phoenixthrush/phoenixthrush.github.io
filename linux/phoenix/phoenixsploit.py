@@ -800,7 +800,7 @@ def forge_minecraft_server_setup_3():
         forge_minecraft_server_setup_3()
         exit()
 
-    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./server.jar nogui"
+    phoenix_mc_start_command = "cd /etc/phoenixthrush/phoenixMC/ && sudo java -Xmx" + str(ram) + "G -Xms" + str(ram) + "G -jar ./forge-1.16.5-36.1.16.jar nogui"
     print()
     print("\033[96mUsing " + phoenix_mc_start_command + " as start trigger!\033[00m")
 
@@ -818,17 +818,18 @@ def forge_minecraft_server_setup_4():
     print()
     choice = input("\033[96mDo you want to manually edit settings? (recommended) [y|n] \033[00m")
     if choice == "y":
-        minecraft_server_config_manually()
+        forge_minecraft_server_config_manually()
         exit()
     elif choice == "n":
-        minecraft_server_config()
+        forge_minecraft_server_config()
         exit()
     else:
-        minecraft_server_setup_4()
+        forge_minecraft_server_setup_4()
         exit()
 
 def forge_minecraft_server_config():
-    os.system("phoenixMC")
+    print()
+    os.system("cd /etc/phoenixthrush/phoenixMC/ && sudo java -jar ./server.jar --installServer")
     minecraft_eula()
     print()
     print("\033[96mThe Error above is normal!\033[00m")
@@ -839,7 +840,7 @@ def forge_minecraft_server_config():
 def forge_minecraft_server_config_manually():
     print()
     os.system("nano /etc/phoenixthrush/phoenixMC/server.properties")
-    os.system("phoenixMC")
+    os.system("cd /etc/phoenixthrush/phoenixMC/ && sudo java -jar ./server.jar --installServer")
     minecraft_eula()
     print("\033[96mThe Error above is normal!\033[00m")
     print("\033[31mYou can start the Server with phoenixMC\033[00m")
