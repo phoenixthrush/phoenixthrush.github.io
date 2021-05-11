@@ -365,6 +365,8 @@ def check_os_platform(verbose = True):
                 return "debian"
             elif content == "ID=kali\n":
                 return "debian"
+            elif content == "ID=raspbian\n":
+                return "debian"
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
                 print("\033[31mExiting!\033[00m")
