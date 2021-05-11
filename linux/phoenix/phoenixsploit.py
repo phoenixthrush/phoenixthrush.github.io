@@ -350,6 +350,8 @@ def check_os_platform(verbose = True):
                 print("\033[31mDebian based Distro detected!\033[00m")
             elif content == "ID=kali\n":
                 print("\033[31mDebian based Distro detected!\033[00m")
+            elif content == "VERSION_ID=\"10\"\n":
+                print("\033[31mDebian based Distro detected!\033[00m")
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
                 print("\033[31mExiting!\033[00m")
