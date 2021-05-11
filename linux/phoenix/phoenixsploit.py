@@ -456,7 +456,7 @@ def update_linux():
 
 def menue():
     clear()
-    print("\033[95mWelcome to Phoenixsploit v.4.3\033[00m")
+    print("\033[95mWelcome to Phoenixsploit v.4.5\033[00m")
     check_sudo(True, False)
     print("\033[95m  ___                   ___   ")
     print(" (o o)                 (o o)  ")
