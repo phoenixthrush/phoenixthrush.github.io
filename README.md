@@ -29,6 +29,6 @@ After that open wsl and do the steps for Linux!
 <br>
 <br>
 
-
 MacOS
+<br>
 Support for MacOS will be coming soon!
