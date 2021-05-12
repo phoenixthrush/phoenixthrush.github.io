@@ -21,6 +21,7 @@ Method 3 (live mode): <br>
 
 <br>
 Windows
+<br>
 Early support with wsl
 <br>
 Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store!
