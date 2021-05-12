@@ -14,7 +14,7 @@ Method 1: <br>
 
 Method 2: <br>
 <code>sudo su</code> <br>
-<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/linux/phoenix/install.py | python3 </code>
+<code> curl -sSL https://bit.ly/phoenixsploit-install | python3 </code>
 
 Method 3 (live mode): <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-main > main && sudo chmod +x main && sudo python3 main </code>
