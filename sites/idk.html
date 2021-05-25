@@ -169,8 +169,8 @@
 risk of photosensitive epileptic seizes</b>.</p>
 <div class="overlay-buttons-wrapper">
 <div id="accept-button" class="overlay-button">Accept</div>
-<div id="decline-button" class="overlay-button">Decline</div>
 </div>
+<br>
 <a href="https://phoenixthrush.github.io" target="_blank" class="overlay-link">Privacy policy</a>
 </div>
 </div>
@@ -180,7 +180,6 @@ risk of photosensitive epileptic seizes</b>.</p>
 <script type="text/javascript">
             const video = document.getElementById("video");
             const overlay = document.getElementById("overlay");
-            const declineButton = document.getElementById("decline-button");
             const acceptButton = document.getElementById("accept-button");
 
             let hasClicked;
@@ -199,7 +198,6 @@ risk of photosensitive epileptic seizes</b>.</p>
 
             function videoClick(event) {
                 if(event) event.preventDefault();
-                // if not fullscreen
                 const { documentElement } = document;
                 if(documentElement.requestFullscreen) documentElement.requestFullscreen();
                 else if(documentElement.mozRequestFullScreen) documentElement.mozRequestFullScreen();
@@ -208,7 +206,6 @@ risk of photosensitive epileptic seizes</b>.</p>
             }
 
             acceptButton.addEventListener("click", buttonClick);
-            declineButton.addEventListener("click", buttonClick);
             video.addEventListener("click", videoClick);
         </script>
 </body>
