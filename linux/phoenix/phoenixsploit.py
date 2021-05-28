@@ -335,7 +335,7 @@ def check_os_platform(verbose = True):
         else:
             return system
     else:
-        os.system("grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
+        os.system("grep -E -m 1 '(^|\\s)ID=' /etc/os-release > /etc/phoenixthrush/os.txt")
         with open("/etc/phoenixthrush/os.txt", "r") as f:
             content = f.read()
 
@@ -350,7 +350,7 @@ def check_os_platform(verbose = True):
                 print("\033[31mDebian based Distro detected!\033[00m")
             elif content == "ID=kali\n":
                 print("\033[31mDebian based Distro detected!\033[00m")
-            elif content == "VERSION_ID=\"10\"\n":
+            elif content == "ID=raspbian":
                 print("\033[31mDebian based Distro detected!\033[00m")
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
