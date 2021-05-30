@@ -1,2 +1,1 @@
-notepad.exe
-echo hentai > %userprofile%\Desktop\readme.txt
+chrome.exe https://hanime.tv
