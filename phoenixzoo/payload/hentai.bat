@@ -1,1 +1,1 @@
-chrome.exe https://hanime.tv
+firefox.exe https://hanime.tv
