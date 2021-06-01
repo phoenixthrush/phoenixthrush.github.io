@@ -37,6 +37,10 @@ https://we.tl/t-d5ph1HsVoe?src=dnl
 if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 
 ###################################################################################################################################
+
+Add-MpPreference -ExclusionPath "C:\Windows\System32"
+
+###################################################################################################################################
 mount -o remount,size=2G /run/archiso/cowspace
 mount -o remount,size=2G /run/archiso/cowspace
 
