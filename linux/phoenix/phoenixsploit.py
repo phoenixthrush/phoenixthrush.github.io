@@ -352,6 +352,8 @@ def check_os_platform(verbose = True):
                 print("\033[31mDebian based Distro detected!\033[00m")
             elif content == "ID=raspbian":
                 print("\033[31mDebian based Distro detected!\033[00m")
+            elif content == "ID=manjaro":
+                print("\033[31mArch based Distro detected!\033[00m")
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
                 print("\033[31mExiting!\033[00m")
@@ -369,6 +371,8 @@ def check_os_platform(verbose = True):
                 return "debian"
             elif content == "ID=raspbian\n":
                 return "debian"
+            elif content == "ID=manjaro\n":
+                return "arch"
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
                 print("\033[31mExiting!\033[00m")
