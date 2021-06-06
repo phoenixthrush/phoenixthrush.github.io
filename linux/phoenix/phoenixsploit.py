@@ -388,7 +388,7 @@ def check_os_compatibility(verbose = True):
 
 def rerun_sudo(sudo = True, argparse1 = None):
     if sudo is True:
-        if not argparse1 == None:
+        if not argparse1 is None:
             current = (os.path.abspath(__file__))
             current = "sudo " + current + " " + argparse1
             print(current)
@@ -1138,7 +1138,6 @@ def install_or_update():
     check_sudo(True, True)
     print()
     print("\033[31mChecking dependency\033[00m")
-    print()
     check_package("wget")
     check_package("python3")
     if os.path.exists("/etc/phoenixthrush/update"):
@@ -1197,6 +1196,7 @@ def uninstall_phoenixsploit():
     print("\033[96mWe had a good time, see ya!\033[31m")
     print("\033[96mAnd have a nice Day!\033[31m \033[31m<3\033[00m")
     print()
+
 
 if __name__ == "__main__":
     phoenixargs = phoenixparse()
