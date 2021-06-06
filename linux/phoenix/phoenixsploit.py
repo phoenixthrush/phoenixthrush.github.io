@@ -335,7 +335,7 @@ def check_os_platform(verbose = True):
         else:
             return system
     else:
-        os.system("grep -E -m 1 '(^|\\s)ID=' /etc/os-release > /etc/phoenixthrush/os.txt")
+        os.system("grep -m 1 \"ID=\" /etc/os-release > /etc/phoenixthrush/os.txt")
         with open("/etc/phoenixthrush/os.txt", "r") as f:
             content = f.read()
 
@@ -350,10 +350,6 @@ def check_os_platform(verbose = True):
                 print("\033[31mDebian based Distro detected!\033[00m")
             elif content == "ID=kali\n":
                 print("\033[31mDebian based Distro detected!\033[00m")
-            elif content == "ID=raspbian":
-                print("\033[31mDebian based Distro detected!\033[00m")
-            elif content == "ID=manjaro":
-                print("\033[31mArch based Distro detected!\033[00m")
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
                 print("\033[31mExiting!\033[00m")
@@ -369,10 +365,6 @@ def check_os_platform(verbose = True):
                 return "debian"
             elif content == "ID=kali\n":
                 return "debian"
-            elif content == "ID=raspbian\n":
-                return "debian"
-            elif content == "ID=manjaro\n":
-                return "arch"
             else:
                 print("\033[31mCould not detect your distro!\033[00m")
                 print("\033[31mExiting!\033[00m")
@@ -442,6 +434,7 @@ def check_package(package):
         user_exit()
 
 def update_linux():
+    clear()
     if check_os_platform(False) == "debian":
         print("\033[31mUpdating your Linux!\033[00m")
         print()
@@ -609,8 +602,12 @@ def minecraft_server_setup():
     check_sudo(False, True)
     print()
     check_package("nano")
-    os.system("sudo apt install default-jdk -y")
-    os.system("sudo apt install default-jre -y")
+    if check_os_platform(False) == "debian":
+        os.system("sudo apt update")
+        os.system("sudo apt install default-jre -y")
+    else:
+        os.system("sudo pacman -Sy")
+        os.system("sudo apt install jre-openjdk-headless --needed --noconfirm")
 
     print()
     if os.path.exists("/etc/phoenixthrush/phoenixMC"):
@@ -1211,7 +1208,7 @@ if __name__ == "__main__":
         exit()
     if phoenixargs.update is True:
         rerun_sudo()
-        #install_or_update()
+        install_or_update()
         exit()
     if phoenixargs.remove is True:
         rerun_sudo()
