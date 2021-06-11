@@ -7,6 +7,8 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 NEW UPDATE!
 DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
 
+edit: tf I also wanna rewrite it in c
+
 Linux (Support debian based distros)
 
 Method 1: <br>
