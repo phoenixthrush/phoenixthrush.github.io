@@ -5,7 +5,7 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 <br>
 
 NEW UPDATE!
-DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python!
+DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python! <br>
 edit: tf I also wanna rewrite it in c
 
 Linux (Support debian based distros)
