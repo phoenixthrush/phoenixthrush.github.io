@@ -4,11 +4,10 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 <br>
 
-NEW UPDATE!
-DOES NOT FUNCTION PROPERLY - I´m gonna rewrite it in Python! <br>
+NEW UPDATE! - I´m gonna rewrite it in Python! <br>
 edit: tf I also wanna rewrite it in c
 
-Linux (Support debian based distros)
+Linux (Support for debian and arch based distros)
 
 Method 1: <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
