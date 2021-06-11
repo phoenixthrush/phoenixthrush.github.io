@@ -34,3 +34,4 @@ After that open wsl and do the steps for Linux!
 MacOS
 <br>
 Support for MacOS will be coming soon!
+edit: na won´t write that shit
