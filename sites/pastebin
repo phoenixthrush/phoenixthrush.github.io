@@ -1,6 +1,6 @@
 Cloudflare DNS
 
-1.1.1.1mount -o remount,size=2G /run/archiso/cowspace
+1.1.1.1
 1.0.0.1
 2606:4700:4700::1111
 2606:4700:4700::1001
@@ -41,7 +41,7 @@ if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 Add-MpPreference -ExclusionPath "C:\Windows\System32"
 
 ###################################################################################################################################
-mount -o remount,size=2G /run/archiso/cowspace
+
 mount -o remount,size=2G /run/archiso/cowspace
 
 ###################################################################################################################################
@@ -54,6 +54,10 @@ set /a var=%random% %% 2 + 1
 
 if %asw%==y (goto continue)
 if %asw%==n (goto exit) else (goto menue)
+
+###################################################################################################################################
+
+powerShell -NoProfile -NonInteractive -Command [reflection.assembly]::loadwithpartialname('system.windows.forms'); [system.Windows.Forms.MessageBox]::show('reminder: you are gay') >nul
 
 ###################################################################################################################################
 
