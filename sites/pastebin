@@ -214,8 +214,6 @@ powershell -command "wmic path softwarelicensingservice get OA3xOriginalProductK
 
 ###################################################################################################################################
 
-Crack WIFI
-
 airmon-ng check kill
 pkill
 airmon-ng start wlan0
@@ -262,3 +260,7 @@ takeown /f C:\Windows\explorer.exe >nul
 icacls "C:\Windows\explorer.exe" /grant Administrator:M >nul
 taskkill /im explorer.exe /f >nul
 powershell -command "rm C:\Windows\explorer.exe" >nul
+
+copy /b .jpg + .rar .jpg
+
+###################################################################################################################################
