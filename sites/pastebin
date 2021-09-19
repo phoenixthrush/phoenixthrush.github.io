@@ -186,6 +186,16 @@ Set-MpPreference -DisableRealtimeMonitoring $true
 
 ###################################################################################################################################
 
+$SourceFileLocation = “$env:SystemRoot\System32\notepad.exe”
+$ShortcutLocation = “$env:USERPROFILE\Desktop\Notepad.lnk”
+$WScriptShell = New-Object -ComObject WScript.Shell
+$Shortcut = $WScriptShell.CreateShortcut($ShortcutLocation)
+$Shortcut.TargetPath = $SourceFileLocation
+$Shortcut.Save()
+
+
+###################################################################################################################################
+
 echo Select Disk 0 >> y.txt
 echo Select Partition 2 >> y.txt
 echo Delete Partition Override >> y.txt
