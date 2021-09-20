@@ -1,3 +1,4 @@
+# Phoenixthrush Develops
 # phoenixthrush.github.io
 Just memes, codes, malwares, an archive and lots more lol! <br>
 Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao
@@ -13,6 +14,7 @@ Linux (Support for debian and arch based distros)
 DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
 DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
 DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+<br>
 <br>
 
 Method 1: c
