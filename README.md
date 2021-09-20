@@ -9,11 +9,13 @@ edit: tf I also wanna rewrite it in c
 
 Linux (Support for debian and arch based distros)
 
+<br>
 DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+<br>
 
-Method 1: <br>
+Method 1: c
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
 
 Method 2: <br>
