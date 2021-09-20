@@ -3,6 +3,7 @@ Just some code what I just copy paste cuz I´m dumb, malware, games, an archive 
 Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br>
 
 NEW UPDATE! - I´m gonna rewrite it in Python! <br>
+
 edit: tf I also wanna rewrite it in c <br>
 edit: I wanna rewrite it in c++ instead <br>
 edit: I wanna nut on hentai instead <br>
