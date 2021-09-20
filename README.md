@@ -3,13 +3,13 @@ Just some code what I just copy paste cuz I´m dumb, malware, games, an archive 
 Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br>
 
 NEW UPDATE! - I´m gonna rewrite it in Python! <br>
-edit: tf I also wanna rewrite it in c
-edit: I wanna rewrite it in c++ instead
-edit: I wanna nut on hentai instead
-edit: my mum came in
-edit: gonna nut on nezuko channnnn
-edit: I came on nezuko chan
-edit: gonna sleep now
+edit: tf I also wanna rewrite it in c <br>
+edit: I wanna rewrite it in c++ instead <br>
+edit: I wanna nut on hentai instead <br>
+edit: my mum came in <br>
+edit: gonna nut on nezuko channnnn <br>
+edit: I came on nezuko chan <br>
+edit: gonna sleep now <br>
 
 <br>
 DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
