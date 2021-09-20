@@ -29,17 +29,15 @@ Method 3 (live mode): <br>
 
 <br>
 # Windows
-<br>
+
 Early support with wsl
 <br>
 Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store!
 <br>
 After that open wsl and do the steps for Linux!
-
-<br>
 <br>
 
 # MacOS
-<br>
+
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
