@@ -9,6 +9,10 @@ edit: tf I also wanna rewrite it in c
 
 Linux (Support for debian and arch based distros)
 
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!
+
 Method 1: <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
 
