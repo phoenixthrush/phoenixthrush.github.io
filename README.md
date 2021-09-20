@@ -12,13 +12,13 @@ edit: gonna nut on nezuko channnnn <br>
 edit: I came on nezuko chan <br>
 edit: gonna sleep now
 
-<br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
-<br>
-
 # Linux (Support for debian and arch based distros)
+
+<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+<br>
 
 Method 1: <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
