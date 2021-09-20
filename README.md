@@ -15,7 +15,7 @@ DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
 <br>
 <br>
 
-Linux (Support for debian and arch based distros)
+#Linux (Support for debian and arch based distros)
 
 Method 1:
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
@@ -28,7 +28,7 @@ Method 3 (live mode): <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-main > main && sudo chmod +x main && sudo python3 main </code>
 
 <br>
-Windows
+#Windows
 <br>
 Early support with wsl
 <br>
@@ -39,7 +39,7 @@ After that open wsl and do the steps for Linux!
 <br>
 <br>
 
-MacOS
+#MacOS
 <br>
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
