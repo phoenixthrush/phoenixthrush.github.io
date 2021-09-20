@@ -1,6 +1,6 @@
 # Phoenixthrush Develops - phoenixthrush.github.io
 Just some code that I just copy paste cuz I´m dumb and can´t code, malware, games, an archive and lots more lol! <br>
-Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br>
+Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br><br>
 
 <img align="right" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png">
 <br>
