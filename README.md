@@ -28,6 +28,7 @@ Method 3 (live mode): <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-main > main && sudo chmod +x main && sudo python3 main </code>
 
 <br>
+
 # Windows
 
 Early support with wsl
