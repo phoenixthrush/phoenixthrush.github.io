@@ -2,6 +2,14 @@
 Just some code that I just copy paste cuz I´m dumb and can´t code, malware, games, an archive and lots more lol! <br>
 Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br>
 
+# Phoenixsploit
+
+<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
+<br>
+
 NEW UPDATE! - I´m gonna rewrite it in Python! <br>
 
 edit: tf I also wanna rewrite it in c <br>
@@ -13,12 +21,6 @@ edit: I came on nezuko chan <br>
 edit: gonna sleep now
 
 # Linux (Support for debian and arch based distros)
-
-<br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
-<br>
 
 Method 1: <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
