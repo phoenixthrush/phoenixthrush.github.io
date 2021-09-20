@@ -17,7 +17,7 @@ DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
 <br>
 <br>
 
-Method 1: c
+Method 1:
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
 
 Method 2: <br>
