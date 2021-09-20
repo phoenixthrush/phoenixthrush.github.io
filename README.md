@@ -1,5 +1,5 @@
 # Phoenixthrush Develops - phoenixthrush.github.io
-Just some code what I just copy paste cuz I´m dumb, malware, games, an archive and lots more lol! <br>
+Just some code that I just copy paste cuz I´m dumb and can´t code, malware, games, an archive and lots more lol! <br>
 Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br>
 
 NEW UPDATE! - I´m gonna rewrite it in Python! <br>
