@@ -14,7 +14,7 @@ DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS!<br>
 
 # Linux (Support for debian and arch based distros)
 
-Method 1:
+Method 1: <br>
 <code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
 
 Method 2: <br>
@@ -26,9 +26,9 @@ Method 3 (live mode): <br>
 
 # Windows
 
-Early support with wsl <br>
-Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store! <br>
-After that open wsl and do the steps for Linux! <br>
+-Early support with wsl <br>
+-Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store! <br>
+-After that open wsl and do the steps for Linux! <br>
 
 # MacOS
 
