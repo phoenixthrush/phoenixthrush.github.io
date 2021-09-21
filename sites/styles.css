@@ -34,11 +34,37 @@ img {
       padding: 15px;
   }
 
-.links {
+.links_safe {
       text-align: center;
       margin-top: 20px;
       padding: 20px;
-      border: 1px solid white;
+      border: 1px solid green;
+      border-width: 2px;
+      width: 290px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 40px;
+  }
+
+.links_warning {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid orange;
+      border-width: 2px;
+      width: 290px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 40px;
+  }
+
+.links_danger {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+      border: 1px solid red;
       border-width: 2px;
       width: 290px;
       display: block;
