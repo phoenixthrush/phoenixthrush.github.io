@@ -43,3 +43,7 @@ Early support with wsl <br>
 
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
+
+# Currently working on a trojan
+
+https://github.com/Phoenixthrush/edge-trojan/releases/tag/1.0
