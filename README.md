@@ -1,4 +1,4 @@
-# Phoenixthrush Develops - phoenixthrush.github.io
+# Phoenixthrush Develops - phoenixthrush.com
 Just some code that I just copy paste cuz I´m dumb and can´t code, malware, games, an archive and lots more lol! <br>
 Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie: &nbsp;</a>lmao <br><br>
 
