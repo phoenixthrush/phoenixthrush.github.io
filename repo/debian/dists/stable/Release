@@ -1,0 +1,22 @@
+
+Origin: phoenixthrush
+Label: phoenix
+Suite: stable
+Codename: stable
+Version: 1.0
+Architectures: amd64 arm64 arm7
+Components: main
+Description: a test binary
+Date: Fri, 24 Sep 2021 14:43:14 +0000
+MD5Sum:
+ 2f68beabe378f3eb04d6a1fc3e8cb763 410 main/binary-amd64/Packages
+ 7b1c1883dab956f86779e2709bf376f7 306 main/binary-amd64/Packages.gz
+ 041fa68b24631600dfd16613355876db 594 create.sh
+SHA1:
+ 08cdf88abbf45ce49cbe0e980282c363f29db5e5 410 main/binary-amd64/Packages
+ 9772970d7a03aa1f765e929de32dfcead746ab26 306 main/binary-amd64/Packages.gz
+ b561683a675f751512a24e7b97ea11b7f10953c8 594 create.sh
+SHA256:
+ 822fc2a659f8768c2abcdd26fd0c35091a88bf880828afbafb56538d1f252c6b 410 main/binary-amd64/Packages
+ dc893e1a5175629b14075c6b3e6d86aca25d80cdd76eb94fe34d9a60f2b45afc 306 main/binary-amd64/Packages.gz
+ db16181ee9e88dff6f431ab7135e9513e61e4bbd7715ec5c123d6de1e0ccc7f0 594 create.sh
