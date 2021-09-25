@@ -46,4 +46,4 @@ edit: na won´t write that shit
 
 # Currently working on a trojan
 
-https://github.com/Phoenixthrush/edge-trojan/releases
+https://github.com/Phoenixthrush/edge-trojan/releases/latest
