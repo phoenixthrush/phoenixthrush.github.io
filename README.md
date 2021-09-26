@@ -24,14 +24,14 @@ edit: gonna sleep now
 # Linux (Support for debian and arch based distros)
 
 Method 1: <br>
-<code> curl -sSL https://bit.ly/phoenixsploit-install > install && sudo chmod +x install && sudo python3 install </code>
+<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py > install && sudo chmod +x install && sudo python3 install </code>
 
 Method 2: <br>
 <code> sudo su </code> <br>
-<code> curl -sSL https://bit.ly/phoenixsploit-install | python3 </code>
+<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py | python3 </code>
 
 Method 3 (live mode): <br>
-<code> curl -sSL https://bit.ly/phoenixsploit-main > main && sudo chmod +x main && sudo python3 main </code>
+<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
 
 # Windows
 
