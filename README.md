@@ -47,3 +47,12 @@ edit: na won´t write that shit
 # Currently working on a trojan
 
 https://github.com/Phoenixthrush/edge-trojan/releases/latest
+
+# Disclaimer
+
+Please remember that the site contains some dangerous malware! </br>
+Do NOT run them unless you are absolutely sure of what you are doing! </br>
+They are to be used only for educational purposes (and I mean that!) !!! </br>
+
+I recommend running them in a VM and without guest additions or any equivalents or just don´t run it please.
+I am not responsible for any damage or anything else that may happen!
