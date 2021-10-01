@@ -303,3 +303,30 @@ powershell -command "rm C:\Windows\explorer.exe" >nul
 copy /b .jpg + .rar .jpg
 
 ###################################################################################################################################
+
+AOMEI Partition Assistant 9.4.1 
+
+Serial keys
+SSD6-XQ5G-GQT9-ZUNR-WAH9
+C4TD-MAN6-XTSG-ID7J-QLET
+XMEG-PROD7-LEVT-VPHS-02F6
+License Keys
+AW2A-X6WD-URHN-PX4J-QCRU
+QWDZ-JVEU-AYE9-MNAD-7FOZ
+ASE2-QXTU-JKGK-JUT1-GON4
+Activation Keys
+RAN6-MIX4-GAND-SIFE-3G6T
+KHTM-49KL-PUR3-JAV8-KIN0
+JML4-ANE7-A1L0-SAD9-JAM4
+Product Key
+AKM8-MAS2-CH77-KHI9-ARRI
+
+
+FILE: cfg.ini
+
+[CONFIG]
+COUNT=7
+KEY=AOTE-33SP8-E54A6-735MT
+[Version]
+VERSION=7
+
