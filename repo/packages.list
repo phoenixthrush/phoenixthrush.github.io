@@ -1,1 +1,1 @@
-deb https://phoenixthrush.com/repo/ stable
+deb https://phoenixthrush.com/repo/ ./stable
