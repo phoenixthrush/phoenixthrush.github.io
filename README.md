@@ -4,7 +4,7 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 <img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500> <br>
 
-# Add my APT (PPA) repo
+## Add my APT (PPA) repo
 
 ### Installation (only debian based rn):
 
