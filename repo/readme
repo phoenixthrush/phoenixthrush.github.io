@@ -1,1 +1,0 @@
-echo "deb [arch=amd64 signed-by=https://phoenixthrush.com/repo/debian/pgp-key.public] https://phoenixthrush.com/repo/debian stable main" | sudo tee /etc/apt/sources.list.d/example.list
