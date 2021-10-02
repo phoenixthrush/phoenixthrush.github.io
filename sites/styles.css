@@ -103,3 +103,12 @@ a:hover {
     color: #000;
     background: #fff;
 }
+
+.idk {
+    display: table-cell;
+    vertical-align: middle;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    text-align: center;
+    height: 50px;
+}
