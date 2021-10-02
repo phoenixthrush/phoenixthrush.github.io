@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Sat, 02 Oct 2021 09:40:29 +0000
+MD5Sum:
+ f7f80ae57e48b362e5ef919ef0fcceb9              396 Packages
+ aa82de3158306f789f1f8f26bbcdfee9              317 Packages.gz
+ 8da5342c1a3682318a3d98f2722f708d               38 Release
+SHA1:
+ 820da62b91b852616e88ce32dfa2b8bdd19d6574              396 Packages
+ d39fbaf59e6762e37af62dd3a25e1f511b32e76d              317 Packages.gz
+ aa92e0c46b9a947923d6dad0ae53ea151207fcc2               38 Release
+SHA256:
+ e176f6131af5b5012d9c8cd94ee6566c796fcdb41a136f7bb9aba1ebd9954ca0              396 Packages
+ 7262a32a5c9710c6f87d755dfb09079d599817c93227598999f1b13d6d70510e              317 Packages.gz
+ 9a4292773f6bcd672752fa47c70faa5fbb90984b965a10c0606c940f009d0dbd               38 Release
+SHA512:
+ 99e90c4894f96c768c0f71688f94231f760303678d7b7176eb30799ee0ad376cc1ae5bbc088f6bd82a1e59aca80ab6ba25a632a34ebfe4e5c704db8e0f39d92b              396 Packages
+ 191f36c246aec2ea3c03d1025503dfcd725429d55a445cc0ad7a955c3a72d7177e409d3e51e91c538294b598f2bd497a9a08a300d5f44d1e75f91ef4e4e0c0a4              317 Packages.gz
+ b4ef0ab80b6f9be95bd39d0d4c1a9c1f9933efefd179d41e38ca3ab0abb16696b0e050d8ae881f26f64026d493773ea0ea02ec6286985bffbef9d25f0c64b2ef               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQJXBAEBCgBBFiEE/WCYz+rosc/guBeZWi7EAL0ZHr0FAmFYKSQjHHBob2VuaXh0
+aHJ1c2hfYnVzaW5lc3NAaG90bWFpbC5jb20ACgkQWi7EAL0ZHr1Ghg//d1/KDJtW
+zqTwYR/ncH8vWGDHjqWxSXGU6YJ+ParS7M2nI62X8GmJiUohFyCgNKn4TA8Xv6rY
+aiLOSGWRvaFEcJTyOeR/6yHZ/NSVU/vNaFmpPb50bxzr0MAU4y9oiS3Xq//iGA3f
+MHXyH4Oy0smMoO2aAcTCH0KGrrVd0rjtxm190H/r9hzs1njgF+h3mSNEsPnM/dEe
+bT5Ba4QR/JDJokTKMwUpI46fJkjjiO7xfq7JIgfPnrAYVxuuZ4YGKzWw5yuOcq5m
+ue8nzafn0YS1zlHYQ/cI+v/L91p+JyijgQ/QraqCcsmyz6u2lRrjRCPmVilEtpMM
+HivqEon6vQ5kvrBvBAZWgaV3jmfEutwsjQQSuEWVwN6adacMEuv7RDXPP9Ts8+rD
+rA/wEmxiqSrUcktGqK/hy1VPjUxhwPxfJcCEWfTYit+0GKUt0zha7Vu/cEq/+iKm
+rF88QlPeXLcGiTZ/Flk148Zs2lbsb78+oDlYnvqwSeFqcDxXf0rxo44q2k+xgqKv
+rRGtgN5iH3rCFErmfDzmvaas+lFLZ1OLpk06wrEGdJyNHbYqSBXCMso+3Hb5ZCFN
+1EKW6YKp6YSRTJkdslS1n7hthwEOAMs1q7YDPkwy0gsYIdkszEgGeBXcnM6CNTn5
+NuDjl1hPEu0yLVm19LE6sHtRG/57jJt/suA=
+=C5mI
+-----END PGP SIGNATURE-----

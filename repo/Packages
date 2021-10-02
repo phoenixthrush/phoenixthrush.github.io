@@ -1,0 +1,15 @@
+Package: hentai
+Version: 0.0.1
+Architecture: all
+Essential: no
+Maintainer: phoenixthrush.com
+Installed-Size: 1024
+Filename: ./hentai_0.0.1-1_amd64.deb
+Size: 3568
+MD5sum: 9caad786e6de356bf8d2f5181b7f7a5d
+SHA1: fad10c46622b8715b836f18771ab2ae292dd08aa
+SHA256: 600377f5f38313cbdefda0a85338fa6b44d3909ec5bfa58477ac6d54e81b0346
+Section: custom
+Priority: optional
+Description: prints an ascii picture
+
