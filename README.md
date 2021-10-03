@@ -14,6 +14,8 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 -hentai (only prints an ascii cat) <br>
 <code> sudo apt install hentai </code> <br>
+-phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
+<code> sudo apt install phoenixsploit </code> <br>
 
 # Phoenixsploit
 
