@@ -1,1 +1,1 @@
-deb https://phoenixthrush.com/repo/ ./
+deb [signed-by=/usr/share/keyrings/phoenixthrush-archive-keyring.gpg] https://phoenixthrush.com/repo/ ./
