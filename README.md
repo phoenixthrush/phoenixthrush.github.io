@@ -65,7 +65,7 @@ Early support with wsl <br>
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
 
-# Currently working on a trojan
+# Currently working on my own APT (PPA) repo for debian based distros!
 
 https://github.com/Phoenixthrush/edge-trojan/releases/latest
 
