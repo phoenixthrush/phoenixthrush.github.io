@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Tue, 05 Oct 2021 12:38:15 +0000
+MD5Sum:
+ 85574682434abd916e53e058151ef3fb             1603 Packages
+ 6a571eba53d29daea8a3fa104de1801a              673 Packages.gz
+ 5bde88fb473ae4a7c15e159bc1ece99d               38 Release
+SHA1:
+ 992a469266f6e7905542a3c378990c789694468b             1603 Packages
+ ce231e19a9396fec690982735d8bbebf24b9b4c0              673 Packages.gz
+ 3567953457fc209e357f8e665cb5bec936ce0c5a               38 Release
+SHA256:
+ 86ab47b303a74c3e4b94d8a55e2c074b12ce15c1e1d0892865d9ba36a2444bff             1603 Packages
+ 5ab657d4a5cf30ed98528a821ea70f8327f713544f08413ae8fc624e23530b69              673 Packages.gz
+ 32b540feec50201bb44faed91c1ff0aed495ceaba14a01edf4f6f75db08cf528               38 Release
+SHA512:
+ bbcd62edc63d2a83ef8cff0c4aa3dcbde7c540720ee010b456d103a17b6b6ffe0e71be403046b976237f697f89f8055fc03b26fcb2254319aab8f97f0ae53afd             1603 Packages
+ d8c31a7cb1df428d867ff13c9788b1eb54e1c8f9377843606ab30dfc481678d3977c3c202a5ff09cb9eefd17f0a73a8ed104828bb4453add421d626b49aef1b7              673 Packages.gz
+ fdf3ba6d6a811af9743bf7b4989ede6d4a2e6e858f545ed0793de2a773694083c72041c9312cc748a7cd32c89b5bb5b0bac532f9c3d8595635db1f04c2651a08               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQJXBAEBCgBBFiEEQQbt3/aqp04JelnyL64e7ozyYyAFAmFcR0gjHHBob2VuaXh0
+aHJ1c2hfYnVzaW5lc3NAaG90bWFpbC5jb20ACgkQL64e7ozyYyA2HA/5ATs7U2GV
+UP026rhKNB5xSELyQrQJw+XlzHiONaxIyKeLlq3lQzkez37jnUiHZyPi4SeT8+SS
+C1gvsJF+dUfcwZB/JHc+EiAf76LDpwE4ZijogLkc3oG2UBAyi607YQzsvb/MASqu
+z+S+YsQP3CQtU+nlk4H2FITNYJFLoK3XIPOKJhwkTi4wxjoAkujvlAsW+fWu7QrN
+P80BShHvVprgTWztK7kmdWyvvWup1egFUznuFlvR93cijPWZAlwAMxaRjdhMV0mZ
+JkSi4LCYdkTZC2u6jJ8YVI67MpZOresqvHlpRW3kGp0vfKv63pXjwlLudy8YUKBe
+yJ1/qAz4yvoU0lpulG9HM6gYZDXv5ZfUgsE37FqYnnqzMuamMnhcCoQ7TJo92Pct
+ODBi5Q6gwk/KJgMTduP3CI/WpydYWSRDkUBAnWMLGygLqrGL0GbusdhH01ZJjHvI
+nOA+7WGy/KIzpcBSSc0zOsXarvzXMmbonq49Tz7I5JlfhWHgVTTaQb5M1z8LPB0q
+nwuZc+DhFXOwpiPRLOguZ/5r6rXuHMmOOc9ET5VzPbV4sr3VaW1uge/s3NdnKSyw
+k4A9TWX4ZTH1Hv9OvSGLmagFxoaZ5eao5pei3HYNSWOk5VoXwXoXe5VyR4SqKpj7
+l4tYBoXVz11YEe3esJLyQ6OmOvi7m3kjWrk=
+=kHhc
+-----END PGP SIGNATURE-----
