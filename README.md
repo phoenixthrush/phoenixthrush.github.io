@@ -4,7 +4,7 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 <img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500> <br>
 
-# Add my APT (PPA) repo
+# Add my APT repo
 
 ### Installation (only debian based rn):
 
@@ -65,7 +65,7 @@ Early support with wsl <br>
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
 
-# Currently working on my own APT (PPA) repo for debian based distros!
+# Currently working on my own APT repo for debian based distros!
 
 https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-ppa-repo
 
