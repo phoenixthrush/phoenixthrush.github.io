@@ -67,7 +67,7 @@ edit: na won´t write that shit
 
 # Currently working on my own APT repo for debian based distros!
 
-https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-ppa-repo
+https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-repo
 
 # Disclaimer
 
