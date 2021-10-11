@@ -4,6 +4,12 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 <img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500> <br>
 
+# To-Do
+
+- Edit deb control file in my repo package "phoenixsploit" (changing install size - on all channels) <br>
+- Coding v.0.0.4 of phoenixsploit
+- Coding support for arch
+
 # Add my APT repo
 
 ## Installation (only debian based rn):
@@ -19,10 +25,10 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 ### Packages: <br>
 
--hentai (only prints an ascii cat) <br>
+- hentai (only prints an ascii cat) <br>
 <code> sudo apt install hentai </code> <br>
 
--phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
+- phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
 <code> sudo apt install phoenixsploit </code> <br>
 
 # Phoenixsploit BETA
@@ -64,8 +70,8 @@ Method 3 (live mode): <br>
 ## Windows
 
 Early support with wsl <br>
--Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store! <br>
--After that open wsl and do the steps for Linux! <br>
+- Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store! <br>
+- After that open wsl and do the steps for Linux! <br>
 
 ## MacOS
 
