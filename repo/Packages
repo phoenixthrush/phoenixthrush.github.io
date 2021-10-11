@@ -1,0 +1,75 @@
+Package: hentai
+Version: 0.0.1
+Architecture: all
+Essential: no
+Maintainer: phoenixthrush.com
+Installed-Size: 1024
+Filename: ./hentai_0.0.1-1_amd64.deb
+Size: 3568
+MD5sum: 9caad786e6de356bf8d2f5181b7f7a5d
+SHA1: fad10c46622b8715b836f18771ab2ae292dd08aa
+SHA256: 600377f5f38313cbdefda0a85338fa6b44d3909ec5bfa58477ac6d54e81b0346
+Section: custom
+Priority: optional
+Description: prints an ascii picture
+
+Package: hentai
+Version: 0.0.2
+Architecture: all
+Essential: no
+Maintainer: phoenixthrush.com
+Installed-Size: 1024
+Filename: ./hentai_0.0.2-1_amd64.deb
+Size: 3736
+MD5sum: 72fd6ae44c4a40a0e5243f303841b34c
+SHA1: c3ab293d048cf55c50bc9087dbedb09cec210399
+SHA256: 74d1495db169e28709fc49cd277d1577452b26f463f6be6022df4c40cfb0bd93
+Section: custom
+Priority: optional
+Description: prints an ascii cat
+
+Package: phoenixsploit
+Version: 0.0.1
+Architecture: all
+Maintainer: phoenixthrush.com
+Installed-Size: 1024
+Pre-Depends: python3
+Filename: ./phoenixsploit_0.0.1-1_amd64.deb
+Size: 7096
+MD5sum: a4d7035e411abb2774daa8233022aa74
+SHA1: bf5b05073bed029271d73ffdc6ccf14e18cebe77
+SHA256: db833134b9973022df42aa3357d7aec549d95a308239b6d19484329e48b3aab3
+Section: custom
+Priority: optional
+Description: phoenixsploit
+
+Package: phoenixsploit
+Version: 0.0.2
+Architecture: all
+Maintainer: phoenixthrush.com
+Installed-Size: 40960
+Pre-Depends: python3
+Filename: ./phoenixsploit_0.0.2-1_amd64.deb
+Size: 7064
+MD5sum: a96d7c1285e63311cbe2cc00989bcd25
+SHA1: a049acc6fded6f0543be295cd5e911cdca3af126
+SHA256: 8ab4f635582b37c26ff3eaa098a9208691cde745d0493c8dd42b4b8981185ee0
+Section: custom
+Priority: optional
+Description: phoenixsploit
+
+Package: phoenixsploit
+Version: 0.0.3
+Architecture: all
+Maintainer: phoenixthrush.com
+Installed-Size: 51200
+Pre-Depends: python3
+Filename: ./phoenixsploit_0.0.3-1_amd64.deb
+Size: 7256
+MD5sum: 2f09166167afcf2d5ff955995329d69b
+SHA1: 39361f6438c065e24010e52659fba8c2dbae5e91
+SHA256: 563b39f905ddee152dfd82fd79f193a521477dd13802041fc7a4243e848b6d66
+Section: custom
+Priority: optional
+Description: phoenixsploit
+
