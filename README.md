@@ -31,13 +31,6 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 - phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
 <code> sudo apt install phoenixsploit </code> <br>
 
-# Phoenixsploit BETA
-
-## Linux (Support for debian based distros)
-
-<code> curl -sSL phoenixthrush.com/install.sh | bash </code>  <br>
-<code> sudo apt install phoenixsploit </code>
-
 # Phoenixsploit
 
 DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS! <br>
@@ -57,14 +50,14 @@ edit: gonna sleep now
 
 ## Linux (Support for debian and arch based distros)
 
-Method 1: <br>
+- Method 1: <br>
 <code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py > install && sudo chmod +x install && sudo python3 install </code>
 
-Method 2: <br>
+- Method 2: <br>
 <code> sudo su </code> <br>
 <code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py | python3 </code>
 
-Method 3 (live mode): <br>
+- Method 3 (live mode): <br>
 <code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
 
 ## Windows
