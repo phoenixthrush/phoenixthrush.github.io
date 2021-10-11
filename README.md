@@ -8,8 +8,13 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 ### Installation (only debian based rn):
 
+## Stable
 <code> curl -sSL phoenixthrush.com/install.sh | bash </code>
+
+## Dev Channel
 <code> curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
+
+## Nightly Channel
 <code> curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash </code>
 
 ### Packages: <br>
