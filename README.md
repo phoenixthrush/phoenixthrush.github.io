@@ -6,15 +6,15 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 # Add my APT repo
 
-### Installation (only debian based rn):
+## Installation (only debian based rn):
 
-## Stable
+### Stable
 <code> curl -sSL phoenixthrush.com/install.sh | bash </code>
 
-## Dev Channel
+### Dev Channel
 <code> curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
 
-## Nightly Channel
+### Nightly Channel
 <code> curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash </code>
 
 ### Packages: <br>
