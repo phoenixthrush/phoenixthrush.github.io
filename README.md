@@ -51,7 +51,7 @@ edit: gonna sleep now
 ## Linux (Support for debian and arch based distros)
 
 - Method 1: <br>
-<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py > install && sudo chmod +x install && sudo python3 install && rm install </code>
+<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py > install && sudo chmod +x install && sudo python3 install && rm install && rm phoenixsploit.py</code>
 
 - Method 2: <br>
 <code> sudo su </code> <br>
