@@ -18,9 +18,11 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 <code> curl -sSL phoenixthrush.com/install.sh | bash </code>
 
 ### Dev Channel
+(inactive pls use stable channel rn) <br>
 <code> curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
 
 ### Nightly Channel
+(inactive pls use stable channel rn) <br>
 <code> curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash </code>
 
 ### Packages: <br>
