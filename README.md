@@ -6,9 +6,8 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 # To-Do
 
-- Edit deb control file in my repo package "phoenixsploit" (changing install size - on all channels) <br>
-- Coding v.0.0.4 of phoenixsploit
-- Coding support for arch
+- phoenixsploit - Coding v.0.0.6
+- phoenixsploit - Coding support for arch 
 
 # Add my APT repo
 
