@@ -46,11 +46,11 @@ edit: gonna sleep now
 
 ## Linux (Support for debian and arch based distros)
 
-- Method 1: <br>
-<code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash </code>
-
-- Method 2 (over repo - only debian based distros): <br>
+- Method 1 (over repo - only debian based distros): <br>
 <code> curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash </code>
+
+- Method 2: <br>
+<code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash </code>
 
 - Method 3 (live mode): <br>
 <code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
