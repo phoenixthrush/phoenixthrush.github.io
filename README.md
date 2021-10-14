@@ -34,11 +34,6 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 # Phoenixsploit
 
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS! <br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS! <br>
-DOES NOT WORK RIGHTNOW GONNA FIX IT THE COMING DAYS! <br>
-<br>
-
 ### NEW UPDATE! - I´m gonna rewrite it in Python! <br>
 
 edit: tf I also wanna rewrite it in c <br>
