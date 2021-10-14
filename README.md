@@ -52,7 +52,7 @@ edit: gonna sleep now
 - Method 2 (over source code - full debian and arch beta support): <br>
 <code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash </code>
 
-- Method 3 (live mode): <br>
+- Method 3 (live mode - no installation): <br>
 <code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
 
 ## Windows
