@@ -49,7 +49,7 @@ edit: gonna sleep now
 - Method 1 (over repo - only debian based distros): <br>
 <code> curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash </code>
 
-- Method 2: <br>
+- Method 2 (over source code - full debian and arch beta support): <br>
 <code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash </code>
 
 - Method 3 (live mode): <br>
