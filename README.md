@@ -7,7 +7,7 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 # To-Do
 
 - phoenixsploit - Coding v.0.0.6
-- phoenixsploit - Coding support for arch 
+- phoenixsploit - Coding full support for arch 
 
 # Add my APT repo
 
@@ -52,14 +52,13 @@ edit: gonna sleep now
 ## Linux (Support for debian and arch based distros)
 
 - Method 1: <br>
-<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.sh | bash </code>
+<code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash </code>
 
-- Method 2: <br>
-<code> sudo su </code> <br>
-<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/install.py | python3 </code>
+- Method 2 (over repo - only debian based distros): <br>
+<code> curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash </code>
 
 - Method 3 (live mode): <br>
-<code> curl -sSL https://raw.githubusercontent.com/Phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
+<code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
 
 ## Windows
 
