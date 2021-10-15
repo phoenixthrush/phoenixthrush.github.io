@@ -61,6 +61,9 @@ edit: gonna sleep now
 - Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store! <br>
 - After that open wsl and do the steps for Linux! <br>
 
+### Or just download my wsl installer lmao!
+https://phoenixthrush.com/projects/scripts/wsl.bat
+
 ## MacOS
 
 Support for MacOS will be coming soon! <br>
