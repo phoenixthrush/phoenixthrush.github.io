@@ -34,6 +34,11 @@ curl -sSL phoenixthrush.com/repo/dev/install.sh | bash
 ```shell
 curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 ```
+
+### Use that command to add my repo on wsl (Windows)!
+```shell
+wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && ./install.sh; rm install.sh
+```
 <br>
 
 ### Packages:
@@ -90,9 +95,14 @@ curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/pho
 ### Or just download my wsl installer lmao!
 https://phoenixthrush.com/projects/scripts/wsl.bat
 
-### After it finished installing insert that command to install it!
+### After it finished installing insert that command to install phoenixsploit!
 ```shell
-curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash
+wget https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh -v -O install.sh && ./install.sh; rm install.sh
+```
+
+### After it finished installing insert that command to only add my repo!
+```shell
+wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && ./install.sh; rm install.sh
 ```
 <br>
 
