@@ -18,22 +18,22 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 ```shell
 curl -sSL phoenixthrush.com/install.sh | bash
 ```
+ <br>
 
-### Dev Channel
-(inactive pls use stable channel rn)
+### Dev Channel (inactive pls use stable channel rn)
 ```shell
 curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
 ```
+ <br>
 
-### Nightly Channel
-(inactive pls use stable channel rn) <br>
+### Nightly Channel (inactive pls use stable channel rn)
 ```shell
 curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 ```
 
 ### Packages: <br>
 
-- hentai (only prints an ascii cat) <br>
+- hentai (only prints an ascii cat)
 ```shell
 sudo apt install hentai
 ```
