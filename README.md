@@ -7,7 +7,8 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 # To-Do
 
 - phoenixsploit - Coding v.0.0.6
-- phoenixsploit - Coding full support for arch 
+- phoenixsploit - Coding full support for arch
+<br>
 
 # Add my APT repo
 
@@ -21,7 +22,7 @@ curl -sSL phoenixthrush.com/install.sh | bash
 
 ### Dev Channel (inactive pls use stable channel rn)
 ```shell
-curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
+curl -sSL phoenixthrush.com/repo/dev/install.sh | bash
 ```
 
 ### Nightly Channel (inactive pls use stable channel rn)
@@ -41,6 +42,7 @@ sudo apt install hentai
 ```shell
 sudo apt install phoenixsploit
 ```
+<br>
 
 # Phoenixsploit
 
@@ -53,6 +55,8 @@ edit: my mum came in <br>
 edit: gonna nut on nezuko channnnn <br>
 edit: I came on nezuko chan <br>
 edit: gonna sleep now
+<br>
+<br>
 
 ## Linux (Support for debian and arch based distros)
 
@@ -70,6 +74,7 @@ curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/ins
 ```shell
 curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main
 ```
+<br>
 
 ## Windows
 
@@ -84,15 +89,18 @@ https://phoenixthrush.com/projects/scripts/wsl.bat
 ```shell
 curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash
 ```
+<br>
 
 ## MacOS
 
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
+<br>
 
 # Currently working on my own APT repo for debian based distros!
 
 https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-repo
+<br>
 
 # Disclaimer
 
