@@ -100,6 +100,8 @@ https://phoenixthrush.com/projects/scripts/wsl.bat
 wget https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh -v -O install.sh && ./install.sh; rm install.sh
 ```
 
+### Or
+
 ### After it finished installing insert that command to only add my repo!
 ```shell
 wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && ./install.sh; rm install.sh
