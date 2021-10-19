@@ -37,7 +37,7 @@ curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 
 ### Use that command to add my repo on wsl (Windows)!
 ```shell
-wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && ./install.sh; rm install.sh
+wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && cat ./install.sh | bash; rm install.sh
 ```
 <br>
 
@@ -97,14 +97,14 @@ https://phoenixthrush.com/projects/scripts/wsl.bat
 
 ### After it finished installing insert that command to install phoenixsploit!
 ```shell
-wget https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh -v -O install.sh && ./install.sh; rm install.sh
+wget https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh -v -O install.sh && cat ./install.sh | bash; rm install.sh
 ```
 
 ### Or
 
 ### After it finished installing insert that command to only add my repo!
 ```shell
-wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && ./install.sh; rm install.sh
+wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && cat ./install.sh | bash; rm install.sh
 ```
 <br>
 
