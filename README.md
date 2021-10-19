@@ -28,8 +28,9 @@ curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
 ```shell
 curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 ```
+<br>
 
-### Packages: <br>
+### Packages:
 
 - hentai (only prints an ascii cat)
 ```shell
