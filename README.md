@@ -14,23 +14,34 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 ## Installation (only debian based rn):
 
 ### Stable
-<code> curl -sSL phoenixthrush.com/install.sh | bash </code>
+
+```shell
+curl -sSL phoenixthrush.com/install.sh | bash
+```
 
 ### Dev Channel
-(inactive pls use stable channel rn) <br>
-<code> curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
+(inactive pls use stable channel rn)
+```shell
+curl -sSL phoenixthrush.com/repo/dev/install.sh | bash </code>
+```
 
 ### Nightly Channel
 (inactive pls use stable channel rn) <br>
-<code> curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash </code>
+```shell
+curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
+```
 
 ### Packages: <br>
 
 - hentai (only prints an ascii cat) <br>
-<code> sudo apt install hentai </code> <br>
+```shell
+sudo apt install hentai
+```
 
 - phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
-<code> sudo apt install phoenixsploit </code> <br>
+```shell
+sudo apt install phoenixsploit
+```
 
 # Phoenixsploit
 
@@ -46,14 +57,20 @@ edit: gonna sleep now
 
 ## Linux (Support for debian and arch based distros)
 
-- Method 1 (over repo - only debian based distros): <br>
-<code> curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash </code>
+- Method 1 (over repo - only debian based distros):
+```shell
+curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash
+```
 
-- Method 2 (over source code - full debian and arch beta support): <br>
-<code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash </code>
+- Method 2 (over source code - full debian and arch beta support):
+```shell
+curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash
+```
 
 - Method 3 (live mode - no installation): <br>
-<code> curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main </code>
+```shell
+curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main
+```
 
 ## Windows
 
@@ -63,6 +80,11 @@ edit: gonna sleep now
 
 ### Or just download my wsl installer lmao!
 https://phoenixthrush.com/projects/scripts/wsl.bat
+
+### After it finished installing insert that command to install it!
+```shell
+curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash
+```
 
 ## MacOS
 
