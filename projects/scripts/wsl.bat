@@ -5,7 +5,7 @@ if not "%1"=="am_admin" (powershell start -verb runas '%0' am_admin & exit /b)
 
 echo This tool will install WSL for you!
 echo The PC will restart after the installation!
-echo After the restart an admin prompt will pop up again, click on "Yes", after that Ubuntu will be getting installed!
+echo After the restart an admin prompt will pop up again, click on "Yes", after that Debian will be getting installed!
 echo.
 echo It will ask you for a UNIX name, just insert anything you want lmao!
 echo Insert the password you want for 2 times and yeah it will be blank if you type!
