@@ -8,6 +8,11 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 - phoenixsploit - Coding v.0.0.6
 - phoenixsploit - Coding full support for arch
+
+# Currently working on:
+- my own APT repo for debian based distros!
+https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-repo
+<br>
 <br>
 
 # Add my APT repo
@@ -96,10 +101,6 @@ curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/ins
 Support for MacOS will be coming soon! <br>
 edit: na won´t write that shit
 <br>
-
-# Currently working on my own APT repo for debian based distros!
-
-https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-repo
 <br>
 
 # Disclaimer
