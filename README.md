@@ -6,7 +6,7 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 # To-Do
 
-- phoenixsploit - Coding v.0.0.6
+- phoenixsploit - Coding v.0.0.6 (fixing uninstall and update bugs)
 - phoenixsploit - Coding full support for arch
 
 # Currently working on:
