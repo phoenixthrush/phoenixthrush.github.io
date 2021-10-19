@@ -40,12 +40,12 @@ curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 
 - hentai (only prints an ascii cat)
 ```shell
-sudo apt install hentai
+sudo apt install hentai -y
 ```
 
 - phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
 ```shell
-sudo apt install phoenixsploit
+sudo apt install phoenixsploit -y
 ```
 <br>
 
