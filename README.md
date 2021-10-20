@@ -11,7 +11,7 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 # Currently working on:
 - my own APT repo for debian based distros!
-https://github.com/Phoenixthrush/phoenixthrush.github.io/blob/master/README.md#add-my-apt-repo
+https://github.com/phoenixthrush#add-my-apt-repo
 <br>
 <br>
 
