@@ -1,0 +1,37 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Wed, 20 Oct 2021 21:04:28 +0000
+MD5Sum:
+ bcfd2f7f55c782dab30c71996f1ac61b             3220 Packages
+ 8b54f022c4494e040bfe013bbc26c513             1076 Packages.gz
+ d3383062a3c9d838033b8b552f240d9d               38 Release
+SHA1:
+ 650aff553b9e562204b3db3df2f1ed1e1ad3e919             3220 Packages
+ 879b77967c44697d9d326466ac8424dc978236f2             1076 Packages.gz
+ 0fb8fb944c6d08188ce48b226d5f648016865db2               38 Release
+SHA256:
+ f4a0f2d7605accadf87d7d2c36f8a23b1b7a9a0c890015656937d6f7d7a1493a             3220 Packages
+ d3db6ec96f0a22df93fcad39a7f7c6f92041ae39be14b8bd7248f97fbdcb7e54             1076 Packages.gz
+ 2849a6184ff61ada5a2873434ec72d67d9d8fe6f6c6207839deecaca3d19b8e0               38 Release
+SHA512:
+ 66692815648751f2388f905add4abf0aa361af9195061cbdf7c827be61d914e67c036340ddaa5e6e86728c9aea2d1397a14b885db5518e98240298b6d969ec4c             3220 Packages
+ 23e27e8287800e97ef5539d8b0700d31e8fe59b9a6fb6616cb906623d6838e36780e7e3098f305dec5a77abf5906e677181bcfcbddf4944ab944d7cbaaf557d8             1076 Packages.gz
+ 46ad6a79ce361f14e0f0858291d01add7be16e14db8c0d5eb3305ab89dea4942804c3068937eaa3eb0ebdd4ebd5f78d78c10428c41e092ce662fe74b78b2ce75               38 Release
+-----BEGIN PGP SIGNATURE-----
+
+iQJXBAEBCgBBFiEEHf2R+GcS9iK6cXiX0/alFTbzQRgFAmFwhGkjHHBob2VuaXh0
+aHJ1c2hfYnVzaW5lc3NAaG90bWFpbC5jb20ACgkQ0/alFTbzQRj8Ug/+PvDEeDke
+b1dKM975swp41ByafoX8oEmTdwS0g/uEYk7LsaHf9gRm+Avn+SwFHnZbmOmEs1ZH
+q73YYo1fOOpcm/AM9k+EfEPuX/7/XGfXtXewWi0+XLcm2CIKKBBngvqB1z59Mjjh
+IcvB5YdrLpt2FUZE8wwEpwzx35WwhfdUHtDvaMHGV35EpbKiojZ8Uyh9ySkvu4RZ
+Tet9LJMG2XkH+ddIP3JV/7KfrVvBbUGeGp8FvuZSE34CztaXncVGWKTV+qlgRhlj
+JVlCZz49x1wHKttTaA4s+EHoJYI6NMeP1JScTpm41xObUuCCEJm0QozDw3qw6Vv1
+pqG/d+A2z+Ux2O5fRQOZkTtARVHPxr8pDqOiz8B3xb3zh/0M44yafMGcEs/1nNV5
+a7OzNqJD1rh+hWX/Jdw9nGhPB6DkDu8YMJUONz0ri91/o4MrqtWTOiORlxh0Holt
+LyLKphhcfLmcSaXhZYglf5/32pK7nmfLsI0BPTKNf2swP2UaLDOkwsVK+FhJky8j
+oBrK/kqvc/JaqXl+cHQvKThZ/NSybg0zLcsj/cod7woInm5/OrJjkl0k6wWr/Q5W
+vm+WjxPxamn/faufpbmSIJN4jbgUW+dVrEWd/gCoZlxcEucIYyOUw979C8WrHB/u
+HdFg7uE22KQrNbFT7AJv39NuufA1QiYfrD8=
+=xCba
+-----END PGP SIGNATURE-----
