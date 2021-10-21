@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /code/
+Disallow: /exploit/
+Disallow: /pics/
+Disallow: /projects/
+Disallow: /repo/
+Disallow: /sites
+Disallow: /wiki.html
