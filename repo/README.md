@@ -11,26 +11,24 @@ mkdir nezuko
 mkdir nezuko/DEBIAN
 vi nezuko/DEBIAN/control
 
-sample control file:
+# sample control file:
 
-\\\
-Package: linuxconfig
-Version: 1.0
-Section: custom
-Priority: optional
-Architecture: all
-Essential: no
-Installed-Size: 1024
-Maintainer: linuxconfig.org
-Description: Print linuxconfig.org on the screen
-\\\
+# Package: linuxconfig
+# Version: 1.0
+# Section: custom
+# Priority: optional
+# Architecture: all
+# Essential: no
+# Installed-Size: 1024
+# Maintainer: linuxconfig.org
+# Description: Print linuxconfig.org on the screen
 
 mkdir -p nezuko/usr/bin/
-#copy your deb files to nezuko/usr/bin
+# copy your deb files to nezuko/usr/bin
 
 dpkg-deb --build nezuko
 
-#now rename your nezuko.deb to something like nezuko_0.0.1-1_all.deb
+# now rename your nezuko.deb to something like nezuko_0.0.1-1_all.deb
 ```
 
 ## Create new repo
