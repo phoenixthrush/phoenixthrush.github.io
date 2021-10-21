@@ -3,6 +3,36 @@
 This is an example! </br>
 Please change the email adress and vars also the links!
 
+
+## Create debian packages
+
+```shell
+mkdir nezuko
+mkdir nezuko/DEBIAN
+vi nezuko/DEBIAN/control
+
+sample control file:
+
+\\\
+Package: linuxconfig
+Version: 1.0
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 1024
+Maintainer: linuxconfig.org
+Description: Print linuxconfig.org on the screen
+\\\
+
+mkdir -p nezuko/usr/bin/
+#copy your deb files to nezuko/usr/bin
+
+dpkg-deb --build nezuko
+
+#now rename your nezuko.deb to something like nezuko_0.0.1-1_all.deb
+```
+
 ## Create new repo
 
 Create a folder and cd into it and copy your deb files to that dir!
@@ -37,33 +67,4 @@ apt-ftparchive release . > Release
 
 gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
 gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
-```
-
-## Create debian packages
-
-```shell
-mkdir nezuko
-mkdir nezuko/DEBIAN
-vi nezuko/DEBIAN/control
-
-sample control file:
-
-\\\
-Package: linuxconfig
-Version: 1.0
-Section: custom
-Priority: optional
-Architecture: all
-Essential: no
-Installed-Size: 1024
-Maintainer: linuxconfig.org
-Description: Print linuxconfig.org on the screen
-\\\
-
-mkdir -p nezuko/usr/bin/
-#copy your deb files to nezuko/usr/bin
-
-dpkg-deb --build nezuko
-
-#now rename your nezuko.deb to something like nezuko_0.0.1-1_all.deb
 ```
