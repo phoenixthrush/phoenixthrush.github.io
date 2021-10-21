@@ -97,14 +97,14 @@ https://phoenixthrush.com/projects/scripts/wsl.bat
 
 ### After it finished installing insert that command to install phoenixsploit!
 ```shell
-sudo apt update && sudo apt intstall wget curl gpg && wget https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh -v -O install.sh && cat ./install.sh | bash; rm install.sh
+sudo apt update && sudo apt install curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh | bash
 ```
 
 ### Or
 
 ### After it finished installing insert that command to only add my repo!
 ```shell
-sudo apt update && sudo apt intstall wget curl gpg && wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && cat ./install.sh | bash; rm install.sh
+sudo apt update && sudo apt install curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
 ```
 <br>
 
