@@ -1,11 +1,13 @@
 # Create and host your ppa
 
-This is an example please change the email adress and vars also the links!
+This is an example! </br>
+Please change the email adress and vars also the links!
 
 ## Create new repo
 
-#Create a folder and cd into it and copy your deb files to that dir!
+Create a folder and cd into it and copy your deb files to that dir!
 
+```shell
 EMAIL="phoenixthrush_business@hotmail"
 
 sudo apt install gnupg
@@ -22,9 +24,11 @@ gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
 gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
 
 echo "deb [signed-by=/usr/share/keyrings/phoenixthrush-archive-keyring.gpg] https://phoenixthrush.com/repo/stable ./" > phoenixthrush-packages.list 
+```
 
 ## Add new packages
 
+```shell
 EMAIL="phoenixthrush_business@hotmail"
 
 dpkg-scanpackages --multiversion . > Packages
@@ -33,9 +37,11 @@ apt-ftparchive release . > Release
 
 gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
 gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
+```
 
 ## Create debian packages
 
+```shell
 mkdir nezuko
 mkdir nezuko/DEBIAN
 vi nezuko/DEBIAN/control
@@ -60,3 +66,4 @@ mkdir -p nezuko/usr/bin/
 dpkg-deb --build nezuko
 
 #now rename your nezuko.deb to something like nezuko_0.0.1-1_all.deb
+```
