@@ -1,4 +1,4 @@
-# Create and host your ppa
+# Create your own debian packages and host your own ppa
 
 This is an example! </br>
 Please change the email adress and vars also the links!
