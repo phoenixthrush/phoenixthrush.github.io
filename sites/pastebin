@@ -1,29 +1,4 @@
-sudo apt install gnupg
-
-git clone https://github.com/phoenixthrush/phoenixthrush.github.io repo
-EMAIL="phoenixthrush_business@hotmail.com"
-mkdir new
-cp -r repo/repo new
-cd new
-cp /path/to/my/package-a_0.0.1_amd64.deb .
-gpg --full-gen-key
-gpg --export-secret-keys "${EMAIL}" > my-private-key.asc
-gpg --import my-private-key.asc
-gpg --armor --export "${EMAIL}" > /path/to/my_ppa/KEY.gpg
-dpkg-scanpackages --multiversion . > Packagesgzip -k -f Packages
-gzip -k -f Packages
-apt-ftparchive release . > Release
-gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
-gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
-echo "deb https://${GITHUB_USERNAME}.github.io/my_ppa ./" > my_list_file.list
-
-###################################################################################################################################
-
-Defaults        badpass_message="pass wrong go fuck yourself you son of a bitch!"
-
-###################################################################################################################################
-
->/dev/null 2>&1
+Random code I just copy paste out
 
 ###################################################################################################################################
 
@@ -59,6 +34,14 @@ slmgr /ato
 ###################################################################################################################################
 
 set __COMPAT_LAYER=RUNASINVOKER
+
+###################################################################################################################################
+
+Defaults        badpass_message="pass wrong go fuck yourself you son of a bitch!"
+
+###################################################################################################################################
+
+>/dev/null 2>&1
 
 ###################################################################################################################################
 
