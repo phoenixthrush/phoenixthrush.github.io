@@ -37,7 +37,7 @@ curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 
 ### Use that command to add my repo on wsl (Windows)!
 ```shell
-sudo apt update && sudo apt intstall wget curl gpg && wget https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh -v -O install.sh && cat ./install.sh | bash; rm install.sh
+sudo apt update && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
 ```
 <br>
 
