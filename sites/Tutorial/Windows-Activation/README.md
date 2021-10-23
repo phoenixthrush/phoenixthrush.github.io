@@ -3,7 +3,8 @@
 Open up a cmd window with admin privs and enter that commmands! <br>
 Sometimes you need to reboot to make changes!
 
-Change the W269N-WFGWX-YVC9B-4J6C9-T83GX to your activation key! (W269N-WFGWX-YVC9B-4J6C9-T83GX = Professional for 10/11)
+Change the W269N-WFGWX-YVC9B-4J6C9-T83GX to your activation key or leave it! <br>
+(W269N-WFGWX-YVC9B-4J6C9-T83GX = Professional for 10/11)
 
 ```shell
 slmgr /ipk "W269N-WFGWX-YVC9B-4J6C9-T83GX"
@@ -70,4 +71,7 @@ slmgr /ato
         
         QFFDN-GRT3P-VKWWX-X7T3R-8B639
 
-If it doesn´t work you could switch to other kms online activation servers!
+If it doesn´t work you could switch to another kms online activation servers!
+
+Another one than kms.lotro.cc is kms.srv.crsoo.com
+Just change slmgr /skms kms.lotro.cc to slmgr /skms kms.srv.crsoo.com
