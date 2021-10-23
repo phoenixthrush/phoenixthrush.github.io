@@ -1,4 +1,4 @@
-# How to activate all Windows Versions for free lmao
+# How to activate Windows 10/11 for free lmao
 
 Open up a cmd window with admin privs and enter that commmands! <br>
 Sometimes you need to reboot to make changes!
