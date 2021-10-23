@@ -8,7 +8,6 @@ Change the W269N-WFGWX-YVC9B-4J6C9-T83GX to your activation key or leave it! <br
 
 ```shell
 slmgr /ipk "W269N-WFGWX-YVC9B-4J6C9-T83GX"
- 
 slmgr /skms kms.lotro.cc
 slmgr /ato
 ```
