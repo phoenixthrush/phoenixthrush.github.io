@@ -3,6 +3,15 @@
 Open up a cmd window with admin privs and enter that commmands! <br>
 Sometimes you need to reboot to make changes!
 
+Change the W269N-WFGWX-YVC9B-4J6C9-T83GX to your activation key! (W269N-WFGWX-YVC9B-4J6C9-T83GX = Professional for 10/11)
+
+```shell
+slmgr /ipk "W269N-WFGWX-YVC9B-4J6C9-T83GX"
+ 
+slmgr /skms kms.lotro.cc
+slmgr /ato
+```
+
 * Here are some Keys for Windows 10/11
 
     * Home/Core
@@ -60,15 +69,5 @@ Sometimes you need to reboot to make changes!
     * Enterprise 2016 LTSB N
         
         QFFDN-GRT3P-VKWWX-X7T3R-8B639
-
-        
-Change the xxx to your activation key!
-
-```shell
-slmgr /ipk "xxx"
- 
-slmgr /skms kms.lotro.cc
-slmgr /ato
-```
 
 If it doesn´t work you could switch to other kms online activation servers!
