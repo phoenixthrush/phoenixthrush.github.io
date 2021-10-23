@@ -1,9 +1,9 @@
-# How to activate all Windows Versions for free lmao
+# How to activate all Windows Versions for free lmao (editing rn just eating before continue lmao wait max 30min until I´m finished uploading)
 
 
 
-Home/Core (Single Language)          7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH <br>
-Home/Core N                          3KHY7-WNT83-DGQKR-F7HPR-844BM <br>
+           <br>
+
 Professional                         W269N-WFGWX-YVC9B-4J6C9-T83GX <br>
 Professional N                       MH37W-N47XK-V7XM9-C7227-GCQG9 <br>
 Enterprise                           NPPR9-FWDCX-D2C8J-H872K-2YT43 <br>
@@ -25,6 +25,33 @@ Here are some Windows Keys for Windows 10/11
 
         TX9XD-98N7V-6WMQ6-BX7FG-H8Q99
 
+    * Home/Core (Country Specific)
+
+        PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
+        
+        
+        
+        
+        
+    * Home/Core N
+ 
+        3KHY7-WNT83-DGQKR-F7HPR-844BM
+        
+        
+        
+        
+        
+        
+    * Home/Core (Country Specific)
+
+        PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
+    * Home/Core (Country Specific)
+
+        PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
+    * Home/Core (Country Specific)
+
+        PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
+        
     * Home/Core (Country Specific)
 
         PVMJN-6DFY6-9CCP6-7BKTT-D3WVR
