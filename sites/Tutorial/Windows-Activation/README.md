@@ -73,5 +73,5 @@ slmgr /ato
 
 If it doesn´t work you could switch to another kms online activation servers!
 
-Another one than kms.lotro.cc is kms.srv.crsoo.com
+Another one than kms.lotro.cc is kms.srv.crsoo.com <br>
 Just change slmgr /skms kms.lotro.cc to slmgr /skms kms.srv.crsoo.com
