@@ -11,7 +11,7 @@ mkdir nezuko
 mkdir nezuko/DEBIAN
 vi nezuko/DEBIAN/control
 
-# sample control file:
+# sample control file from linuxconfig.org:
 
 # Package: linuxconfig
 # Version: 1.0
@@ -36,7 +36,7 @@ dpkg-deb --build nezuko
 Create a folder and cd into it and copy your deb files to that dir!
 
 ```shell
-EMAIL="phoenixthrush_business@hotmail.com"
+EMAIL="contact@phoenixthrush.com"
 
 sudo apt install gnupg
 gpg --full-gen-key
@@ -57,7 +57,7 @@ echo "deb [signed-by=/usr/share/keyrings/phoenixthrush-archive-keyring.gpg] http
 ## Add new packages
 
 ```shell
-EMAIL="phoenixthrush_business@hotmail.com"
+EMAIL="contact@phoenixthrush.com"
 
 dpkg-scanpackages --multiversion . > Packages
 gzip -k -f Packages
