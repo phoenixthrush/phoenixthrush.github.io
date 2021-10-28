@@ -52,6 +52,11 @@ sudo apt install hentai -y
 ```shell
 sudo apt install phoenixsploit -y
 ```
+
+- rockyou (downloads the rockyou.txt wordlist) <br>
+```shell
+sudo apt install rockyou -y
+```
 <br>
 
 # Phoenixsploit
