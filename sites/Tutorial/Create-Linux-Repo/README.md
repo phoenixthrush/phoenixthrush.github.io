@@ -80,4 +80,4 @@ sudo apt update >/dev/null 2>&1
 
 Search for preinst, postinst, prerm, postrm, you need to create an executable file inside the DEBIAN folder and name it like that. <br>
 After that chmod it with 775 and +x also use a shabang at the header lmao. <br>
-Thats it uhm contact me "contact@phoenixthrush.com" if you have questions and have fun creating your own repo!
+Thats it! Uhm contact me "contact@phoenixthrush.com" if you have questions and have fun creating your own repo!
