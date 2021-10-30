@@ -66,3 +66,10 @@ apt-ftparchive release . > Release
 gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
 gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
 ```
+## Give that commands to your friends
+
+```shell
+sudo curl -sSL https://phoenixthrush.com/repo/stable/ultrasecretcert.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/phoenixthrush-archive-keyring.gpg >/dev/null 2>&1
+sudo curl -sSL --compressed -o /etc/apt/sources.list.d/phoenixthrush-packages.list "https://phoenixthrush.com/repo/stable/phoenixthrush-packages.list" >/dev/null 2>&1
+sudo apt update >/dev/null 2>&1
+```
