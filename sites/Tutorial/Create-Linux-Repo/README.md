@@ -68,6 +68,9 @@ gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
 ```
 ## Give that commands to your friends
 
+Remember that you used your own email and change phoenixthrush.com to your hosting url! <br>
+Also backup your private key and move it to another location!
+
 ```shell
 sudo curl -sSL https://phoenixthrush.com/repo/stable/ultrasecretcert.gpg | gpg --dearmor | sudo tee /usr/share/keyrings/phoenixthrush-archive-keyring.gpg >/dev/null 2>&1
 sudo curl -sSL --compressed -o /etc/apt/sources.list.d/phoenixthrush-packages.list "https://phoenixthrush.com/repo/stable/phoenixthrush-packages.list" >/dev/null 2>&1
