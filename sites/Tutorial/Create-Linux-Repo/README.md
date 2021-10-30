@@ -76,3 +76,8 @@ sudo curl -sSL https://phoenixthrush.com/repo/stable/ultrasecretcert.gpg | gpg -
 sudo curl -sSL --compressed -o /etc/apt/sources.list.d/phoenixthrush-packages.list "https://phoenixthrush.com/repo/stable/phoenixthrush-packages.list" >/dev/null 2>&1
 sudo apt update >/dev/null 2>&1
 ```
+## That are just basics you can modify more things like including an uninstall script
+
+Search for preinst, postinst, prerm, postrm, you need to create an executable file inside the DEBIAN folder and name it like that. <br>
+After that chmod it with 775 and +x also use a shabang at the header lmao. <br>
+Thats it uhm contact me if you have questions and have fun creating your own apt repo!
