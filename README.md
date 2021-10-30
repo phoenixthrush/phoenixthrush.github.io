@@ -6,18 +6,20 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 
 # To-Do
 
-- phoenixsploit - Coding v.0.0.6 (fixing uninstall and update bugs)
-- phoenixsploit - Coding full support for arch
+- phoenixsploit - Coding v.0.0.6 (fixing uninstall and update bugs/ removing arch support)
 
 # Currently working on:
 - my own APT repo for debian based distros!
 https://github.com/phoenixthrush#add-my-apt-repo
+
+- phoenixsploit!
+https://github.com/phoenixthrush#phoenixsploit
 <br>
 <br>
 
 # Add my APT repo
 
-## Installation (only debian based rn):
+## Installation (debian ~~and arch based~~ distros):
 
 ### Stable
 
@@ -73,14 +75,14 @@ edit: gonna sleep now
 <br>
 <br>
 
-## Linux (Support for debian and arch based distros)
+## Linux (Support for debian ~~and arch~~ based distros)
 
 - Method 1 (over repo - only debian based distros):
 ```shell
 curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash
 ```
 
-- Method 2 (over source code - full debian and arch beta support):
+- Method 2 (over source code - full debian ~~and arch beta~~ support):
 ```shell
 curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash
 ```
