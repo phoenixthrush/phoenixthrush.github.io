@@ -39,7 +39,7 @@ curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 
 ### Use that command to add my repo on wsl (Windows)!
 ```shell
-sudo apt update && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
+sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
 ```
 <br>
 
@@ -104,14 +104,14 @@ https://phoenixthrush.com/projects/scripts/wsl.bat
 
 ### After it finished installing insert that command to install phoenixsploit!
 ```shell
-sudo apt update && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh | bash
+sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh | bash
 ```
 
 ### Or
 
 ### After it finished installing insert that command to only add my repo!
 ```shell
-sudo apt update && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
+sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
 ```
 <br>
 
