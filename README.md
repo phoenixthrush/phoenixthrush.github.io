@@ -59,6 +59,12 @@ sudo apt install phoenixsploit -y
 ```shell
 sudo apt install rockyou -y
 ```
+
+
+- hideme (routes all your traffic through tor) <br>
+```shell
+sudo apt install hideme -y
+```
 <br>
 
 # Phoenixsploit
