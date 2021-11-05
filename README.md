@@ -60,10 +60,9 @@ sudo apt install phoenixsploit -y
 sudo apt install rockyou -y
 ```
 
-
-- hideme (routes all your traffic through tor) <br>
+- phoenixrelay (script which routes all your traffic through a tor relay) <br>
 ```shell
-sudo apt install hideme -y
+sudo apt install phoenixrelay -y
 ```
 <br>
 
