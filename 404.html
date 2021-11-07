@@ -3,16 +3,25 @@
 <head>
 <title>404 - cats not found!</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 
-body {
+body, html {
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  color: white;
   font-family: 'Open Sans'
 }
 
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
+ h1 {
+  display: block;
+  font-size: 2.5em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
 }
 
 .centered {
@@ -22,15 +31,24 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.bg {
+  background-image: url("https://github.com/Phoenixthrush/phoenixthrush.github.io/raw/master/assets/images/404.jpg");
+
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <img src="https://github.com/Phoenixthrush/phoenixthrush.github.io/raw/master/assets/images/404.jpg" alt="cetto" style="high:100%;">
-  <div class="centered"><h1>no cats in here</h1></div>
+<div class="bg">
+<div class="centered"><h1>404 <br/> no cats in here</h1></div>
 </div>
 
 </body>
-</html> 
+
+</html>
