@@ -9,11 +9,14 @@ Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie
 - hideme - changing pre install debian control settings
 
 # Currently working on:
-- my own APT repo for debian based distros!
-https://github.com/phoenixthrush#add-my-apt-repo
+- phoenixrelay
+https://github.com/Phoenixthrush/phoenixrelay
 
-- phoenixsploit!
-https://github.com/phoenixthrush#phoenixsploit
+- phoenixsploit
+https://github.com/Phoenixthrush/phoenixsploit
+
+- my blog
+https://blog.phoenixthrush.com
 <br>
 <br>
 
