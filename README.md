@@ -1,136 +1,95 @@
 # Phoenixthrush Develops - phoenixthrush.com
-Just some code that I just copy paste cuz I am dumb and can´t code, malware, games, an archive and lots more lol! <br>
-Follow me if u wanna get a <a href="https://instagram.com/phoenixthrush">:cookie:&nbsp;</a>lmao <br><br>
+Just some code about some scripts (also a discord bot), malware and lots more lol! <br>
+Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao <br/><br/>
 
-<img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500> <br>
+<img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500>
+<br/>
 
-# To-Do
+## Internal Sites
 
-- hideme - changing pre install debian control settings
+### Here are all my pages!
 
-# Currently working on:
-- phoenixrelay
-https://github.com/Phoenixthrush/phoenixrelay
+- PhoenixHub [phoenixthrush.com](https://phoenixthrush.com)
+- Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
+- Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
+- Wordlists [phoenixthrush.com/wordlists](https://phoenixthrush.com/wordlists)
+- PhoenixZoo [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
+- Pihole-List [phoenixthrush.com/pihole-list](https://phoenixthrush.com/pihole-list)
+
+### And here are some special sites (subdomains)
+
+- My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com
+- TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
+
+### Some websites that will be coming soon!
+
+- NSFWHub (Subdomain) [nsfw.phoenixthrush.com](https://nsfw.phoenixthrush.com)
+- HentaiHub (Subdomain) [hentaihub.phoenixthrush.com](https://hentaihub.phoenixthrush.com)
+<br/>
+
+## Currently working on:
 
 - phoenixsploit
 https://github.com/Phoenixthrush/phoenixsploit
 
+- phoenixrelay
+https://github.com/Phoenixthrush/phoenixrelay
+
 - my blog
 https://blog.phoenixthrush.com
-<br>
-<br>
+<br/>
 
-# Add my APT repo
+## Add my APT repo
 
-## Installation (debian ~~and arch based~~ distros):
+### Installation (debian ~~and arch based~~ distros):
 
-### Stable
+#### Stable
 
 ```shell
 curl -sSL phoenixthrush.com/install.sh | bash
 ```
 
-### Dev Channel (inactive pls use stable channel rn)
+#### ~~Dev Channel~~ (inactive pls use stable channel rn)
 ```shell
 curl -sSL phoenixthrush.com/repo/dev/install.sh | bash
 ```
 
-### Nightly Channel (inactive pls use stable channel rn)
+#### ~~Nightly Channel~~ (inactive pls use stable channel rn)
 ```shell
 curl -sSL phoenixthrush.com/repo/nightly/install.sh | bash
 ```
 
-### Use that command to add my repo on wsl (Windows)!
+#### Use that command to add my repo on WSL (Windows)!
 ```shell
-sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
+sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/repo/wsl-repo-install.sh | bash
 ```
-<br>
+<br/>
 
-### Packages:
+#### Packages:
 
-- hentai (only prints an ascii cat)
+- hentai (only prints an ascii cat) <br/>
 ```shell
 sudo apt install hentai -y
 ```
 
-- phoenixsploit (my idk metasploit? idk tbh not finished yet) <br>
+- phoenixsploit (idk what it is rn) <br/>
 ```shell
 sudo apt install phoenixsploit -y
 ```
 
-- rockyou (downloads the rockyou.txt wordlist) <br>
+- rockyou (downloads the rockyou.txt wordlist) <br/>
 ```shell
 sudo apt install rockyou -y
 ```
 
-- phoenixrelay (script which routes all your traffic through a tor relay) <br>
+- phoenixrelay (script which routes all your traffic through a tor relay) <br/>
 ```shell
 sudo apt install phoenixrelay -y
 ```
-<br>
+<br/>
+<br/>
 
-# Phoenixsploit
-
-### NEW UPDATE! - Rewritten in Python! <br>
-
-edit: tf I also wanna rewrite it in c <br>
-edit: I wanna rewrite it in c++ instead <br>
-edit: I wanna nut on hentai instead <br>
-edit: my mum came in <br>
-edit: gonna nut on nezuko channnnn <br>
-edit: I came on nezuko chan <br>
-edit: gonna sleep now
-<br>
-<br>
-
-## Linux (Support for debian ~~and arch~~ based distros)
-
-- Method 1 (over repo - only debian based distros):
-```shell
-curl -sSL phoenixthrush.com/phoenixsploit-install.sh | bash
-```
-
-- Method 2 (over source code - full debian ~~and arch beta~~ support):
-```shell
-curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/install.sh | bash
-```
-
-- Method 3 (live mode - no installation): <br>
-```shell
-curl -sSL https://raw.githubusercontent.com/phoenixthrush/phoenixsploit/main/phoenixsploit.py > main && sudo chmod +x main && sudo python3 main
-```
-<br>
-
-## Windows
-
-### Early support with wsl <br>
-- Just enable "windows-subsystem for linux" in the optionalfeatures menue and download Ubuntu or Kali Linux from the Microsoft Store! <br>
-- After that open wsl and do the steps for Linux! <br>
-
-### Or just download my wsl installer lmao!
-https://phoenixthrush.com/projects/scripts/wsl.bat
-
-### After it finished installing insert that command to install phoenixsploit!
-```shell
-sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-phoenixsploit-install.sh | bash
-```
-
-### Or
-
-### After it finished installing insert that command to only add my repo!
-```shell
-sudo apt update && sudo apt upgrade -y && sudo apt install apt-transport-https curl gpg -y && curl -sSL https://phoenixthrush.com/projects/scripts/wsl-repo-install.sh | bash
-```
-<br>
-
-## MacOS
-
-Support for MacOS will be coming soon! <br>
-edit: na won´t write that shit
-<br>
-<br>
-
-# Disclaimer
+## Disclaimer
 
 Please remember that the site contains some dangerous malware! </br>
 Do NOT run them unless you are absolutely sure of what you are doing! </br>
