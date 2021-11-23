@@ -2,6 +2,5 @@
 
 ## Reporting a Vulnerability
 
-U can contact me on <a href="https://instagram.com/phoenixthrush" style="color: red">Insta</a>!
-<br>
-I will try the days to solve the problem!
+Contact me via email: [contact@phoenixthrush.com!](mailto:contact@phoenixthrush.com)<br>
+I will try to answer to your message in the next 48h!
