@@ -34,7 +34,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 - [ ] phoenixsploit coding product version (+ adding to repo) + removing phoenixsploit-tmp
 - [ ] edge-trojan coding product version
 - [ ] phoenixrelay (adding country support)
-- [ ] blackeye check
+- [x] blackeye check
 - [ ] russian-roulette check
 
 ### private projects
