@@ -1,7 +1,11 @@
 User-agent: *
+Disallow: /assets
 Disallow: /assets/*
+Disallow: /code
 Disallow: /code/*
+Disallow: /projects
 Disallow: /projects/*
+Disallow: /sites
 Disallow: /sites/*
 Disallow: /wiki.html
 Sitemap: https://phoenixthrush.com/sitemap.xml
