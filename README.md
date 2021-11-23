@@ -29,14 +29,23 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ## Currently working on:
 
-- phoenixsploit
-https://github.com/Phoenixthrush/phoenixsploit
+### public projects
 
-- phoenixrelay
-https://github.com/Phoenixthrush/phoenixrelay
+- phoenixsploit coding product version (+ adding to repo) + removing phoenixsploit-tmp
+- edge-trojan coding product version
+- phoenixrelay (adding country support)
+- blackeye check
+- russian-roulette check
 
-- my blog
-https://blog.phoenixthrush.com
+### private projects
+
+- development reupload
+- firefox-configs (creating clean profile)
+
+### future projects
+
+- hentaihub
+- nsfw
 <br/>
 
 ## Add my APT repo
