@@ -18,7 +18,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ### And here are some special sites (subdomains)
 
-- My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com
+- My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
 - TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
 
 ### Some websites that will be coming soon!
@@ -31,21 +31,21 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ### public projects
 
-- phoenixsploit coding product version (+ adding to repo) + removing phoenixsploit-tmp
-- edge-trojan coding product version
-- phoenixrelay (adding country support)
-- blackeye check
-- russian-roulette check
+- [ ] phoenixsploit coding product version (+ adding to repo) + removing phoenixsploit-tmp
+- [ ] edge-trojan coding product version
+- [ ] phoenixrelay (adding country support)
+- [ ] blackeye check
+- [ ] russian-roulette check
 
 ### private projects
 
-- development reupload
-- firefox-configs (creating clean profile)
+- [ ] development reupload
+- [ ] firefox-configs (creating clean profile)
 
 ### future projects
 
-- hentaihub
-- nsfw
+- [ ] hentaihub
+- [ ] nsfw
 <br/>
 
 ## Add my APT repo
