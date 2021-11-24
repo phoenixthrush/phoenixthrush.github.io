@@ -13,11 +13,11 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 - My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
 - My Discord Server [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
 - TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
+- Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
+- Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
 
 ### Pages without index site
 
-- Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
-- Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
 - Wordlists [phoenixthrush.com/wordlists](https://phoenixthrush.com/wordlists)
 - PhoenixZoo [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
 - Pihole-List [phoenixthrush.com/pihole-list](https://phoenixthrush.com/pihole-list)
