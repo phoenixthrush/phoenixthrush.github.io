@@ -19,7 +19,6 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 ### Pages without index site
 
 - Wordlists [phoenixthrush.com/wordlists](https://phoenixthrush.com/wordlists)
-- PhoenixZoo [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
 - Pihole-List [phoenixthrush.com/pihole-list](https://phoenixthrush.com/pihole-list)
 
 ### Some websites that will be coming soon
@@ -40,8 +39,9 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ### Malware and Ransomeware
 
+- PhoenixZoo (index site will be coming soon) [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
 - russian-roulette [github.com/phoenixthrush/russian-roulette](https://github.com/phoenixthrush/russian-roulette)
-- edge-trojan (pages enabled too, without index site) [phoenixthrush.com/edge-trojan](https://phoenixthrush.com/edge-trojan)
+- edge-trojan (pages enabled too, without index site) [github.com/phoenixthrush/edge-trojan](https://github.com/phoenixthrush/edge-trojan)
 <br/>
 
 ## Currently working on:
@@ -62,7 +62,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 ### future projects
 
 - [ ] hentaihub
-- [ ] nsfw
+- [x] nsfw
 <br/>
 <br/>
 
