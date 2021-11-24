@@ -11,10 +11,10 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 - PhoenixHub [phoenixthrush.com](https://phoenixthrush.com)
 - My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
+- Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
+- Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
 - My Discord Server [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
 - TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
-- Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
-- Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
 
 ### Pages without index site
 
