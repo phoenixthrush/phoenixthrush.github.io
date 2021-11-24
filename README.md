@@ -10,20 +10,19 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 ### Here are all my pages!
 
 - PhoenixHub [phoenixthrush.com](https://phoenixthrush.com)
+- My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
+- My Discord Server [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
+- TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
+
+### Pages without index site
+
 - Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
 - Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
 - Wordlists [phoenixthrush.com/wordlists](https://phoenixthrush.com/wordlists)
 - PhoenixZoo [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
 - Pihole-List [phoenixthrush.com/pihole-list](https://phoenixthrush.com/pihole-list)
-- Edge-Trojan [phoenixthrush.com/edge-trojan](https://phoenixthrush.com/edge-trojan)
 
-### And here are some special sites (subdomains)
-
-- My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
-- My Discord Server [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
-- TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
-
-### Some websites that will be coming soon!
+### Some websites that will be coming soon
 
 - NSFWHub (Subdomain) [nsfw.phoenixthrush.com](https://nsfw.phoenixthrush.com)
 - HentaiHub (Subdomain) [hentaihub.phoenixthrush.com](https://hentaihub.phoenixthrush.com)
@@ -34,7 +33,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 - phoenix-engine [github.com/phoenixthrush/phoenix-engine](https://github.com/phoenixthrush/phoenix-engine)
 - phoenixrelay [github.com/phoenixthrush/phoenixrelay](https://github.com/phoenixthrush/phoenixrelay)
 - blackeye [github.com/phoenixthrush/blackeye](https://github.com/phoenixthrush/blackeye)
-- hentai-script (docker) [github.com/phoenixthrush/blackeye](https://github.com/phoenixthrush/blackeye)
+- hentai-script [github.com/phoenixthrush/blackeye](https://github.com/phoenixthrush/blackeye)
 - uac-bypass [github.com/phoenixthrush/uac-bypass](https://github.com/phoenixthrush/uac-bypass)
 - vm-detection [github.com/phoenixthrush/vm-detection](https://github.com/phoenixthrush/vm-detection)
 - firefox-configs (private yet)
@@ -42,6 +41,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 ### Malware and Ransomeware
 
 - russian-roulette [github.com/phoenixthrush/russian-roulette](https://github.com/phoenixthrush/russian-roulette)
+- edge-trojan (pages enabled too, without index site) [phoenixthrush.com/edge-trojan](https://phoenixthrush.com/edge-trojan)
 <br/>
 
 ## Currently working on:
@@ -68,9 +68,9 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ## Disclaimer
 
-Please remember that the site contains some dangerous malware! </br>
-Do NOT run them unless you are absolutely sure of what you are doing! </br>
-They are to be used only for educational purposes (and I mean that!) !!! </br>
+Please remember that the "Malware and Ransomeware" section contains some dangerous malware! <br/>
+Do NOT run them unless you are absolutely sure of what you are doing! <br/>
+They are to be used only for educational purposes (and I mean that!)!!! <br/>
 
-I recommend running them in a VM and without guest additions or any equivalents or just don´t run it please. </br>
+I recommend running them in a VM and without guest additions or any equivalents or just don´t run it please. <br/>
 I am not responsible for any damage or anything else that may happen!
