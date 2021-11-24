@@ -15,6 +15,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 - Wordlists [phoenixthrush.com/wordlists](https://phoenixthrush.com/wordlists)
 - PhoenixZoo [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
 - Pihole-List [phoenixthrush.com/pihole-list](https://phoenixthrush.com/pihole-list)
+- Edge-Trojan [phoenixthrush.com/edge-trojan](https://phoenixthrush.com/edge-trojan)
 
 ### And here are some special sites (subdomains)
 
@@ -40,7 +41,6 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ### Malware and Ransomeware
 
-- edge-trojan [github.com/phoenixthrush/edge-trojan](https://github.com/phoenixthrush/edge-trojan)
 - russian-roulette [github.com/phoenixthrush/russian-roulette](https://github.com/phoenixthrush/russian-roulette)
 <br/>
 
