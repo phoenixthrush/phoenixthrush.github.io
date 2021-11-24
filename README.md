@@ -19,12 +19,29 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 ### And here are some special sites (subdomains)
 
 - My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
+- My Discord Server [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
 - TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
 
 ### Some websites that will be coming soon!
 
 - NSFWHub (Subdomain) [nsfw.phoenixthrush.com](https://nsfw.phoenixthrush.com)
 - HentaiHub (Subdomain) [hentaihub.phoenixthrush.com](https://hentaihub.phoenixthrush.com)
+<br/>
+
+## All my other projects
+
+- phoenix-engine [github.com/phoenixthrush/phoenix-engine](https://github.com/phoenixthrush/phoenix-engine)
+- phoenixrelay [github.com/phoenixthrush/phoenixrelay](https://github.com/phoenixthrush/phoenixrelay)
+- blackeye [github.com/phoenixthrush/blackeye](https://github.com/phoenixthrush/blackeye)
+- hentai-script (docker) [github.com/phoenixthrush/blackeye](https://github.com/phoenixthrush/blackeye)
+- uac-bypass [github.com/phoenixthrush/uac-bypass](https://github.com/phoenixthrush/uac-bypass)
+- vm-detection [github.com/phoenixthrush/vm-detection](https://github.com/phoenixthrush/vm-detection)
+- firefox-configs (private yet)
+
+### Malware and Ransomeware
+
+- edge-trojan [github.com/phoenixthrush/edge-trojan](https://github.com/phoenixthrush/edge-trojan)
+- russian-roulette [github.com/phoenixthrush/russian-roulette](https://github.com/phoenixthrush/russian-roulette)
 <br/>
 
 ## Currently working on:
