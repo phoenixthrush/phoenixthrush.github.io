@@ -5,6 +5,9 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 <img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500>
 <br/>
 
+![Phoenixthrush's GitHub stats](https://github-readme-stats.vercel.app/api?username=Phoenixthrush&show_icons=true&theme=radical) <br/> <br/>
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Phoenixthrush&layout=compact&langs_count=6&theme=radical)](https://github.com/Phoenixthrush/phoenixthrush.github.io)
+
 ## Internal Sites
 
 ### Here are all my pages!
