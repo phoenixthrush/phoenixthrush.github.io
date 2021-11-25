@@ -48,16 +48,16 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 
 ### public projects
 
-- [ ] phoenixsploit coding product version (+ adding to repo) + removing phoenixsploit-tmp
-- [ ] edge-trojan coding product version
-- [ ] phoenixrelay (adding country support)
-- [x] blackeye check
-- [ ] russian-roulette check
+- [ ] phoenixsploit | coding product version and adding live mode and mac support (+ upload to repo + removing private repo "phoenixsploit-tmp")
+- [ ] edge-trojan | coding product version
+- [ ] phoenixrelay | adding country support
+- [x] blackeye | check
+- [ ] russian-roulette | check
 
 ### private projects
 
-- [ ] development reupload
-- [ ] firefox-configs (creating clean profile)
+- [ ] development | reupload
+- [ ] firefox-configs | creating clean profile
 
 ### future projects
 
