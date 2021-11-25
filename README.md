@@ -1,6 +1,15 @@
 # Phoenixthrush Develops - phoenixthrush.com
-Just some code about some scripts (also a discord bot), malware and lots more lol! <br>
-Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao <br/><br/>
+
+[![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/phoenixthrush)
+[![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.phoenixthrush.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/phoenixthrush)
+[![Spotify](https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/user/hlddjuzm3oqpw8e52sejmi5g1?si=VPFboXWyQNCd-q7orw0_5w)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/xPhoenixthrushx)
+[![Snapchat](https://img.shields.io/badge/Snapchat-FFFC00?style=for-the-badge&logo=snapchat&logoColor=white)](https://www.snapchat.com/add/phoenixthrush)
+[![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@phoenixthrush?)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/xphoenixthrushx)
+
+### Just some code about some "cool" projects and a blog, malware, a modified cheat engine a phishing tool, some wordlists, some "hosts" files for adblocking and lots more! <br/> <br/> Follow me on insta to get a [:cookie:](https://instagram.com/phoenixthrush) lmao <br/> <br/>
 
 <img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500>
 <br/>
