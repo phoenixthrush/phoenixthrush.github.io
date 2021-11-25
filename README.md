@@ -6,7 +6,7 @@ Follow me if u wanna get a [:cookie:](https://instagram.com/phoenixthrush) lmao 
 <br/>
 
 ![Phoenixthrush's GitHub stats](https://github-readme-stats.vercel.app/api?username=Phoenixthrush&show_icons=true&theme=radical) <br/> <br/>
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Phoenixthrush&layout=compact&langs_count=6&theme=radical)](https://github.com/Phoenixthrush/phoenixthrush.github.io)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Phoenixthrush&layout=compact&langs_count=6&theme=radical)
 
 ## Internal Sites
 
