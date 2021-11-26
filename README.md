@@ -2,14 +2,14 @@
 
 [![Github](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/phoenixthrush)
 [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.phoenixthrush.com)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/phoenixthrush)
 [![Spotify](https://img.shields.io/badge/Spotify-1ED760?&style=for-the-badge&logo=spotify&logoColor=white)](https://open.spotify.com/user/hlddjuzm3oqpw8e52sejmi5g1?si=VPFboXWyQNCd-q7orw0_5w)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/phoenixthrush)
 [![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/xPhoenixthrushx)
 [![Snapchat](https://img.shields.io/badge/Snapchat-FFFC00?style=for-the-badge&logo=snapchat&logoColor=white)](https://www.snapchat.com/add/phoenixthrush)
 [![TikTok](https://img.shields.io/badge/TikTok-000000?style=for-the-badge&logo=tiktok&logoColor=white)](https://www.tiktok.com/@phoenixthrush?)
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/xphoenixthrushx)
 
-### Just some code about some "cool" projects and a blog, malware, a modified cheat engine a phishing tool, some wordlists, some "hosts" files for adblocking and lots more! <br/> <br/> Follow me on insta to get a [:cookie:](https://instagram.com/phoenixthrush) lmao <br/> <br/>
+### Just some projects about a blog, malware, a modified cheat engine, a phishing tool, some wordlists, some "hosts" files for a pihole and lots more! <br/> <br/> Click on the cookie to follow me on instagram [:cookie:](https://instagram.com/phoenixthrush) <br/> <br/>
 
 <img align="center" src="https://user-images.githubusercontent.com/44802077/134012957-221296c0-8a64-4d3a-af59-7d407233332d.png" width=3500>
 <br/>
@@ -25,8 +25,9 @@
 - My Blog [blog.phoenixthrush.com](https://blog.phoenixthrush.com)
 - Repo [phoenixthrush.com/repo](https://phoenixthrush.com/repo)
 - Phoenixsploit [phoenixthrush.com/phoenixsploit](https://phoenixthrush.com/phoenixsploit)
-- My Discord Server [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
-- TheAnnoyingSite [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
+- My Discord Server (Subdomain) [discord.phoenixthrush.com](https://discord.phoenixthrush.com)
+- TheAnnoyingSite (Subdomain) [theannoyingsite.phoenixthrush.com](https://theannoyingsite.phoenixthrush.com)
+- NSFWHub (Subdomain) [nsfw.phoenixthrush.com](https://nsfw.phoenixthrush.com)
 
 ### Pages without index site
 
@@ -35,7 +36,6 @@
 
 ### Some websites that will be coming soon
 
-- NSFWHub (Subdomain) [nsfw.phoenixthrush.com](https://nsfw.phoenixthrush.com)
 - HentaiHub (Subdomain) [hentaihub.phoenixthrush.com](https://hentaihub.phoenixthrush.com)
 <br/>
 
@@ -51,7 +51,7 @@
 
 ### Malware and Ransomeware
 
-- PhoenixZoo (index site will be coming soon) [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
+- PhoenixZoo [phoenixthrush.com/phoenixzoo](https://phoenixthrush.com/phoenixzoo)
 - russian-roulette [github.com/phoenixthrush/russian-roulette](https://github.com/phoenixthrush/russian-roulette)
 - edge-trojan (pages enabled too, without index site) [github.com/phoenixthrush/edge-trojan](https://github.com/phoenixthrush/edge-trojan)
 <br/>
@@ -74,7 +74,6 @@
 ### future projects
 
 - [ ] hentaihub
-- [x] nsfw
 <br/>
 <br/>
 
