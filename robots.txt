@@ -8,3 +8,4 @@ Disallow: /projects/*
 Disallow: /sites
 Disallow: /sites/*
 Disallow: /wiki.html
+Sitemap: https://phoenixthrush.com/sitemap.xml
