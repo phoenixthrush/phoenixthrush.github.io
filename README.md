@@ -58,6 +58,10 @@
 
 ## Currently working on:
 
+### Really important
+
+- [ ] moving my current index page to phoenixhub
+
 ### public projects
 
 - [ ] phoenixsploit | coding product version and adding live mode and mac support (+ upload to repo + removing private repo "phoenixsploit-tmp")
