@@ -1,6 +1,6 @@
 html, body {
   
-  // Setting Cat Background
+  /* Setting Cat Background */
   height: 100%; 
   background-image: url("https://phoenixthrush.com/assets/images/404.jpg");
   background-position: center;
@@ -9,9 +9,10 @@ html, body {
 
 }
 
+
 .centered {
 
-  // Setting Center
+  /* Setting Center */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19,9 +20,10 @@ html, body {
 
 }
 
+
  h1 {
  
-  // Setting Text Font
+  /* Setting Text Font */
   color: white;
   font-weight: bold;
   font-family: 'Open Sans';
