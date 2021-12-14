@@ -19,6 +19,7 @@
 
     }
 
+
     .centered {
       /* Setting Center */
       position: absolute;
@@ -37,7 +38,7 @@
       text-align: center;
       display: block;
       height: 100%;
-      font-size: 4.5em;
+      font-size: 750%;
       padding: 0;
       margin: 0;
       margin-left: 0;
@@ -53,7 +54,12 @@
 
 <body>
   
+  <script type="text/javascript">
+    if (screen.width >= 700 || screen.height >= 400) {
+    document.location = "404m.html";
+    }
+  </script>
+  
   <div class="centered"><h1>404<br/>no cats in here</h1></div>
 
 </body>
-</html>
