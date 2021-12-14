@@ -1,3 +1,5 @@
+// https://codepen.io/pimskie/pen/jEVPNx
+
 var canvas = document.querySelector('.snow'),
   ctx = canvas.getContext('2d'),
   windowW = window.innerWidth,
