@@ -1,10 +1,8 @@
 User-agent: *
 
-Disallow: /assets
-Disallow: /assets/*
-Disallow: /generic.html
-Disallow: /elements.html
-Disallow: /404.html
-Disallow: /404m.html
+Disallow: /
+Disallow: /*
+
+Allow: /index.html
 
 Sitemap: https://phoenixthrush.com/sitemap.xml
