@@ -41,6 +41,9 @@
 
 	Icons:
 		Font Awesome (fontawesome.io)
+		
+	Favicon:
+		Pixiv (pixiv.net | https://www.pixiv.net/en/artworks/83806567)
 
 	Other:
 		jQuery (jquery.com)
