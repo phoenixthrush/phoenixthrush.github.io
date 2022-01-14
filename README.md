@@ -50,4 +50,4 @@
 		Scrollex (github.com/ajlkn/jquery.scrollex)
 		Responsive Tools (github.com/ajlkn/responsive-tools)
 		
-## [Disclaimer](https://github.com/Phoenixthrush/Disclaimer)
+## [Disclaimer](https://github.com/phoenixthrush-websites/Disclaimer)
