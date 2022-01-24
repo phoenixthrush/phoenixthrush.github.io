@@ -44,6 +44,9 @@
 		
 	Favicon:
 		Pixiv (pixiv.net | https://www.pixiv.net/en/artworks/83806567)
+		
+	404 Snowflake Effect:
+		James231 (jam-es.com | https://github.com/James231/JavaScript-Snow-Effect)
 
 	Other:
 		jQuery (jquery.com)
