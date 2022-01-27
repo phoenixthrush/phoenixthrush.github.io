@@ -5,8 +5,8 @@
 
 // Change the following variables to customize the appearance of the particles
 var numParticles = window.innerWidth / 3;
-var maxSpeed = 2.5;
-var minSpeed = 1;
+var maxSpeed = 1.5;
+var minSpeed = 0.5;
 var maxSize = 5;
 var minSize = 3;
 var maxOpacity = 1;
