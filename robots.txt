@@ -1,8 +1,0 @@
-User-agent: *
-
-Disallow: /
-Disallow: /*
-
-Allow: /index.html
-
-Sitemap: https://phoenixthrush.com/sitemap.xml
