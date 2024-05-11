@@ -60,11 +60,13 @@ footer img {
     align-items: center;
     flex-direction: column;
     position: relative;
+    padding: 20px;
 }
 
 .container p {
-    letter-spacing: 0.2em;
     font-size: calc(0.95em + 1vmin);
+    letter-spacing: 0.2em;
+    padding-left: 0.2em; 
 }
 
 .container hr {
