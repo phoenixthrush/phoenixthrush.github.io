@@ -1,18 +1,45 @@
-html, body {
+html,
+body {
     height: 100%;
     width: 100%;
     margin: 0 auto;
 }
 
 body {
+    background-color: #111;
+    color: white;
     display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: #111;
-    color: white;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     animation: fadeIn 3s;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+footer p {
+    margin: 10px;
+    font-size: 0.85em;
+    text-align: right;
+}
+
+footer img {
+    height: 7.5vh;
 }
 
 .bg-image {
@@ -48,34 +75,38 @@ body {
     margin: 0 auto;
 }
 
-nav {
+.dropdown-content {
+    display: none;
     position: absolute;
-    top: 0;
+    background-color: #333;
+    min-width: 150px;
+    top: 95%;
     right: 0;
+    border-radius: 10%;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+.dropdown-checkbox:checked~.dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
     text-align: center;
+    transition: background-color 0.3s;
 }
 
-footer p {
-    margin: 10px;
-    font-size: 0.85em;
-    text-align: right;
-}
-
-footer img {
-    height: 7.5vh;
+.dropdown-content a:hover {
+    background-color: #303446;
 }
 
 @keyframes grow {
     from {
         width: 0%;
     }
+
     to {
         width: 100%;
     }
