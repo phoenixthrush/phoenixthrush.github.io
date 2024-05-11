@@ -99,7 +99,8 @@ footer img {
 }
 
 .dropdown-content a:hover {
-    background-color: #303446;
+    background-color: #444;
+    border-radius: 10px;
 }
 
 @keyframes grow {
