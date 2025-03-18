@@ -1,113 +1,97 @@
-html,
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-}
-
-body {
-    background-color: #111;
-    color: white;
+    height: 100vh;
     display: flex;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     overflow: hidden;
+    color: white;
+    font-family: Arial, sans-serif;
+    background: #111;
     animation: fadeIn 3s;
 }
 
 nav {
     position: absolute;
-    top: 0;
-    right: 0;
-    margin: 15px;
-    z-index: 1;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    text-align: center;
-}
-
-footer p {
-    margin: 10px;
-    font-size: 0.85em;
-    text-align: right;
-}
-
-footer img {
-    height: 7.5vh;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
 }
 
 .bg-image {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://www.phoenixthrush.com/assets/images/background.webp");
-    background-size: cover;
-    background-position: center;
+    inset: 0;
+    background: url("https://www.phoenixthrush.com/assets/images/background.webp") center/cover;
     filter: brightness(50%);
 }
 
 .container {
     display: flex;
+    flex: 1;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    position: relative;
-    padding: 20px;
+    z-index: 1;
 }
 
 .container p {
-    font-size: calc(0.95em + 1vmin);
+    font-size: calc(1em + 1vmin);
     letter-spacing: 0.2em;
-    padding-left: 0.2em; 
+    padding-left: 0.2em;
 }
 
 .container hr {
-    background-color: white;
+    background: white;
     animation: grow 2s forwards;
-    width: 20vw;
-    color: white;
-    margin: 0 auto;
+    border: none;
+    height: 1px;
+    width: 100%;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
+    background: #333;
     min-width: 150px;
-    top: 95%;
+    top: 100%;
     right: 0;
     border-radius: 10%;
 }
 
-.dropdown-checkbox:checked~.dropdown-content {
-    display: block;
-}
-
 .dropdown-content a {
+    display: block;
     color: white;
     padding: 10px;
     text-decoration: none;
-    display: block;
     text-align: center;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 .dropdown-content a:hover {
-    background-color: #444;
+    background: #444;
     border-radius: 10px;
+}
+
+#dropdown-checkbox:checked~.dropdown-content {
+    display: block;
+}
+
+#copyright {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 0.85em;
+}
+
+#moe-counter {
+    position: absolute;
+    bottom: 15px;
+    height: 75px;
 }
 
 @keyframes grow {
     from {
-        width: 0%;
+        width: 0;
     }
 
     to {
@@ -116,11 +100,18 @@ footer img {
 }
 
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
     }
 
-    100% {
+    to {
         opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    #moe-counter {
+        height: 50px;
+        left: 15px;
     }
 }
