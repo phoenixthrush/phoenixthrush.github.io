@@ -6,9 +6,13 @@ body {
     flex-direction: column;
     overflow: hidden;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #111;
     animation: fadeIn 3s;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 nav {
@@ -16,6 +20,47 @@ nav {
     top: 15px;
     right: 15px;
     z-index: 2;
+}
+
+.hamburger-label {
+    cursor: pointer;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.icon-hamburger,
+.icon-hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.2s;
+    opacity: 1;
+}
+
+.icon-cross {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    transition: opacity 0.2s;
+    opacity: 0;
+}
+
+.icon-cross {
+    opacity: 0;
+}
+
+#dropdown-checkbox:checked+.hamburger-label .icon-hamburger {
+    opacity: 0;
+}
+
+#dropdown-checkbox:checked+.hamburger-label .icon-cross {
+    opacity: 1;
 }
 
 .bg-image {
