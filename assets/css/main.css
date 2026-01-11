@@ -31,7 +31,7 @@ nav {
 }
 
 .icon-hamburger,
-.icon-hamburger {
+.icon-cross {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,6 +53,13 @@ nav {
 
 .icon-cross {
     opacity: 0;
+}
+
+.icon-hamburger svg,
+.icon-cross svg {
+    fill: white;
+    stroke: white;
+    pointer-events: none;
 }
 
 #dropdown-checkbox:checked+.hamburger-label .icon-hamburger {
@@ -132,6 +139,7 @@ nav {
     position: absolute;
     bottom: 15px;
     height: 75px;
+    display: none;
 }
 
 @keyframes grow {
