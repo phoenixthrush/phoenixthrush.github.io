@@ -20,44 +20,167 @@
     <link rel="icon" href="assets/favicon/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="stylesheet" href="assets/css/main.css">
 
     <meta name="darkreader-lock">
     <meta http-equiv="onion-location" content="http://cctmiudpo4jqtdghi4uwk766jvl4xlfeabqdeutyfu3ob5t76tykpiqd.onion/" />
+    <style>
+        body {
+            height: 100svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #111;
+            animation: fadeIn 3s;
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .bg-image {
+            position: absolute;
+            inset: 0;
+            background: url("https://www.phoenixthrush.com/assets/images/background.webp") center/cover;
+            filter: brightness(50%);
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .container p {
+            font-size: calc(1em + 1vmin);
+            letter-spacing: 0.2em;
+            padding-left: 0.2em;
+        }
+
+        .container hr {
+            background: white;
+            animation: grow 2s forwards;
+            border: none;
+            height: 1px;
+            width: 100%;
+        }
+
+        #copyright {
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+            font-size: 0.85em;
+        }
+
+        #moe-counter {
+            position: absolute;
+            bottom: 15px;
+            height: 75px;
+            display: none;
+        }
+
+        .top-pill-nav {
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 18px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            background: rgba(15, 15, 15, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2;
+        }
+
+        .top-pill-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 0.08em;
+            opacity: 0.85;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .top-pill-nav a:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+        .top-pill-nav a:focus-visible {
+            outline: 2px solid #ffffff;
+            outline-offset: 4px;
+            opacity: 1;
+        }
+
+        @keyframes grow {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .top-pill-nav {
+                max-width: 90vw;
+                overflow-x: auto;
+                white-space: nowrap;
+                gap: 14px;
+            }
+
+            .top-pill-nav::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            #moe-counter {
+                height: 50px;
+                left: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <input type="checkbox" id="dropdown-checkbox" hidden>
-        <label for="dropdown-checkbox" class="hamburger-label">
-            <span class="icon-hamburger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
-                    <path fill="white"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg>
-            </span>
-            <span class="icon-cross">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16">
-                    <path d="M3 3l10 10M13 3L3 13" stroke="white" stroke-width="1.5" stroke-linecap="round"
-                        fill="none" />
-                </svg>
-            </span>
-        </label>
-        <div class="dropdown-content">
-            <a href="https://www.phoenixthrush.com/poop/">Hosted Sites</a>
-            <a href="https://github.com/Phoenixthrush">Repositories</a>
-            <a href="https://www.phoenixthrush.com/gist-explorer/">Gists</a>
-            <a href="https://anilist.co/user/phoenixthrush">AniList</a>
-            <a href="https://osu.ppy.sh/users/20715825">osu!</a>
-            <a href="http://3hpba4otemb2amgur7gujdkixr4rg2rwaghalktdc4i5sssvs47nxyyd.onion/">Radio</a>
-        </div>
+    <nav class="top-pill-nav">
+        <a href="https://www.phoenixthrush.com/poop/">Hosted Sites</a>
+        <a href="https://github.com/Phoenixthrush">Repositories</a>
+        <a href="https://www.phoenixthrush.com/gist-explorer/">Gists</a>
+        <a href="https://anilist.co/user/phoenixthrush">AniList</a>
+        <a href="https://osu.ppy.sh/users/20715825">osu!</a>
+        <a href="http://3hpba4otemb2amgur7gujdkixr4rg2rwaghalktdc4i5sssvs47nxyyd.onion/">Radio</a>
     </nav>
+
     <div class="bg-image"></div>
+
     <div class="container">
         <hr>
         <p>PHOENIXTHRUSH</p>
         <hr>
     </div>
+
     <img id="moe-counter" src="https://count.getloli.com/get/@phoenixthrush?theme=rule34" alt="Counter">
     <p id="copyright">&copy; 2018 - 2026</p>
     <script>
